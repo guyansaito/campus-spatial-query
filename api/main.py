@@ -152,7 +152,6 @@ def calculate_distance_meters(
         * math.sin(delta_lon / 2) ** 2
     )
 
-    # 防止浮点数误差导致 asin 参数超出 [0, 1]
     value = max(0.0, min(1.0, value))
 
     return 2 * earth_radius_m * math.asin(math.sqrt(value))
@@ -171,41 +170,67 @@ def health() -> dict[str, str]:
     }
 
 
-# ==================== 设施空间查询 ====================
+# ==================== 楼宇基础查询 ====================
 
-@app.get("/facilities/nearby")
-def nearby_facilities(
-    lon: float = Query(..., description="经度"),
-    lat: float = Query(..., description="纬度"),
-    radius_m: float = Query(default=300, gt=0, le=10000),
-    facility_type: str | None = Query(default=None),
+# 查询楼宇列表，支持分页和楼宇类型筛选
+@app.get("/buildings")
+def get_buildings(
     limit: int = Query(default=100, ge=1, le=1000),
-) -> dict[str, Any]:
-    validate_coordinates(lon, lat)
+    skip: int = Query(default=0, ge=0),
+    building_type: Optional[str] = Query(default=None),
+):
+    query = {}
 
-    query: dict[str, Any] = {
-        "location": {
-            "$near": {
-                "$geometry": point_geometry(lon, lat),
-                "$maxDistance": radius_m,
-            }
-        }
-    }
-
-    if facility_type:
-        query["type"] = facility_type
+    if building_type:
+        query["building_type"] = building_type
 
     database = get_database()
 
-    documents = list(
-        database["facilities"]
+    documents = (
+        database["buildings"]
         .find(query)
+        .sort("_id", ASCENDING)
+        .skip(skip)
         .limit(limit)
     )
 
     return {
-        "center": {"lon": lon, "lat": lat},
-        "radius_m": radius_m,
+        "skip": skip,
+        "limit": limit,
+        "items": [
+            serialize_document(item) for item in documents
+        ],
+    }
+
+
+# 查询包含指定坐标的楼宇
+# 固定路径必须放在 /buildings/{building_id} 之前
+@app.get("/buildings/contains")
+def buildings_contains(
+    lon: float = Query(..., description="经度"),
+    lat: float = Query(..., description="纬度"),
+) -> dict[str, Any]:
+    validate_coordinates(lon, lat)
+
+    database = get_database()
+
+    documents = list(
+        database["buildings"].find(
+            {
+                "boundary": {
+                    "$geoIntersects": {
+                        "$geometry": point_geometry(lon, lat),
+                    }
+                }
+            }
+        )
+    )
+
+    return {
+        "point": {
+            "lon": lon,
+            "lat": lat,
+        },
         "count": len(documents),
         "items": [
             serialize_document(item) for item in documents
@@ -213,6 +238,108 @@ def nearby_facilities(
     }
 
 
+# 查询单个楼宇的完整信息
+@app.get("/buildings/{building_id}")
+def get_building(building_id: str):
+    database = get_database()
+
+    document = database["buildings"].find_one(
+        {"_id": building_id}
+    )
+
+    if document is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Building not found",
+        )
+
+    return serialize_document(document)
+
+
+# ==================== 设施空间查询 ====================
+
+# 查询指定坐标附近的设施
+@app.get("/facilities/nearby")
+def nearby_facilities(
+    longitude: float = Query(
+        ...,
+        ge=-180,
+        le=180,
+        description="经度",
+    ),
+    latitude: float = Query(
+        ...,
+        ge=-90,
+        le=90,
+        description="纬度",
+    ),
+    radius_m: float = Query(
+        default=500,
+        gt=0,
+        le=50000,
+        description="查询半径，单位为米",
+    ),
+    facility_type: Optional[str] = Query(
+        default=None,
+        description="设施类型",
+    ),
+    limit: int = Query(
+        default=100,
+        ge=1,
+        le=1000,
+        description="返回结果数量上限",
+    ),
+) -> dict[str, Any]:
+    validate_coordinates(longitude, latitude)
+
+    query: dict[str, Any] = {}
+
+    if facility_type:
+        query["type"] = facility_type
+
+    pipeline = [
+        {
+            "$geoNear": {
+                "near": {
+                    "type": "Point",
+                    "coordinates": [longitude, latitude],
+                },
+                "key": "location",
+                "distanceField": "distance_m",
+                "maxDistance": radius_m,
+                "spherical": True,
+                "query": query,
+            }
+        },
+        {
+            "$limit": limit,
+        },
+    ]
+
+    database = get_database()
+    facilities = database["facilities"]
+
+    items = []
+
+    for document in facilities.aggregate(pipeline):
+        document["distance_m"] = round(
+            float(document["distance_m"]),
+            2,
+        )
+        items.append(serialize_document(document))
+
+    return {
+        "center": {
+            "type": "Point",
+            "coordinates": [longitude, latitude],
+        },
+        "radius_m": radius_m,
+        "count": len(items),
+        "items": items,
+    }
+
+
+# 查询指定多边形范围内的设施
 @app.post("/facilities/within")
 def facilities_within(body: PolygonQuery) -> dict[str, Any]:
     polygon = body.polygon
@@ -260,43 +387,19 @@ def facilities_within(body: PolygonQuery) -> dict[str, Any]:
     }
 
 
-# ==================== 楼宇空间查询 ====================
+# ==================== 楼宇覆盖范围查询 ====================
 
-@app.get("/buildings/contains")
-def buildings_contains(
-    lon: float = Query(..., description="经度"),
-    lat: float = Query(..., description="纬度"),
-) -> dict[str, Any]:
-    validate_coordinates(lon, lat)
-
-    database = get_database()
-
-    documents = list(
-        database["buildings"].find(
-            {
-                "boundary": {
-                    "$geoIntersects": {
-                        "$geometry": point_geometry(lon, lat),
-                    }
-                }
-            }
-        )
-    )
-
-    return {
-        "point": {"lon": lon, "lat": lat},
-        "count": len(documents),
-        "items": [
-            serialize_document(item) for item in documents
-        ],
-    }
-
-
+# 查询楼宇的 300 米覆盖范围及设施统计
+# 将覆盖范围元数据与原有统计结果合并，避免重复注册路由
 @app.get("/buildings/{building_id}/coverage")
 def building_coverage(
     building_id: str,
-    radius_m: float = Query(default=300, gt=0, le=300),
-) -> dict[str, Any]:
+    radius_m: float = Query(
+        default=300,
+        gt=0,
+        le=300,
+    ),
+):
     database = get_database()
 
     building = database["buildings"].find_one(
@@ -307,6 +410,7 @@ def building_coverage(
             "center": 1,
             "coverage_300m": 1,
             "coverage_buffer_distance_m": 1,
+            "coverage_buffer_version": 1,
         },
     )
 
@@ -361,6 +465,13 @@ def building_coverage(
         "center": building.get("center"),
         "radius_m": 300,
         "coverage_mode": "building_boundary_buffer",
+        "coverage_buffer_distance_m": building.get(
+            "coverage_buffer_distance_m"
+        ),
+        "coverage_buffer_version": building.get(
+            "coverage_buffer_version"
+        ),
+        "coverage_300m": coverage_geometry,
         "facility_count": total,
         "facility_count_by_type": {
             item["_id"]: item["count"]
@@ -369,13 +480,81 @@ def building_coverage(
     }
 
 
+# 查询指定楼宇覆盖范围内的设施
+@app.get("/buildings/{building_id}/facilities")
+def get_building_facilities(
+    building_id: str,
+    facility_type: Optional[str] = Query(
+        default=None,
+        description="设施类型",
+    ),
+    limit: int = Query(
+        default=1000,
+        ge=1,
+        le=5000,
+        description="返回结果数量上限",
+    ),
+) -> dict[str, Any]:
+    database = get_database()
+
+    building = database["buildings"].find_one(
+        {"_id": building_id},
+        {
+            "_id": 1,
+            "coverage_300m": 1,
+        },
+    )
+
+    if building is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Building not found",
+        )
+
+    coverage_geometry = building.get("coverage_300m")
+
+    if coverage_geometry is None:
+        raise HTTPException(
+            status_code=500,
+            detail="楼宇缓冲区尚未生成",
+        )
+
+    query: dict[str, Any] = {
+        "location": {
+            "$geoWithin": {
+                "$geometry": coverage_geometry,
+            }
+        }
+    }
+
+    if facility_type:
+        query["type"] = facility_type
+
+    documents = list(
+        database["facilities"]
+        .find(query)
+        .limit(limit)
+    )
+
+    return {
+        "building_id": building_id,
+        "coverage": coverage_geometry,
+        "count": len(documents),
+        "limited": len(documents) >= limit,
+        "items": [
+            serialize_document(item) for item in documents
+        ],
+    }
+
+
 # ==================== 车辆轨迹管理 ====================
 
+# 创建车辆轨迹
 @app.post("/vehicles/{vehicle_id}/tracks", status_code=201)
 def create_vehicle_track(
     vehicle_id: str,
     payload: VehicleTrackCreate,
-):
+) -> dict[str, Any]:
     if not vehicle_id.strip():
         raise HTTPException(
             status_code=400,
@@ -383,6 +562,7 @@ def create_vehicle_track(
         )
 
     longitude, latitude = payload.location.coordinates
+
     validate_coordinates(longitude, latitude)
 
     timestamp = normalize_timestamp(payload.timestamp)
@@ -404,6 +584,7 @@ def create_vehicle_track(
         document["status"] = payload.status
 
     database = get_database()
+
     result = database["vehicle_tracks"].insert_one(document)
 
     document["_id"] = result.inserted_id
@@ -411,13 +592,14 @@ def create_vehicle_track(
     return serialize_document(document)
 
 
+# 查询指定车辆的历史轨迹
 @app.get("/vehicles/{vehicle_id}/tracks")
 def get_vehicle_tracks(
     vehicle_id: str,
     start_time: Optional[datetime] = Query(default=None),
     end_time: Optional[datetime] = Query(default=None),
     limit: int = Query(default=100, ge=1, le=5000),
-):
+) -> dict[str, Any]:
     now = datetime.now(timezone.utc)
 
     start = (
@@ -467,16 +649,40 @@ def get_vehicle_tracks(
 
 # ==================== 附近车辆查询 ====================
 
+# 查询指定范围、指定时间窗口内每辆车的最新位置
 @app.get("/vehicles/nearby")
 def get_nearby_vehicles(
-    longitude: float = Query(..., ge=-180, le=180),
-    latitude: float = Query(..., ge=-90, le=90),
-    radius_m: float = Query(default=500, gt=0, le=50000),
-    minutes: int = Query(default=5, gt=0, le=1440),
-):
-    cutoff = datetime.now(timezone.utc) - timedelta(minutes=minutes)
+    longitude: float = Query(
+        ...,
+        ge=-180,
+        le=180,
+        description="经度",
+    ),
+    latitude: float = Query(
+        ...,
+        ge=-90,
+        le=90,
+        description="纬度",
+    ),
+    radius_m: float = Query(
+        default=500,
+        gt=0,
+        le=50000,
+        description="查询半径，单位为米",
+    ),
+    minutes: int = Query(
+        default=5,
+        gt=0,
+        le=1440,
+        description="查询最近多少分钟的轨迹",
+    ),
+) -> dict[str, Any]:
+    validate_coordinates(longitude, latitude)
 
-    # 地球平均半径，单位：米
+    cutoff = datetime.now(timezone.utc) - timedelta(
+        minutes=minutes
+    )
+
     earth_radius_m = 6371008.8
     radius_radians = radius_m / earth_radius_m
 
@@ -505,7 +711,9 @@ def get_nearby_vehicles(
         {
             "$group": {
                 "_id": "$vehicle_id",
-                "latest": {"$first": "$$ROOT"},
+                "latest": {
+                    "$first": "$$ROOT",
+                },
             }
         },
         {
@@ -534,9 +742,12 @@ def get_nearby_vehicles(
         )
 
         document["distance_m"] = round(distance_m, 2)
+
         items.append(serialize_document(document))
 
-    items.sort(key=lambda item: item["distance_m"])
+    items.sort(
+        key=lambda item: item["distance_m"]
+    )
 
     return {
         "center": {
@@ -545,5 +756,6 @@ def get_nearby_vehicles(
         },
         "radius_m": radius_m,
         "within_minutes": minutes,
+        "count": len(items),
         "items": items,
     }
