@@ -176,24 +176,41 @@ def buildings_contains(
 @app.get("/buildings/{building_id}/coverage")
 def building_coverage(
     building_id: str,
-    radius_m: float = Query(300, gt=0, le=5000),
+    radius_m: float = Query(300, gt=0, le=300),
 ) -> dict[str, Any]:
     database = get_database()
-    building = database["buildings"].find_one({"_id": building_id})
+    building = database["buildings"].find_one(
+        {"_id": building_id},
+        {
+            "_id": 1,
+            "name": 1,
+            "center": 1,
+            "coverage_300m": 1,
+            "coverage_buffer_distance_m": 1,
+        },
+    )
 
     if building is None:
         raise HTTPException(status_code=404, detail="楼宇不存在")
 
-    center = building["center"]
-    coordinates = center["coordinates"]
+    if radius_m != 300:
+        raise HTTPException(
+            status_code=400,
+            detail="当前仅支持 300 米楼宇边界缓冲区",
+        )
 
-    # $centerSphere 使用弧度，地球平均半径约为 6,371,000 米。
-    radius_radians = radius_m / 6_371_000
+    coverage_geometry = building.get("coverage_300m")
+
+    if coverage_geometry is None:
+        raise HTTPException(
+            status_code=500,
+            detail="楼宇缓冲区尚未生成",
+        )
 
     base_query = {
         "location": {
             "$geoWithin": {
-                "$centerSphere": [coordinates, radius_radians]
+                "$geometry": coverage_geometry,
             }
         }
     }
@@ -213,10 +230,11 @@ def building_coverage(
     return {
         "building_id": building_id,
         "building_name": building.get("name"),
-        "center": center,
-        "radius_m": radius_m,
+        "center": building.get("center"),
+        "radius_m": 300,
+        "coverage_mode": "building_boundary_buffer",
         "facility_count": total,
         "facility_count_by_type": {
             item["_id"]: item["count"] for item in type_counts
         },
-    }
+    }   
