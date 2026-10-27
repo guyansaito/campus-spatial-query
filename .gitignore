@@ -1,0 +1,23 @@
+# 本地账号密码
+.env
+
+# Python 虚拟环境
+.venv/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 编辑器
+.idea/
+.vscode/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 生成数据与临时文件
+data/generated/
+tmp/
+*.log

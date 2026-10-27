@@ -1,0 +1,6 @@
+pymongo==4.11.3
+python-dotenv==1.0.1
+fastapi==0.115.8
+uvicorn[standard]==0.34.0
+shapely==2.0.7
+pyproj==3.7.1
