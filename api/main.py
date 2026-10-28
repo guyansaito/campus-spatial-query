@@ -1,4 +1,3 @@
-
 import os
 import math
 from datetime import datetime, timedelta, timezone
@@ -6,6 +5,7 @@ from typing import Any, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from pymongo import MongoClient, ASCENDING, DESCENDING
 
@@ -14,6 +14,19 @@ load_dotenv()
 app = FastAPI(
     title="Campus Spatial Query API",
     version="0.1.0",
+)
+
+# ==================== CORS 跨域配置 ====================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ==================== MongoDB 配置 ====================
@@ -75,7 +88,11 @@ class VehicleTrackCreate(BaseModel):
     timestamp: Optional[datetime] = None
     location: Point
     speed_kmh: Optional[float] = Field(default=None, ge=0)
-    heading_degrees: Optional[float] = Field(default=None, ge=0, le=360)
+    heading_degrees: Optional[float] = Field(
+        default=None,
+        ge=0,
+        le=360,
+    )
     status: Optional[str] = None
     source: Optional[str] = "api"
 
