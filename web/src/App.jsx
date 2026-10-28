@@ -304,6 +304,8 @@ function App() {
           <TileLayer
             attribution="&copy; OpenStreetMap contributors"
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            maxNativeZoom={19}
+            maxZoom={100}
           />
 
           {/* 楼宇 300 米覆盖区域 */}
