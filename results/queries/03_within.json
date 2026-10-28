@@ -1,0 +1,62 @@
+{
+  "function": "区域检索",
+  "timing": {
+    "runs_ms": [
+      22.25,
+      16.23,
+      17.3,
+      20.53,
+      15.05
+    ],
+    "min_ms": 15.05,
+    "median_ms": 17.3,
+    "max_ms": 22.25
+  },
+  "total": 4875,
+  "page_size": 20,
+  "page1_ids": [
+    "facility_000001",
+    "facility_000004",
+    "facility_000007",
+    "facility_000008",
+    "facility_000011",
+    "facility_000012",
+    "facility_000016",
+    "facility_000018",
+    "facility_000020",
+    "facility_000029",
+    "facility_000035",
+    "facility_000039",
+    "facility_000041",
+    "facility_000048",
+    "facility_000054",
+    "facility_000062",
+    "facility_000066",
+    "facility_000068",
+    "facility_000069",
+    "facility_000070"
+  ],
+  "page2_ids": [
+    "facility_000073",
+    "facility_000087",
+    "facility_000089",
+    "facility_000095",
+    "facility_000100",
+    "facility_000103",
+    "facility_000108",
+    "facility_000112",
+    "facility_000113",
+    "facility_000119",
+    "facility_000120",
+    "facility_000121",
+    "facility_000128",
+    "facility_000130",
+    "facility_000132",
+    "facility_000135",
+    "facility_000137",
+    "facility_000140",
+    "facility_000148",
+    "facility_000149"
+  ],
+  "overlap": []
+}

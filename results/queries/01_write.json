@@ -1,0 +1,64 @@
+{
+  "function": "写入",
+  "bulk": {
+    "building_count": 200,
+    "facility_count": 20000,
+    "bike_count": 40,
+    "report_count": 2320,
+    "static_import_seconds": 0.74,
+    "buffer_seconds": 0.36,
+    "bike_insert_seconds": 0.12
+  },
+  "count_query": {
+    "result": {
+      "buildings": 200,
+      "facilities": 20000,
+      "bikes": 40,
+      "bike_latest": 40
+    },
+    "timing": {
+      "runs_ms": [
+        12.41,
+        6.46,
+        7.32
+      ],
+      "min_ms": 6.46,
+      "median_ms": 7.32,
+      "max_ms": 12.41
+    }
+  },
+  "single_facility_write": {
+    "timing": {
+      "runs_ms": [
+        2.5,
+        1.97,
+        1.92,
+        1.96,
+        1.86
+      ],
+      "min_ms": 1.86,
+      "median_ms": 1.96,
+      "max_ms": 2.5
+    },
+    "read_back": {
+      "_id": "facility_probe_acceptance",
+      "name": "验收探针饮水机",
+      "type": "water_dispenser",
+      "status": "active",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          116.312,
+          39.905
+        ]
+      },
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 1,
+      "building_id": null,
+      "source": "acceptance",
+      "data_version": "probe",
+      "updated_at": "2026-10-28T16:33:06.480000+00:00"
+    },
+    "deleted": true
+  }
+}

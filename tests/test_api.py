@@ -19,6 +19,15 @@ def test_building_not_found():
     assert response.status_code == 404
 
 
+def test_within_rejects_non_polygon():
+    response = client.post(
+        "/facilities/within",
+        json={"polygon": {"type": "Point", "coordinates": [116.3, 39.9]}},
+    )
+
+    assert response.status_code == 400
+
+
 def test_invalid_nearby_radius():
     response = client.get(
         "/facilities/nearby",

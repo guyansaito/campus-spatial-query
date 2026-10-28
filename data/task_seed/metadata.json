@@ -1,0 +1,16 @@
+{
+  "_id": "seed-v1",
+  "dataset_version": "seed-v1",
+  "random_seed": 20260301,
+  "building_count": 200,
+  "facility_count": 20000,
+  "facility_counts": {
+    "water_dispenser": 3000,
+    "restroom": 3000,
+    "study_seat": 6000,
+    "charging_station": 2000,
+    "printing_point": 2000,
+    "parcel_locker": 4000
+  },
+  "generated_at": "2026-10-28T15:25:59.468659+00:00"
+}

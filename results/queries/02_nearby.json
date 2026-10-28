@@ -1,0 +1,122 @@
+{
+  "function": "附近查找",
+  "timing": {
+    "runs_ms": [
+      11.56,
+      6.16,
+      5.97,
+      6.14,
+      6.38
+    ],
+    "min_ms": 5.97,
+    "median_ms": 6.16,
+    "max_ms": 11.56
+  },
+  "count": 10,
+  "distances_m": [
+    17.62,
+    18.68,
+    45.17,
+    50.88,
+    52.16,
+    54.29,
+    57.07,
+    60.37,
+    62.97,
+    65.29
+  ],
+  "sorted": true,
+  "items": [
+    {
+      "_id": "facility_001048",
+      "distance_m": 17.62,
+      "distance_min_m": 15.62,
+      "distance_max_m": 19.62,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 2,
+      "status": "active"
+    },
+    {
+      "_id": "facility_001258",
+      "distance_m": 18.68,
+      "distance_min_m": 13.68,
+      "distance_max_m": 23.68,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 5,
+      "status": "active"
+    },
+    {
+      "_id": "facility_000586",
+      "distance_m": 45.17,
+      "distance_min_m": 43.17,
+      "distance_max_m": 47.17,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 2,
+      "status": "active"
+    },
+    {
+      "_id": "facility_000685",
+      "distance_m": 50.88,
+      "distance_min_m": 45.88,
+      "distance_max_m": 55.88,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 5,
+      "status": "active"
+    },
+    {
+      "_id": "facility_001348",
+      "distance_m": 52.16,
+      "distance_min_m": 51.16,
+      "distance_max_m": 53.16,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 1,
+      "status": "active"
+    },
+    {
+      "_id": "facility_000591",
+      "distance_m": 54.29,
+      "distance_min_m": 49.29,
+      "distance_max_m": 59.29,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 5,
+      "status": "active"
+    },
+    {
+      "_id": "facility_000783",
+      "distance_m": 57.07,
+      "distance_min_m": 47.07,
+      "distance_max_m": 67.07,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 10,
+      "status": "active"
+    },
+    {
+      "_id": "facility_002950",
+      "distance_m": 60.37,
+      "distance_min_m": 57.37,
+      "distance_max_m": 63.37,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 3,
+      "status": "active"
+    },
+    {
+      "_id": "facility_001543",
+      "distance_m": 62.97,
+      "distance_min_m": 61.97,
+      "distance_max_m": 63.97,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 1,
+      "status": "active"
+    },
+    {
+      "_id": "facility_002267",
+      "distance_m": 65.29,
+      "distance_min_m": 63.29,
+      "distance_max_m": 67.29,
+      "coordinate_accuracy": "exact",
+      "accuracy_meters": 2,
+      "status": "active"
+    }
+  ],
+  "explain_ok": true
+}

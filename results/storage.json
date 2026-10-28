@@ -1,0 +1,94 @@
+{
+  "host": {
+    "system": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cpu_count": 28,
+    "python": "3.12.9",
+    "memory": {
+      "total_bytes": 34124718080,
+      "available_bytes": 14214479872
+    }
+  },
+  "disk": {
+    "path": "D:\\aiagent\\campus-spatial-query",
+    "total": 699697983488,
+    "used": 449009065984,
+    "free": 250688917504
+  },
+  "mongodb": {
+    "version": "8.0.34",
+    "resident_mb": 239,
+    "virtual_mb": 2660,
+    "cache": {
+      "bytes_in_cache": 31080218,
+      "max_bytes": 7786725376
+    }
+  },
+  "database": {
+    "name": "campus_service",
+    "collections": 10,
+    "objects": 21677,
+    "dataSize": 7502965.0,
+    "storageSize": 3215360.0,
+    "indexSize": 2285568.0,
+    "totalSize": 5500928.0
+  },
+  "collections": {
+    "facilities": {
+      "count": 20000,
+      "size": 6456000,
+      "storageSize": 2306048,
+      "totalIndexSize": 1626112,
+      "avgObjSize": 322
+    },
+    "buildings": {
+      "count": 200,
+      "size": 641240,
+      "storageSize": 647168,
+      "totalIndexSize": 237568,
+      "avgObjSize": 3206
+    },
+    "bikes": {
+      "count": 40,
+      "size": 8480,
+      "storageSize": 20480,
+      "totalIndexSize": 40960,
+      "avgObjSize": 212
+    },
+    "bike_latest": {
+      "count": 40,
+      "size": 11680,
+      "storageSize": 20480,
+      "totalIndexSize": 102400,
+      "avgObjSize": 292
+    },
+    "bike_reports": {
+      "count": null,
+      "size": 45172,
+      "storageSize": 36864,
+      "totalIndexSize": 40960,
+      "avgObjSize": null
+    },
+    "bike_anomalies": {
+      "count": 2,
+      "size": 692,
+      "storageSize": 20480,
+      "totalIndexSize": 81920,
+      "avgObjSize": 346
+    },
+    "heatmap_aggregates": {
+      "count": 1353,
+      "size": 337751,
+      "storageSize": 77824,
+      "totalIndexSize": 65536,
+      "avgObjSize": 249
+    },
+    "dataset_metadata": {
+      "count": 1,
+      "size": 1745,
+      "storageSize": 36864,
+      "totalIndexSize": 40960,
+      "avgObjSize": 1745
+    }
+  }
+}

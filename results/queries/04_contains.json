@@ -1,0 +1,24 @@
+{
+  "function": "包含判断",
+  "timing": {
+    "runs_ms": [
+      1.18,
+      1.0,
+      1.09,
+      1.04,
+      0.88
+    ],
+    "min_ms": 0.88,
+    "median_ms": 1.04,
+    "max_ms": 1.18
+  },
+  "point": {
+    "lon": 116.3005987,
+    "lat": 39.900503
+  },
+  "expected_building": "building_0001",
+  "hit_ids": [
+    "building_0001"
+  ],
+  "outside_count": 0
+}

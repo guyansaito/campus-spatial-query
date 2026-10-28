@@ -1,0 +1,3065 @@
+{
+  "function": "覆盖分析",
+  "timing": {
+    "runs_ms": [
+      748.57,
+      700.74,
+      706.35
+    ],
+    "min_ms": 700.74,
+    "median_ms": 706.35,
+    "max_ms": 748.57
+  },
+  "building_count": 200,
+  "category_min": 6,
+  "category_max": 6,
+  "sample": [
+    {
+      "building_id": "building_0001",
+      "name": "教学楼001",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1085,
+      "counts": {
+        "parcel_locker": 212,
+        "study_seat": 328,
+        "restroom": 159,
+        "charging_station": 97,
+        "water_dispenser": 182,
+        "printing_point": 107
+      }
+    },
+    {
+      "building_id": "building_0002",
+      "name": "宿舍002",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1439,
+      "counts": {
+        "parcel_locker": 283,
+        "study_seat": 431,
+        "restroom": 212,
+        "charging_station": 135,
+        "printing_point": 142,
+        "water_dispenser": 236
+      }
+    },
+    {
+      "building_id": "building_0003",
+      "name": "图书馆003",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1758,
+      "counts": {
+        "parcel_locker": 355,
+        "study_seat": 539,
+        "restroom": 249,
+        "charging_station": 162,
+        "water_dispenser": 280,
+        "printing_point": 173
+      }
+    }
+  ],
+  "items": [
+    {
+      "building_id": "building_0001",
+      "name": "教学楼001",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1085,
+      "counts": {
+        "parcel_locker": 212,
+        "study_seat": 328,
+        "restroom": 159,
+        "charging_station": 97,
+        "water_dispenser": 182,
+        "printing_point": 107
+      }
+    },
+    {
+      "building_id": "building_0002",
+      "name": "宿舍002",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1439,
+      "counts": {
+        "parcel_locker": 283,
+        "study_seat": 431,
+        "restroom": 212,
+        "charging_station": 135,
+        "printing_point": 142,
+        "water_dispenser": 236
+      }
+    },
+    {
+      "building_id": "building_0003",
+      "name": "图书馆003",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1758,
+      "counts": {
+        "parcel_locker": 355,
+        "study_seat": 539,
+        "restroom": 249,
+        "charging_station": 162,
+        "water_dispenser": 280,
+        "printing_point": 173
+      }
+    },
+    {
+      "building_id": "building_0004",
+      "name": "食堂004",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1930,
+      "counts": {
+        "parcel_locker": 381,
+        "study_seat": 587,
+        "restroom": 264,
+        "printing_point": 194,
+        "water_dispenser": 320,
+        "charging_station": 184
+      }
+    },
+    {
+      "building_id": "building_0005",
+      "name": "行政楼005",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1886,
+      "counts": {
+        "water_dispenser": 290,
+        "restroom": 252,
+        "printing_point": 195,
+        "parcel_locker": 381,
+        "study_seat": 584,
+        "charging_station": 184
+      }
+    },
+    {
+      "building_id": "building_0006",
+      "name": "实验楼006",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1912,
+      "counts": {
+        "study_seat": 587,
+        "parcel_locker": 403,
+        "restroom": 267,
+        "water_dispenser": 282,
+        "printing_point": 186,
+        "charging_station": 187
+      }
+    },
+    {
+      "building_id": "building_0007",
+      "name": "体育馆007",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1861,
+      "counts": {
+        "study_seat": 580,
+        "restroom": 276,
+        "parcel_locker": 382,
+        "charging_station": 173,
+        "water_dispenser": 275,
+        "printing_point": 175
+      }
+    },
+    {
+      "building_id": "building_0008",
+      "name": "服务楼008",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1850,
+      "counts": {
+        "charging_station": 171,
+        "restroom": 269,
+        "parcel_locker": 388,
+        "study_seat": 561,
+        "printing_point": 181,
+        "water_dispenser": 280
+      }
+    },
+    {
+      "building_id": "building_0009",
+      "name": "教学楼009",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1825,
+      "counts": {
+        "charging_station": 176,
+        "restroom": 282,
+        "parcel_locker": 376,
+        "study_seat": 532,
+        "printing_point": 172,
+        "water_dispenser": 287
+      }
+    },
+    {
+      "building_id": "building_0010",
+      "name": "宿舍010",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1901,
+      "counts": {
+        "restroom": 297,
+        "water_dispenser": 292,
+        "printing_point": 183,
+        "parcel_locker": 383,
+        "study_seat": 554,
+        "charging_station": 192
+      }
+    },
+    {
+      "building_id": "building_0011",
+      "name": "图书馆011",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1898,
+      "counts": {
+        "printing_point": 188,
+        "restroom": 289,
+        "parcel_locker": 368,
+        "study_seat": 556,
+        "charging_station": 197,
+        "water_dispenser": 300
+      }
+    },
+    {
+      "building_id": "building_0012",
+      "name": "食堂012",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1954,
+      "counts": {
+        "study_seat": 581,
+        "restroom": 289,
+        "parcel_locker": 375,
+        "charging_station": 196,
+        "printing_point": 211,
+        "water_dispenser": 302
+      }
+    },
+    {
+      "building_id": "building_0013",
+      "name": "行政楼013",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1955,
+      "counts": {
+        "study_seat": 560,
+        "restroom": 291,
+        "parcel_locker": 378,
+        "charging_station": 201,
+        "printing_point": 211,
+        "water_dispenser": 314
+      }
+    },
+    {
+      "building_id": "building_0014",
+      "name": "实验楼014",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1935,
+      "counts": {
+        "parcel_locker": 377,
+        "study_seat": 563,
+        "restroom": 292,
+        "charging_station": 197,
+        "printing_point": 207,
+        "water_dispenser": 299
+      }
+    },
+    {
+      "building_id": "building_0015",
+      "name": "体育馆015",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1936,
+      "counts": {
+        "parcel_locker": 402,
+        "restroom": 297,
+        "study_seat": 558,
+        "charging_station": 188,
+        "water_dispenser": 296,
+        "printing_point": 195
+      }
+    },
+    {
+      "building_id": "building_0016",
+      "name": "服务楼016",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1998,
+      "counts": {
+        "charging_station": 186,
+        "restroom": 310,
+        "study_seat": 586,
+        "parcel_locker": 424,
+        "printing_point": 197,
+        "water_dispenser": 295
+      }
+    },
+    {
+      "building_id": "building_0017",
+      "name": "教学楼017",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2012,
+      "counts": {
+        "water_dispenser": 304,
+        "restroom": 320,
+        "printing_point": 199,
+        "study_seat": 581,
+        "parcel_locker": 418,
+        "charging_station": 190
+      }
+    },
+    {
+      "building_id": "building_0018",
+      "name": "宿舍018",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1828,
+      "counts": {
+        "restroom": 292,
+        "printing_point": 184,
+        "water_dispenser": 259,
+        "parcel_locker": 369,
+        "study_seat": 549,
+        "charging_station": 175
+      }
+    },
+    {
+      "building_id": "building_0019",
+      "name": "图书馆019",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1515,
+      "counts": {
+        "charging_station": 145,
+        "restroom": 242,
+        "parcel_locker": 303,
+        "study_seat": 464,
+        "printing_point": 146,
+        "water_dispenser": 215
+      }
+    },
+    {
+      "building_id": "building_0020",
+      "name": "食堂020",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1142,
+      "counts": {
+        "parcel_locker": 209,
+        "study_seat": 360,
+        "restroom": 186,
+        "water_dispenser": 171,
+        "charging_station": 106,
+        "printing_point": 110
+      }
+    },
+    {
+      "building_id": "building_0021",
+      "name": "行政楼021",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1407,
+      "counts": {
+        "parcel_locker": 278,
+        "study_seat": 430,
+        "restroom": 203,
+        "charging_station": 131,
+        "printing_point": 136,
+        "water_dispenser": 229
+      }
+    },
+    {
+      "building_id": "building_0022",
+      "name": "实验楼022",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1886,
+      "counts": {
+        "parcel_locker": 377,
+        "study_seat": 566,
+        "restroom": 273,
+        "water_dispenser": 302,
+        "printing_point": 191,
+        "charging_station": 177
+      }
+    },
+    {
+      "building_id": "building_0023",
+      "name": "体育馆023",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2242,
+      "counts": {
+        "parcel_locker": 446,
+        "study_seat": 692,
+        "restroom": 314,
+        "water_dispenser": 354,
+        "printing_point": 226,
+        "charging_station": 210
+      }
+    },
+    {
+      "building_id": "building_0024",
+      "name": "服务楼024",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2431,
+      "counts": {
+        "parcel_locker": 481,
+        "study_seat": 750,
+        "restroom": 334,
+        "water_dispenser": 380,
+        "charging_station": 243,
+        "printing_point": 243
+      }
+    },
+    {
+      "building_id": "building_0025",
+      "name": "教学楼025",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2485,
+      "counts": {
+        "restroom": 328,
+        "printing_point": 247,
+        "water_dispenser": 372,
+        "study_seat": 782,
+        "parcel_locker": 505,
+        "charging_station": 251
+      }
+    },
+    {
+      "building_id": "building_0026",
+      "name": "宿舍026",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2493,
+      "counts": {
+        "printing_point": 245,
+        "restroom": 338,
+        "water_dispenser": 370,
+        "study_seat": 783,
+        "parcel_locker": 512,
+        "charging_station": 245
+      }
+    },
+    {
+      "building_id": "building_0027",
+      "name": "图书馆027",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2507,
+      "counts": {
+        "parcel_locker": 519,
+        "restroom": 347,
+        "study_seat": 791,
+        "charging_station": 243,
+        "printing_point": 236,
+        "water_dispenser": 371
+      }
+    },
+    {
+      "building_id": "building_0028",
+      "name": "食堂028",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2539,
+      "counts": {
+        "study_seat": 782,
+        "parcel_locker": 529,
+        "restroom": 360,
+        "printing_point": 242,
+        "charging_station": 244,
+        "water_dispenser": 382
+      }
+    },
+    {
+      "building_id": "building_0029",
+      "name": "行政楼029",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2532,
+      "counts": {
+        "parcel_locker": 525,
+        "study_seat": 757,
+        "restroom": 381,
+        "water_dispenser": 369,
+        "charging_station": 255,
+        "printing_point": 245
+      }
+    },
+    {
+      "building_id": "building_0030",
+      "name": "实验楼030",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2495,
+      "counts": {
+        "study_seat": 749,
+        "parcel_locker": 510,
+        "restroom": 365,
+        "water_dispenser": 378,
+        "printing_point": 241,
+        "charging_station": 252
+      }
+    },
+    {
+      "building_id": "building_0031",
+      "name": "体育馆031",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2509,
+      "counts": {
+        "study_seat": 747,
+        "parcel_locker": 498,
+        "restroom": 369,
+        "printing_point": 258,
+        "water_dispenser": 379,
+        "charging_station": 258
+      }
+    },
+    {
+      "building_id": "building_0032",
+      "name": "服务楼032",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2503,
+      "counts": {
+        "parcel_locker": 486,
+        "restroom": 372,
+        "study_seat": 738,
+        "charging_station": 252,
+        "printing_point": 266,
+        "water_dispenser": 389
+      }
+    },
+    {
+      "building_id": "building_0033",
+      "name": "教学楼033",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2582,
+      "counts": {
+        "study_seat": 735,
+        "parcel_locker": 522,
+        "restroom": 383,
+        "charging_station": 259,
+        "water_dispenser": 399,
+        "printing_point": 284
+      }
+    },
+    {
+      "building_id": "building_0034",
+      "name": "宿舍034",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2589,
+      "counts": {
+        "study_seat": 738,
+        "parcel_locker": 546,
+        "restroom": 380,
+        "charging_station": 255,
+        "water_dispenser": 397,
+        "printing_point": 273
+      }
+    },
+    {
+      "building_id": "building_0035",
+      "name": "图书馆035",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2637,
+      "counts": {
+        "study_seat": 782,
+        "parcel_locker": 546,
+        "restroom": 397,
+        "water_dispenser": 385,
+        "charging_station": 255,
+        "printing_point": 272
+      }
+    },
+    {
+      "building_id": "building_0036",
+      "name": "食堂036",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2658,
+      "counts": {
+        "parcel_locker": 561,
+        "study_seat": 776,
+        "restroom": 412,
+        "water_dispenser": 385,
+        "charging_station": 249,
+        "printing_point": 275
+      }
+    },
+    {
+      "building_id": "building_0037",
+      "name": "行政楼037",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2690,
+      "counts": {
+        "charging_station": 258,
+        "restroom": 436,
+        "study_seat": 790,
+        "parcel_locker": 553,
+        "printing_point": 277,
+        "water_dispenser": 376
+      }
+    },
+    {
+      "building_id": "building_0038",
+      "name": "实验楼038",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2412,
+      "counts": {
+        "study_seat": 711,
+        "parcel_locker": 490,
+        "restroom": 396,
+        "charging_station": 237,
+        "printing_point": 240,
+        "water_dispenser": 338
+      }
+    },
+    {
+      "building_id": "building_0039",
+      "name": "体育馆039",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1976,
+      "counts": {
+        "parcel_locker": 387,
+        "study_seat": 594,
+        "restroom": 328,
+        "printing_point": 202,
+        "water_dispenser": 275,
+        "charging_station": 190
+      }
+    },
+    {
+      "building_id": "building_0040",
+      "name": "服务楼040",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1481,
+      "counts": {
+        "parcel_locker": 282,
+        "restroom": 251,
+        "study_seat": 439,
+        "charging_station": 143,
+        "printing_point": 155,
+        "water_dispenser": 211
+      }
+    },
+    {
+      "building_id": "building_0041",
+      "name": "教学楼041",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1749,
+      "counts": {
+        "parcel_locker": 330,
+        "study_seat": 527,
+        "restroom": 259,
+        "water_dispenser": 294,
+        "printing_point": 176,
+        "charging_station": 163
+      }
+    },
+    {
+      "building_id": "building_0042",
+      "name": "宿舍042",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2254,
+      "counts": {
+        "printing_point": 228,
+        "water_dispenser": 375,
+        "restroom": 337,
+        "parcel_locker": 432,
+        "study_seat": 669,
+        "charging_station": 213
+      }
+    },
+    {
+      "building_id": "building_0043",
+      "name": "图书馆043",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2703,
+      "counts": {
+        "parcel_locker": 533,
+        "study_seat": 820,
+        "restroom": 386,
+        "charging_station": 263,
+        "water_dispenser": 430,
+        "printing_point": 271
+      }
+    },
+    {
+      "building_id": "building_0044",
+      "name": "食堂044",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2952,
+      "counts": {
+        "study_seat": 915,
+        "parcel_locker": 567,
+        "restroom": 413,
+        "water_dispenser": 465,
+        "printing_point": 292,
+        "charging_station": 300
+      }
+    },
+    {
+      "building_id": "building_0045",
+      "name": "行政楼045",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2938,
+      "counts": {
+        "study_seat": 929,
+        "parcel_locker": 576,
+        "restroom": 394,
+        "water_dispenser": 458,
+        "charging_station": 294,
+        "printing_point": 287
+      }
+    },
+    {
+      "building_id": "building_0046",
+      "name": "实验楼046",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2898,
+      "counts": {
+        "study_seat": 918,
+        "restroom": 392,
+        "parcel_locker": 576,
+        "charging_station": 288,
+        "water_dispenser": 447,
+        "printing_point": 277
+      }
+    },
+    {
+      "building_id": "building_0047",
+      "name": "体育馆047",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2986,
+      "counts": {
+        "charging_station": 297,
+        "restroom": 418,
+        "study_seat": 929,
+        "parcel_locker": 625,
+        "printing_point": 286,
+        "water_dispenser": 431
+      }
+    },
+    {
+      "building_id": "building_0048",
+      "name": "服务楼048",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2988,
+      "counts": {
+        "parcel_locker": 630,
+        "restroom": 418,
+        "study_seat": 940,
+        "charging_station": 294,
+        "printing_point": 277,
+        "water_dispenser": 429
+      }
+    },
+    {
+      "building_id": "building_0049",
+      "name": "教学楼049",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2958,
+      "counts": {
+        "study_seat": 907,
+        "parcel_locker": 613,
+        "restroom": 442,
+        "charging_station": 283,
+        "water_dispenser": 424,
+        "printing_point": 289
+      }
+    },
+    {
+      "building_id": "building_0050",
+      "name": "宿舍050",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2988,
+      "counts": {
+        "study_seat": 911,
+        "restroom": 443,
+        "parcel_locker": 597,
+        "charging_station": 304,
+        "printing_point": 291,
+        "water_dispenser": 442
+      }
+    },
+    {
+      "building_id": "building_0051",
+      "name": "图书馆051",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2899,
+      "counts": {
+        "printing_point": 305,
+        "water_dispenser": 423,
+        "restroom": 423,
+        "parcel_locker": 578,
+        "study_seat": 887,
+        "charging_station": 283
+      }
+    },
+    {
+      "building_id": "building_0052",
+      "name": "食堂052",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3070,
+      "counts": {
+        "charging_station": 298,
+        "water_dispenser": 446,
+        "printing_point": 329,
+        "restroom": 452,
+        "parcel_locker": 613,
+        "study_seat": 932
+      }
+    },
+    {
+      "building_id": "building_0053",
+      "name": "行政楼053",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3001,
+      "counts": {
+        "study_seat": 893,
+        "parcel_locker": 597,
+        "restroom": 428,
+        "water_dispenser": 456,
+        "printing_point": 328,
+        "charging_station": 299
+      }
+    },
+    {
+      "building_id": "building_0054",
+      "name": "实验楼054",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3026,
+      "counts": {
+        "printing_point": 319,
+        "water_dispenser": 449,
+        "restroom": 439,
+        "study_seat": 890,
+        "parcel_locker": 628,
+        "charging_station": 301
+      }
+    },
+    {
+      "building_id": "building_0055",
+      "name": "体育馆055",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3082,
+      "counts": {
+        "study_seat": 888,
+        "restroom": 465,
+        "parcel_locker": 647,
+        "charging_station": 302,
+        "printing_point": 326,
+        "water_dispenser": 454
+      }
+    },
+    {
+      "building_id": "building_0056",
+      "name": "服务楼056",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3120,
+      "counts": {
+        "printing_point": 328,
+        "restroom": 501,
+        "study_seat": 901,
+        "parcel_locker": 637,
+        "charging_station": 302,
+        "water_dispenser": 451
+      }
+    },
+    {
+      "building_id": "building_0057",
+      "name": "教学楼057",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3104,
+      "counts": {
+        "restroom": 508,
+        "printing_point": 320,
+        "water_dispenser": 435,
+        "study_seat": 907,
+        "parcel_locker": 631,
+        "charging_station": 303
+      }
+    },
+    {
+      "building_id": "building_0058",
+      "name": "宿舍058",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2897,
+      "counts": {
+        "water_dispenser": 409,
+        "restroom": 492,
+        "parcel_locker": 589,
+        "study_seat": 837,
+        "charging_station": 278,
+        "printing_point": 292
+      }
+    },
+    {
+      "building_id": "building_0059",
+      "name": "图书馆059",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2353,
+      "counts": {
+        "water_dispenser": 331,
+        "restroom": 406,
+        "printing_point": 242,
+        "study_seat": 677,
+        "parcel_locker": 464,
+        "charging_station": 233
+      }
+    },
+    {
+      "building_id": "building_0060",
+      "name": "食堂060",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1826,
+      "counts": {
+        "parcel_locker": 341,
+        "study_seat": 539,
+        "restroom": 306,
+        "water_dispenser": 270,
+        "charging_station": 174,
+        "printing_point": 196
+      }
+    },
+    {
+      "building_id": "building_0061",
+      "name": "行政楼061",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1744,
+      "counts": {
+        "charging_station": 159,
+        "printing_point": 174,
+        "parcel_locker": 330,
+        "study_seat": 523,
+        "restroom": 264,
+        "water_dispenser": 294
+      }
+    },
+    {
+      "building_id": "building_0062",
+      "name": "实验楼062",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2398,
+      "counts": {
+        "study_seat": 712,
+        "restroom": 361,
+        "parcel_locker": 453,
+        "charging_station": 239,
+        "printing_point": 236,
+        "water_dispenser": 397
+      }
+    },
+    {
+      "building_id": "building_0063",
+      "name": "体育馆063",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2788,
+      "counts": {
+        "study_seat": 856,
+        "parcel_locker": 519,
+        "restroom": 414,
+        "printing_point": 268,
+        "water_dispenser": 456,
+        "charging_station": 275
+      }
+    },
+    {
+      "building_id": "building_0064",
+      "name": "服务楼064",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3081,
+      "counts": {
+        "restroom": 435,
+        "water_dispenser": 487,
+        "printing_point": 286,
+        "parcel_locker": 571,
+        "study_seat": 991,
+        "charging_station": 311
+      }
+    },
+    {
+      "building_id": "building_0065",
+      "name": "教学楼065",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3097,
+      "counts": {
+        "restroom": 426,
+        "water_dispenser": 471,
+        "printing_point": 300,
+        "study_seat": 998,
+        "parcel_locker": 578,
+        "charging_station": 324
+      }
+    },
+    {
+      "building_id": "building_0066",
+      "name": "宿舍066",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3036,
+      "counts": {
+        "study_seat": 970,
+        "parcel_locker": 591,
+        "restroom": 431,
+        "water_dispenser": 448,
+        "printing_point": 285,
+        "charging_station": 311
+      }
+    },
+    {
+      "building_id": "building_0067",
+      "name": "图书馆067",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3106,
+      "counts": {
+        "study_seat": 961,
+        "parcel_locker": 644,
+        "restroom": 435,
+        "printing_point": 287,
+        "charging_station": 322,
+        "water_dispenser": 457
+      }
+    },
+    {
+      "building_id": "building_0068",
+      "name": "食堂068",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3052,
+      "counts": {
+        "parcel_locker": 625,
+        "restroom": 446,
+        "study_seat": 968,
+        "charging_station": 312,
+        "water_dispenser": 423,
+        "printing_point": 278
+      }
+    },
+    {
+      "building_id": "building_0069",
+      "name": "行政楼069",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3066,
+      "counts": {
+        "study_seat": 958,
+        "parcel_locker": 638,
+        "restroom": 451,
+        "printing_point": 275,
+        "water_dispenser": 439,
+        "charging_station": 305
+      }
+    },
+    {
+      "building_id": "building_0070",
+      "name": "实验楼070",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3104,
+      "counts": {
+        "parcel_locker": 640,
+        "study_seat": 946,
+        "restroom": 453,
+        "charging_station": 321,
+        "water_dispenser": 445,
+        "printing_point": 299
+      }
+    },
+    {
+      "building_id": "building_0071",
+      "name": "体育馆071",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3089,
+      "counts": {
+        "water_dispenser": 430,
+        "restroom": 459,
+        "printing_point": 316,
+        "parcel_locker": 646,
+        "study_seat": 927,
+        "charging_station": 311
+      }
+    },
+    {
+      "building_id": "building_0072",
+      "name": "服务楼072",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3143,
+      "counts": {
+        "water_dispenser": 464,
+        "restroom": 467,
+        "printing_point": 323,
+        "parcel_locker": 627,
+        "study_seat": 958,
+        "charging_station": 304
+      }
+    },
+    {
+      "building_id": "building_0073",
+      "name": "教学楼073",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3227,
+      "counts": {
+        "printing_point": 338,
+        "restroom": 460,
+        "study_seat": 978,
+        "charging_station": 314,
+        "parcel_locker": 665,
+        "water_dispenser": 472
+      }
+    },
+    {
+      "building_id": "building_0074",
+      "name": "宿舍074",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3140,
+      "counts": {
+        "printing_point": 334,
+        "restroom": 469,
+        "study_seat": 939,
+        "parcel_locker": 630,
+        "charging_station": 303,
+        "water_dispenser": 465
+      }
+    },
+    {
+      "building_id": "building_0075",
+      "name": "图书馆075",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3184,
+      "counts": {
+        "printing_point": 349,
+        "restroom": 488,
+        "water_dispenser": 468,
+        "study_seat": 921,
+        "parcel_locker": 656,
+        "charging_station": 302
+      }
+    },
+    {
+      "building_id": "building_0076",
+      "name": "食堂076",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3251,
+      "counts": {
+        "charging_station": 313,
+        "restroom": 531,
+        "study_seat": 925,
+        "water_dispenser": 467,
+        "parcel_locker": 675,
+        "printing_point": 340
+      }
+    },
+    {
+      "building_id": "building_0077",
+      "name": "行政楼077",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3183,
+      "counts": {
+        "parcel_locker": 635,
+        "restroom": 540,
+        "study_seat": 907,
+        "charging_station": 316,
+        "water_dispenser": 467,
+        "printing_point": 318
+      }
+    },
+    {
+      "building_id": "building_0078",
+      "name": "实验楼078",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3024,
+      "counts": {
+        "restroom": 518,
+        "water_dispenser": 434,
+        "printing_point": 302,
+        "study_seat": 873,
+        "parcel_locker": 605,
+        "charging_station": 292
+      }
+    },
+    {
+      "building_id": "building_0079",
+      "name": "体育馆079",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2508,
+      "counts": {
+        "water_dispenser": 353,
+        "restroom": 438,
+        "printing_point": 253,
+        "study_seat": 731,
+        "parcel_locker": 488,
+        "charging_station": 245
+      }
+    },
+    {
+      "building_id": "building_0080",
+      "name": "服务楼080",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1865,
+      "counts": {
+        "charging_station": 187,
+        "restroom": 329,
+        "study_seat": 533,
+        "parcel_locker": 342,
+        "printing_point": 199,
+        "water_dispenser": 275
+      }
+    },
+    {
+      "building_id": "building_0081",
+      "name": "教学楼081",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1802,
+      "counts": {
+        "charging_station": 179,
+        "restroom": 272,
+        "study_seat": 552,
+        "parcel_locker": 324,
+        "printing_point": 186,
+        "water_dispenser": 289
+      }
+    },
+    {
+      "building_id": "building_0082",
+      "name": "宿舍082",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2321,
+      "counts": {
+        "study_seat": 693,
+        "restroom": 361,
+        "parcel_locker": 430,
+        "charging_station": 235,
+        "water_dispenser": 364,
+        "printing_point": 238
+      }
+    },
+    {
+      "building_id": "building_0083",
+      "name": "图书馆083",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2892,
+      "counts": {
+        "water_dispenser": 461,
+        "printing_point": 284,
+        "restroom": 421,
+        "parcel_locker": 539,
+        "study_seat": 896,
+        "charging_station": 291
+      }
+    },
+    {
+      "building_id": "building_0084",
+      "name": "食堂084",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3052,
+      "counts": {
+        "parcel_locker": 583,
+        "study_seat": 968,
+        "restroom": 431,
+        "water_dispenser": 477,
+        "charging_station": 310,
+        "printing_point": 283
+      }
+    },
+    {
+      "building_id": "building_0085",
+      "name": "行政楼085",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3091,
+      "counts": {
+        "parcel_locker": 591,
+        "study_seat": 985,
+        "restroom": 435,
+        "water_dispenser": 471,
+        "printing_point": 295,
+        "charging_station": 314
+      }
+    },
+    {
+      "building_id": "building_0086",
+      "name": "实验楼086",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3078,
+      "counts": {
+        "charging_station": 318,
+        "restroom": 414,
+        "parcel_locker": 608,
+        "study_seat": 981,
+        "printing_point": 300,
+        "water_dispenser": 457
+      }
+    },
+    {
+      "building_id": "building_0087",
+      "name": "体育馆087",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3116,
+      "counts": {
+        "study_seat": 973,
+        "restroom": 428,
+        "parcel_locker": 616,
+        "charging_station": 329,
+        "water_dispenser": 463,
+        "printing_point": 307
+      }
+    },
+    {
+      "building_id": "building_0088",
+      "name": "服务楼088",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3043,
+      "counts": {
+        "restroom": 433,
+        "water_dispenser": 430,
+        "printing_point": 291,
+        "parcel_locker": 625,
+        "study_seat": 949,
+        "charging_station": 315
+      }
+    },
+    {
+      "building_id": "building_0089",
+      "name": "教学楼089",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3072,
+      "counts": {
+        "study_seat": 946,
+        "parcel_locker": 627,
+        "restroom": 440,
+        "water_dispenser": 441,
+        "charging_station": 326,
+        "printing_point": 292
+      }
+    },
+    {
+      "building_id": "building_0090",
+      "name": "宿舍090",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3146,
+      "counts": {
+        "parcel_locker": 656,
+        "restroom": 455,
+        "study_seat": 947,
+        "charging_station": 325,
+        "printing_point": 306,
+        "water_dispenser": 457
+      }
+    },
+    {
+      "building_id": "building_0091",
+      "name": "图书馆091",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2995,
+      "counts": {
+        "parcel_locker": 628,
+        "study_seat": 895,
+        "restroom": 435,
+        "printing_point": 299,
+        "charging_station": 309,
+        "water_dispenser": 429
+      }
+    },
+    {
+      "building_id": "building_0092",
+      "name": "食堂092",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3184,
+      "counts": {
+        "parcel_locker": 649,
+        "study_seat": 956,
+        "restroom": 468,
+        "water_dispenser": 456,
+        "charging_station": 321,
+        "printing_point": 334
+      }
+    },
+    {
+      "building_id": "building_0093",
+      "name": "行政楼093",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3163,
+      "counts": {
+        "printing_point": 324,
+        "charging_station": 312,
+        "study_seat": 974,
+        "parcel_locker": 626,
+        "restroom": 455,
+        "water_dispenser": 472
+      }
+    },
+    {
+      "building_id": "building_0094",
+      "name": "实验楼094",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3220,
+      "counts": {
+        "charging_station": 321,
+        "restroom": 463,
+        "parcel_locker": 659,
+        "study_seat": 968,
+        "printing_point": 335,
+        "water_dispenser": 474
+      }
+    },
+    {
+      "building_id": "building_0095",
+      "name": "体育馆095",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3196,
+      "counts": {
+        "restroom": 486,
+        "water_dispenser": 473,
+        "printing_point": 331,
+        "study_seat": 930,
+        "parcel_locker": 658,
+        "charging_station": 318
+      }
+    },
+    {
+      "building_id": "building_0096",
+      "name": "服务楼096",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3262,
+      "counts": {
+        "parcel_locker": 671,
+        "study_seat": 946,
+        "restroom": 526,
+        "charging_station": 315,
+        "printing_point": 328,
+        "water_dispenser": 476
+      }
+    },
+    {
+      "building_id": "building_0097",
+      "name": "教学楼097",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3280,
+      "counts": {
+        "study_seat": 944,
+        "restroom": 541,
+        "parcel_locker": 667,
+        "charging_station": 319,
+        "water_dispenser": 492,
+        "printing_point": 317
+      }
+    },
+    {
+      "building_id": "building_0098",
+      "name": "宿舍098",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3011,
+      "counts": {
+        "study_seat": 884,
+        "restroom": 499,
+        "parcel_locker": 599,
+        "charging_station": 296,
+        "printing_point": 292,
+        "water_dispenser": 441
+      }
+    },
+    {
+      "building_id": "building_0099",
+      "name": "图书馆099",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2565,
+      "counts": {
+        "restroom": 446,
+        "printing_point": 260,
+        "water_dispenser": 369,
+        "parcel_locker": 503,
+        "study_seat": 745,
+        "charging_station": 242
+      }
+    },
+    {
+      "building_id": "building_0100",
+      "name": "食堂100",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1949,
+      "counts": {
+        "printing_point": 197,
+        "restroom": 356,
+        "parcel_locker": 374,
+        "study_seat": 553,
+        "charging_station": 188,
+        "water_dispenser": 281
+      }
+    },
+    {
+      "building_id": "building_0101",
+      "name": "行政楼101",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1816,
+      "counts": {
+        "restroom": 279,
+        "water_dispenser": 280,
+        "printing_point": 188,
+        "study_seat": 556,
+        "parcel_locker": 343,
+        "charging_station": 170
+      }
+    },
+    {
+      "building_id": "building_0102",
+      "name": "实验楼102",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2376,
+      "counts": {
+        "study_seat": 716,
+        "parcel_locker": 451,
+        "restroom": 351,
+        "charging_station": 244,
+        "water_dispenser": 374,
+        "printing_point": 240
+      }
+    },
+    {
+      "building_id": "building_0103",
+      "name": "体育馆103",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2871,
+      "counts": {
+        "parcel_locker": 555,
+        "study_seat": 883,
+        "restroom": 414,
+        "water_dispenser": 443,
+        "charging_station": 287,
+        "printing_point": 289
+      }
+    },
+    {
+      "building_id": "building_0104",
+      "name": "服务楼104",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2999,
+      "counts": {
+        "charging_station": 301,
+        "restroom": 427,
+        "parcel_locker": 577,
+        "study_seat": 941,
+        "printing_point": 297,
+        "water_dispenser": 456
+      }
+    },
+    {
+      "building_id": "building_0105",
+      "name": "教学楼105",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3102,
+      "counts": {
+        "parcel_locker": 593,
+        "study_seat": 992,
+        "restroom": 435,
+        "water_dispenser": 458,
+        "charging_station": 329,
+        "printing_point": 295
+      }
+    },
+    {
+      "building_id": "building_0106",
+      "name": "宿舍106",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3112,
+      "counts": {
+        "study_seat": 965,
+        "restroom": 430,
+        "parcel_locker": 607,
+        "charging_station": 339,
+        "printing_point": 302,
+        "water_dispenser": 469
+      }
+    },
+    {
+      "building_id": "building_0107",
+      "name": "图书馆107",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3093,
+      "counts": {
+        "water_dispenser": 454,
+        "charging_station": 335,
+        "study_seat": 959,
+        "parcel_locker": 628,
+        "restroom": 423,
+        "printing_point": 294
+      }
+    },
+    {
+      "building_id": "building_0108",
+      "name": "食堂108",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3085,
+      "counts": {
+        "study_seat": 954,
+        "restroom": 419,
+        "parcel_locker": 624,
+        "charging_station": 337,
+        "water_dispenser": 471,
+        "printing_point": 280
+      }
+    },
+    {
+      "building_id": "building_0109",
+      "name": "行政楼109",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3054,
+      "counts": {
+        "restroom": 428,
+        "water_dispenser": 434,
+        "printing_point": 300,
+        "parcel_locker": 607,
+        "study_seat": 945,
+        "charging_station": 340
+      }
+    },
+    {
+      "building_id": "building_0110",
+      "name": "实验楼110",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3015,
+      "counts": {
+        "water_dispenser": 453,
+        "restroom": 430,
+        "printing_point": 290,
+        "study_seat": 906,
+        "parcel_locker": 602,
+        "charging_station": 334
+      }
+    },
+    {
+      "building_id": "building_0111",
+      "name": "体育馆111",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3055,
+      "counts": {
+        "water_dispenser": 449,
+        "printing_point": 296,
+        "restroom": 463,
+        "study_seat": 905,
+        "parcel_locker": 618,
+        "charging_station": 324
+      }
+    },
+    {
+      "building_id": "building_0112",
+      "name": "服务楼112",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3152,
+      "counts": {
+        "water_dispenser": 466,
+        "restroom": 463,
+        "parcel_locker": 620,
+        "study_seat": 965,
+        "charging_station": 315,
+        "printing_point": 323
+      }
+    },
+    {
+      "building_id": "building_0113",
+      "name": "教学楼113",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3167,
+      "counts": {
+        "charging_station": 304,
+        "water_dispenser": 469,
+        "study_seat": 981,
+        "parcel_locker": 612,
+        "restroom": 474,
+        "printing_point": 327
+      }
+    },
+    {
+      "building_id": "building_0114",
+      "name": "宿舍114",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3116,
+      "counts": {
+        "parcel_locker": 616,
+        "study_seat": 946,
+        "restroom": 454,
+        "charging_station": 309,
+        "water_dispenser": 467,
+        "printing_point": 324
+      }
+    },
+    {
+      "building_id": "building_0115",
+      "name": "图书馆115",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3181,
+      "counts": {
+        "study_seat": 933,
+        "parcel_locker": 634,
+        "restroom": 473,
+        "water_dispenser": 480,
+        "charging_station": 321,
+        "printing_point": 340
+      }
+    },
+    {
+      "building_id": "building_0116",
+      "name": "食堂116",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3216,
+      "counts": {
+        "study_seat": 931,
+        "parcel_locker": 659,
+        "restroom": 497,
+        "printing_point": 319,
+        "charging_station": 315,
+        "water_dispenser": 495
+      }
+    },
+    {
+      "building_id": "building_0117",
+      "name": "行政楼117",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3264,
+      "counts": {
+        "charging_station": 327,
+        "restroom": 516,
+        "study_seat": 959,
+        "parcel_locker": 659,
+        "water_dispenser": 483,
+        "printing_point": 320
+      }
+    },
+    {
+      "building_id": "building_0118",
+      "name": "实验楼118",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3008,
+      "counts": {
+        "printing_point": 304,
+        "restroom": 487,
+        "study_seat": 863,
+        "charging_station": 300,
+        "parcel_locker": 601,
+        "water_dispenser": 453
+      }
+    },
+    {
+      "building_id": "building_0119",
+      "name": "体育馆119",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2552,
+      "counts": {
+        "study_seat": 748,
+        "restroom": 430,
+        "parcel_locker": 478,
+        "charging_station": 265,
+        "water_dispenser": 363,
+        "printing_point": 268
+      }
+    },
+    {
+      "building_id": "building_0120",
+      "name": "服务楼120",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1839,
+      "counts": {
+        "printing_point": 191,
+        "restroom": 320,
+        "study_seat": 534,
+        "charging_station": 179,
+        "parcel_locker": 354,
+        "water_dispenser": 261
+      }
+    },
+    {
+      "building_id": "building_0121",
+      "name": "教学楼121",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1811,
+      "counts": {
+        "printing_point": 183,
+        "restroom": 276,
+        "water_dispenser": 280,
+        "study_seat": 540,
+        "parcel_locker": 343,
+        "charging_station": 189
+      }
+    },
+    {
+      "building_id": "building_0122",
+      "name": "宿舍122",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2473,
+      "counts": {
+        "study_seat": 750,
+        "restroom": 357,
+        "parcel_locker": 476,
+        "charging_station": 261,
+        "water_dispenser": 374,
+        "printing_point": 255
+      }
+    },
+    {
+      "building_id": "building_0123",
+      "name": "图书馆123",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2914,
+      "counts": {
+        "parcel_locker": 568,
+        "study_seat": 888,
+        "restroom": 419,
+        "printing_point": 305,
+        "charging_station": 304,
+        "water_dispenser": 430
+      }
+    },
+    {
+      "building_id": "building_0124",
+      "name": "食堂124",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3026,
+      "counts": {
+        "restroom": 426,
+        "printing_point": 319,
+        "water_dispenser": 435,
+        "study_seat": 929,
+        "parcel_locker": 591,
+        "charging_station": 326
+      }
+    },
+    {
+      "building_id": "building_0125",
+      "name": "行政楼125",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3143,
+      "counts": {
+        "restroom": 432,
+        "water_dispenser": 458,
+        "printing_point": 317,
+        "study_seat": 966,
+        "parcel_locker": 613,
+        "charging_station": 357
+      }
+    },
+    {
+      "building_id": "building_0126",
+      "name": "实验楼126",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3142,
+      "counts": {
+        "parcel_locker": 598,
+        "study_seat": 985,
+        "restroom": 426,
+        "charging_station": 349,
+        "printing_point": 314,
+        "water_dispenser": 470
+      }
+    },
+    {
+      "building_id": "building_0127",
+      "name": "体育馆127",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3147,
+      "counts": {
+        "study_seat": 966,
+        "restroom": 432,
+        "parcel_locker": 621,
+        "charging_station": 350,
+        "printing_point": 300,
+        "water_dispenser": 478
+      }
+    },
+    {
+      "building_id": "building_0128",
+      "name": "服务楼128",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3095,
+      "counts": {
+        "study_seat": 935,
+        "parcel_locker": 632,
+        "restroom": 424,
+        "charging_station": 342,
+        "water_dispenser": 475,
+        "printing_point": 287
+      }
+    },
+    {
+      "building_id": "building_0129",
+      "name": "教学楼129",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3094,
+      "counts": {
+        "charging_station": 335,
+        "restroom": 453,
+        "study_seat": 924,
+        "parcel_locker": 634,
+        "printing_point": 280,
+        "water_dispenser": 468
+      }
+    },
+    {
+      "building_id": "building_0130",
+      "name": "宿舍130",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3094,
+      "counts": {
+        "printing_point": 278,
+        "restroom": 458,
+        "parcel_locker": 632,
+        "study_seat": 924,
+        "charging_station": 344,
+        "water_dispenser": 458
+      }
+    },
+    {
+      "building_id": "building_0131",
+      "name": "图书馆131",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3117,
+      "counts": {
+        "parcel_locker": 629,
+        "study_seat": 935,
+        "restroom": 468,
+        "printing_point": 297,
+        "water_dispenser": 454,
+        "charging_station": 334
+      }
+    },
+    {
+      "building_id": "building_0132",
+      "name": "食堂132",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3123,
+      "counts": {
+        "water_dispenser": 453,
+        "printing_point": 303,
+        "restroom": 479,
+        "parcel_locker": 647,
+        "study_seat": 936,
+        "charging_station": 305
+      }
+    },
+    {
+      "building_id": "building_0133",
+      "name": "行政楼133",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3171,
+      "counts": {
+        "parcel_locker": 633,
+        "study_seat": 961,
+        "restroom": 479,
+        "charging_station": 304,
+        "water_dispenser": 473,
+        "printing_point": 321
+      }
+    },
+    {
+      "building_id": "building_0134",
+      "name": "实验楼134",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3162,
+      "counts": {
+        "water_dispenser": 467,
+        "restroom": 467,
+        "printing_point": 317,
+        "study_seat": 982,
+        "parcel_locker": 623,
+        "charging_station": 306
+      }
+    },
+    {
+      "building_id": "building_0135",
+      "name": "体育馆135",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3016,
+      "counts": {
+        "parcel_locker": 621,
+        "study_seat": 901,
+        "restroom": 446,
+        "water_dispenser": 442,
+        "charging_station": 305,
+        "printing_point": 301
+      }
+    },
+    {
+      "building_id": "building_0136",
+      "name": "服务楼136",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3126,
+      "counts": {
+        "study_seat": 930,
+        "parcel_locker": 633,
+        "restroom": 479,
+        "water_dispenser": 474,
+        "printing_point": 304,
+        "charging_station": 306
+      }
+    },
+    {
+      "building_id": "building_0137",
+      "name": "教学楼137",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3252,
+      "counts": {
+        "study_seat": 945,
+        "parcel_locker": 631,
+        "restroom": 535,
+        "water_dispenser": 491,
+        "charging_station": 323,
+        "printing_point": 327
+      }
+    },
+    {
+      "building_id": "building_0138",
+      "name": "宿舍138",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2957,
+      "counts": {
+        "study_seat": 840,
+        "restroom": 507,
+        "parcel_locker": 570,
+        "charging_station": 298,
+        "water_dispenser": 438,
+        "printing_point": 304
+      }
+    },
+    {
+      "building_id": "building_0139",
+      "name": "图书馆139",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2451,
+      "counts": {
+        "study_seat": 700,
+        "parcel_locker": 477,
+        "restroom": 408,
+        "water_dispenser": 348,
+        "printing_point": 264,
+        "charging_station": 254
+      }
+    },
+    {
+      "building_id": "building_0140",
+      "name": "食堂140",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1848,
+      "counts": {
+        "study_seat": 533,
+        "restroom": 306,
+        "parcel_locker": 363,
+        "charging_station": 179,
+        "water_dispenser": 268,
+        "printing_point": 199
+      }
+    },
+    {
+      "building_id": "building_0141",
+      "name": "行政楼141",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1779,
+      "counts": {
+        "water_dispenser": 268,
+        "restroom": 259,
+        "printing_point": 177,
+        "parcel_locker": 342,
+        "study_seat": 545,
+        "charging_station": 188
+      }
+    },
+    {
+      "building_id": "building_0142",
+      "name": "实验楼142",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2304,
+      "counts": {
+        "study_seat": 715,
+        "parcel_locker": 444,
+        "restroom": 334,
+        "charging_station": 232,
+        "water_dispenser": 346,
+        "printing_point": 233
+      }
+    },
+    {
+      "building_id": "building_0143",
+      "name": "体育馆143",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2710,
+      "counts": {
+        "study_seat": 836,
+        "parcel_locker": 528,
+        "restroom": 379,
+        "water_dispenser": 399,
+        "printing_point": 277,
+        "charging_station": 291
+      }
+    },
+    {
+      "building_id": "building_0144",
+      "name": "服务楼144",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3060,
+      "counts": {
+        "study_seat": 959,
+        "restroom": 429,
+        "parcel_locker": 593,
+        "charging_station": 320,
+        "water_dispenser": 438,
+        "printing_point": 321
+      }
+    },
+    {
+      "building_id": "building_0145",
+      "name": "教学楼145",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3002,
+      "counts": {
+        "charging_station": 329,
+        "restroom": 414,
+        "study_seat": 920,
+        "parcel_locker": 598,
+        "printing_point": 306,
+        "water_dispenser": 435
+      }
+    },
+    {
+      "building_id": "building_0146",
+      "name": "宿舍146",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3041,
+      "counts": {
+        "water_dispenser": 458,
+        "restroom": 419,
+        "printing_point": 308,
+        "study_seat": 909,
+        "parcel_locker": 608,
+        "charging_station": 339
+      }
+    },
+    {
+      "building_id": "building_0147",
+      "name": "图书馆147",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2985,
+      "counts": {
+        "printing_point": 294,
+        "charging_station": 340,
+        "parcel_locker": 597,
+        "study_seat": 897,
+        "restroom": 404,
+        "water_dispenser": 453
+      }
+    },
+    {
+      "building_id": "building_0148",
+      "name": "食堂148",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2946,
+      "counts": {
+        "charging_station": 318,
+        "restroom": 417,
+        "parcel_locker": 606,
+        "study_seat": 861,
+        "water_dispenser": 456,
+        "printing_point": 288
+      }
+    },
+    {
+      "building_id": "building_0149",
+      "name": "行政楼149",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2983,
+      "counts": {
+        "study_seat": 874,
+        "parcel_locker": 611,
+        "restroom": 449,
+        "charging_station": 317,
+        "water_dispenser": 469,
+        "printing_point": 263
+      }
+    },
+    {
+      "building_id": "building_0150",
+      "name": "实验楼150",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 3045,
+      "counts": {
+        "study_seat": 891,
+        "parcel_locker": 619,
+        "restroom": 470,
+        "charging_station": 322,
+        "printing_point": 263,
+        "water_dispenser": 480
+      }
+    },
+    {
+      "building_id": "building_0151",
+      "name": "体育馆151",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 3085,
+      "counts": {
+        "study_seat": 924,
+        "parcel_locker": 626,
+        "restroom": 471,
+        "water_dispenser": 462,
+        "printing_point": 288,
+        "charging_station": 314
+      }
+    },
+    {
+      "building_id": "building_0152",
+      "name": "服务楼152",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 3100,
+      "counts": {
+        "printing_point": 289,
+        "restroom": 477,
+        "parcel_locker": 633,
+        "study_seat": 946,
+        "charging_station": 291,
+        "water_dispenser": 464
+      }
+    },
+    {
+      "building_id": "building_0153",
+      "name": "教学楼153",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 3065,
+      "counts": {
+        "study_seat": 921,
+        "parcel_locker": 620,
+        "restroom": 476,
+        "printing_point": 291,
+        "water_dispenser": 471,
+        "charging_station": 286
+      }
+    },
+    {
+      "building_id": "building_0154",
+      "name": "宿舍154",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 3088,
+      "counts": {
+        "restroom": 481,
+        "water_dispenser": 452,
+        "printing_point": 298,
+        "study_seat": 937,
+        "parcel_locker": 618,
+        "charging_station": 302
+      }
+    },
+    {
+      "building_id": "building_0155",
+      "name": "图书馆155",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 3105,
+      "counts": {
+        "study_seat": 920,
+        "parcel_locker": 633,
+        "restroom": 467,
+        "water_dispenser": 468,
+        "charging_station": 310,
+        "printing_point": 307
+      }
+    },
+    {
+      "building_id": "building_0156",
+      "name": "食堂156",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 3130,
+      "counts": {
+        "water_dispenser": 482,
+        "restroom": 485,
+        "parcel_locker": 639,
+        "charging_station": 306,
+        "study_seat": 904,
+        "printing_point": 314
+      }
+    },
+    {
+      "building_id": "building_0157",
+      "name": "行政楼157",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 3149,
+      "counts": {
+        "study_seat": 923,
+        "parcel_locker": 632,
+        "restroom": 498,
+        "charging_station": 305,
+        "water_dispenser": 467,
+        "printing_point": 324
+      }
+    },
+    {
+      "building_id": "building_0158",
+      "name": "实验楼158",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2843,
+      "counts": {
+        "water_dispenser": 431,
+        "restroom": 456,
+        "printing_point": 284,
+        "study_seat": 820,
+        "parcel_locker": 572,
+        "charging_station": 280
+      }
+    },
+    {
+      "building_id": "building_0159",
+      "name": "体育馆159",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2401,
+      "counts": {
+        "water_dispenser": 359,
+        "restroom": 397,
+        "printing_point": 237,
+        "study_seat": 689,
+        "parcel_locker": 481,
+        "charging_station": 238
+      }
+    },
+    {
+      "building_id": "building_0160",
+      "name": "服务楼160",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1841,
+      "counts": {
+        "printing_point": 189,
+        "restroom": 289,
+        "study_seat": 544,
+        "charging_station": 181,
+        "parcel_locker": 364,
+        "water_dispenser": 274
+      }
+    },
+    {
+      "building_id": "building_0161",
+      "name": "教学楼161",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1489,
+      "counts": {
+        "study_seat": 460,
+        "parcel_locker": 295,
+        "restroom": 203,
+        "water_dispenser": 217,
+        "charging_station": 159,
+        "printing_point": 155
+      }
+    },
+    {
+      "building_id": "building_0162",
+      "name": "宿舍162",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1943,
+      "counts": {
+        "study_seat": 606,
+        "parcel_locker": 381,
+        "restroom": 267,
+        "charging_station": 209,
+        "water_dispenser": 279,
+        "printing_point": 201
+      }
+    },
+    {
+      "building_id": "building_0163",
+      "name": "图书馆163",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2305,
+      "counts": {
+        "charging_station": 254,
+        "water_dispenser": 324,
+        "parcel_locker": 458,
+        "study_seat": 715,
+        "restroom": 313,
+        "printing_point": 241
+      }
+    },
+    {
+      "building_id": "building_0164",
+      "name": "食堂164",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2452,
+      "counts": {
+        "parcel_locker": 480,
+        "study_seat": 758,
+        "restroom": 338,
+        "water_dispenser": 353,
+        "charging_station": 265,
+        "printing_point": 258
+      }
+    },
+    {
+      "building_id": "building_0165",
+      "name": "行政楼165",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2420,
+      "counts": {
+        "water_dispenser": 354,
+        "restroom": 326,
+        "printing_point": 260,
+        "charging_station": 254,
+        "parcel_locker": 495,
+        "study_seat": 731
+      }
+    },
+    {
+      "building_id": "building_0166",
+      "name": "实验楼166",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2512,
+      "counts": {
+        "water_dispenser": 376,
+        "restroom": 336,
+        "printing_point": 265,
+        "parcel_locker": 524,
+        "study_seat": 735,
+        "charging_station": 276
+      }
+    },
+    {
+      "building_id": "building_0167",
+      "name": "体育馆167",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2511,
+      "counts": {
+        "charging_station": 282,
+        "restroom": 337,
+        "study_seat": 732,
+        "parcel_locker": 525,
+        "printing_point": 254,
+        "water_dispenser": 381
+      }
+    },
+    {
+      "building_id": "building_0168",
+      "name": "服务楼168",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2519,
+      "counts": {
+        "parcel_locker": 525,
+        "study_seat": 722,
+        "restroom": 363,
+        "printing_point": 241,
+        "water_dispenser": 397,
+        "charging_station": 271
+      }
+    },
+    {
+      "building_id": "building_0169",
+      "name": "教学楼169",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2481,
+      "counts": {
+        "charging_station": 258,
+        "restroom": 373,
+        "parcel_locker": 532,
+        "study_seat": 703,
+        "water_dispenser": 392,
+        "printing_point": 223
+      }
+    },
+    {
+      "building_id": "building_0170",
+      "name": "宿舍170",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2556,
+      "counts": {
+        "study_seat": 732,
+        "restroom": 403,
+        "parcel_locker": 535,
+        "charging_station": 267,
+        "water_dispenser": 398,
+        "printing_point": 221
+      }
+    },
+    {
+      "building_id": "building_0171",
+      "name": "图书馆171",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2582,
+      "counts": {
+        "study_seat": 757,
+        "parcel_locker": 535,
+        "restroom": 399,
+        "water_dispenser": 405,
+        "printing_point": 226,
+        "charging_station": 260
+      }
+    },
+    {
+      "building_id": "building_0172",
+      "name": "食堂172",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 2589,
+      "counts": {
+        "study_seat": 752,
+        "parcel_locker": 543,
+        "restroom": 408,
+        "charging_station": 254,
+        "printing_point": 238,
+        "water_dispenser": 394
+      }
+    },
+    {
+      "building_id": "building_0173",
+      "name": "行政楼173",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 2587,
+      "counts": {
+        "restroom": 414,
+        "printing_point": 245,
+        "water_dispenser": 384,
+        "parcel_locker": 537,
+        "study_seat": 765,
+        "charging_station": 242
+      }
+    },
+    {
+      "building_id": "building_0174",
+      "name": "实验楼174",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 2599,
+      "counts": {
+        "charging_station": 251,
+        "printing_point": 248,
+        "study_seat": 753,
+        "restroom": 413,
+        "parcel_locker": 543,
+        "water_dispenser": 391
+      }
+    },
+    {
+      "building_id": "building_0175",
+      "name": "体育馆175",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 2608,
+      "counts": {
+        "study_seat": 773,
+        "restroom": 396,
+        "parcel_locker": 536,
+        "charging_station": 259,
+        "water_dispenser": 387,
+        "printing_point": 257
+      }
+    },
+    {
+      "building_id": "building_0176",
+      "name": "服务楼176",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 2611,
+      "counts": {
+        "printing_point": 268,
+        "restroom": 396,
+        "study_seat": 759,
+        "parcel_locker": 536,
+        "charging_station": 260,
+        "water_dispenser": 392
+      }
+    },
+    {
+      "building_id": "building_0177",
+      "name": "教学楼177",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 2633,
+      "counts": {
+        "charging_station": 253,
+        "water_dispenser": 383,
+        "study_seat": 763,
+        "parcel_locker": 565,
+        "restroom": 412,
+        "printing_point": 257
+      }
+    },
+    {
+      "building_id": "building_0178",
+      "name": "宿舍178",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 2440,
+      "counts": {
+        "printing_point": 242,
+        "restroom": 381,
+        "study_seat": 710,
+        "charging_station": 236,
+        "parcel_locker": 503,
+        "water_dispenser": 368
+      }
+    },
+    {
+      "building_id": "building_0179",
+      "name": "图书馆179",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 2012,
+      "counts": {
+        "study_seat": 583,
+        "restroom": 326,
+        "parcel_locker": 396,
+        "charging_station": 198,
+        "water_dispenser": 303,
+        "printing_point": 206
+      }
+    },
+    {
+      "building_id": "building_0180",
+      "name": "食堂180",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1572,
+      "counts": {
+        "water_dispenser": 235,
+        "restroom": 250,
+        "printing_point": 166,
+        "study_seat": 452,
+        "parcel_locker": 319,
+        "charging_station": 150
+      }
+    },
+    {
+      "building_id": "building_0181",
+      "name": "行政楼181",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1085,
+      "counts": {
+        "parcel_locker": 219,
+        "study_seat": 330,
+        "restroom": 153,
+        "charging_station": 117,
+        "printing_point": 112,
+        "water_dispenser": 154
+      }
+    },
+    {
+      "building_id": "building_0182",
+      "name": "实验楼182",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1461,
+      "counts": {
+        "study_seat": 448,
+        "restroom": 190,
+        "parcel_locker": 291,
+        "charging_station": 167,
+        "printing_point": 156,
+        "water_dispenser": 209
+      }
+    },
+    {
+      "building_id": "building_0183",
+      "name": "体育馆183",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1780,
+      "counts": {
+        "study_seat": 537,
+        "restroom": 242,
+        "parcel_locker": 356,
+        "charging_station": 196,
+        "water_dispenser": 249,
+        "printing_point": 200
+      }
+    },
+    {
+      "building_id": "building_0184",
+      "name": "服务楼184",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1856,
+      "counts": {
+        "study_seat": 562,
+        "parcel_locker": 380,
+        "restroom": 244,
+        "charging_station": 204,
+        "printing_point": 200,
+        "water_dispenser": 266
+      }
+    },
+    {
+      "building_id": "building_0185",
+      "name": "教学楼185",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1839,
+      "counts": {
+        "charging_station": 190,
+        "restroom": 250,
+        "study_seat": 547,
+        "parcel_locker": 386,
+        "water_dispenser": 271,
+        "printing_point": 195
+      }
+    },
+    {
+      "building_id": "building_0186",
+      "name": "宿舍186",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1860,
+      "counts": {
+        "water_dispenser": 282,
+        "restroom": 241,
+        "printing_point": 193,
+        "study_seat": 550,
+        "parcel_locker": 391,
+        "charging_station": 203
+      }
+    },
+    {
+      "building_id": "building_0187",
+      "name": "图书馆187",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1929,
+      "counts": {
+        "printing_point": 198,
+        "restroom": 260,
+        "parcel_locker": 401,
+        "study_seat": 562,
+        "charging_station": 210,
+        "water_dispenser": 298
+      }
+    },
+    {
+      "building_id": "building_0188",
+      "name": "食堂188",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1875,
+      "counts": {
+        "water_dispenser": 290,
+        "restroom": 264,
+        "printing_point": 178,
+        "study_seat": 542,
+        "parcel_locker": 388,
+        "charging_station": 213
+      }
+    },
+    {
+      "building_id": "building_0189",
+      "name": "行政楼189",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1928,
+      "counts": {
+        "study_seat": 550,
+        "restroom": 294,
+        "parcel_locker": 407,
+        "charging_station": 195,
+        "printing_point": 173,
+        "water_dispenser": 309
+      }
+    },
+    {
+      "building_id": "building_0190",
+      "name": "实验楼190",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1856,
+      "counts": {
+        "restroom": 296,
+        "water_dispenser": 296,
+        "printing_point": 158,
+        "parcel_locker": 388,
+        "study_seat": 545,
+        "charging_station": 173
+      }
+    },
+    {
+      "building_id": "building_0191",
+      "name": "体育馆191",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1905,
+      "counts": {
+        "study_seat": 574,
+        "parcel_locker": 393,
+        "restroom": 305,
+        "water_dispenser": 293,
+        "charging_station": 188,
+        "printing_point": 152
+      }
+    },
+    {
+      "building_id": "building_0192",
+      "name": "服务楼192",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1930,
+      "counts": {
+        "water_dispenser": 298,
+        "printing_point": 167,
+        "restroom": 314,
+        "study_seat": 586,
+        "parcel_locker": 393,
+        "charging_station": 172
+      }
+    },
+    {
+      "building_id": "building_0193",
+      "name": "教学楼193",
+      "building_type": "teaching",
+      "category_count": 6,
+      "total": 1959,
+      "counts": {
+        "water_dispenser": 282,
+        "printing_point": 185,
+        "restroom": 314,
+        "study_seat": 602,
+        "parcel_locker": 399,
+        "charging_station": 177
+      }
+    },
+    {
+      "building_id": "building_0194",
+      "name": "宿舍194",
+      "building_type": "dormitory",
+      "category_count": 6,
+      "total": 1924,
+      "counts": {
+        "charging_station": 172,
+        "restroom": 314,
+        "parcel_locker": 401,
+        "study_seat": 572,
+        "printing_point": 183,
+        "water_dispenser": 282
+      }
+    },
+    {
+      "building_id": "building_0195",
+      "name": "图书馆195",
+      "building_type": "library",
+      "category_count": 6,
+      "total": 1967,
+      "counts": {
+        "study_seat": 570,
+        "parcel_locker": 412,
+        "restroom": 310,
+        "printing_point": 203,
+        "water_dispenser": 287,
+        "charging_station": 185
+      }
+    },
+    {
+      "building_id": "building_0196",
+      "name": "食堂196",
+      "building_type": "canteen",
+      "category_count": 6,
+      "total": 1989,
+      "counts": {
+        "printing_point": 192,
+        "restroom": 304,
+        "study_seat": 587,
+        "parcel_locker": 415,
+        "charging_station": 198,
+        "water_dispenser": 293
+      }
+    },
+    {
+      "building_id": "building_0197",
+      "name": "行政楼197",
+      "building_type": "administration",
+      "category_count": 6,
+      "total": 1957,
+      "counts": {
+        "water_dispenser": 289,
+        "restroom": 296,
+        "printing_point": 191,
+        "parcel_locker": 419,
+        "study_seat": 575,
+        "charging_station": 187
+      }
+    },
+    {
+      "building_id": "building_0198",
+      "name": "实验楼198",
+      "building_type": "laboratory",
+      "category_count": 6,
+      "total": 1847,
+      "counts": {
+        "study_seat": 535,
+        "parcel_locker": 377,
+        "restroom": 290,
+        "charging_station": 180,
+        "water_dispenser": 269,
+        "printing_point": 196
+      }
+    },
+    {
+      "building_id": "building_0199",
+      "name": "体育馆199",
+      "building_type": "sports",
+      "category_count": 6,
+      "total": 1551,
+      "counts": {
+        "printing_point": 161,
+        "restroom": 251,
+        "study_seat": 446,
+        "charging_station": 153,
+        "parcel_locker": 319,
+        "water_dispenser": 221
+      }
+    },
+    {
+      "building_id": "building_0200",
+      "name": "服务楼200",
+      "building_type": "service",
+      "category_count": 6,
+      "total": 1185,
+      "counts": {
+        "water_dispenser": 173,
+        "restroom": 193,
+        "printing_point": 135,
+        "study_seat": 338,
+        "parcel_locker": 233,
+        "charging_station": 113
+      }
+    }
+  ]
+}

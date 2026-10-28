@@ -4,3 +4,5 @@ fastapi==0.115.8
 uvicorn[standard]==0.34.0
 shapely==2.0.7
 pyproj==3.7.1
+httpx==0.28.1
+pytest==9.1.1

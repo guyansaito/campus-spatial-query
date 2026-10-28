@@ -1,5 +1,7 @@
 import os
 import sys
+import time
+from pathlib import Path
 
 from dotenv import load_dotenv
 from pymongo import MongoClient
@@ -8,7 +10,8 @@ from shapely.geometry import shape, mapping
 from shapely.ops import transform
 
 
-load_dotenv()
+ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(ROOT / ".env")
 
 # 北京区域使用 UTM 50N，单位为米，适合进行 300 米缓冲计算。
 TO_METERS = Transformer.from_crs(
@@ -52,7 +55,7 @@ def main() -> int:
         client.admin.command("ping")
         database = client[database_name]
         buildings = database["buildings"]
-
+        started = time.perf_counter()
         count = 0
 
         for building in buildings.find(
@@ -77,7 +80,13 @@ def main() -> int:
 
             count += 1
 
+        elapsed = round(time.perf_counter() - started, 2)
+        database["dataset_metadata"].update_one(
+            {"_id": "seed-v1"},
+            {"$set": {"buffer_seconds": elapsed}},
+        )
         print(f"[OK] building buffers updated: {count}")
+        print(f"[OK] buffer seconds: {elapsed}")
         return 0
 
     except Exception as exc:
