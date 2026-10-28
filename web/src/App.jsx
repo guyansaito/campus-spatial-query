@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import {
   Circle,
@@ -11,6 +12,14 @@ import "leaflet/dist/leaflet.css";
 
 const API_BASE = "http://127.0.0.1:8000";
 const CENTER = [39.9005, 116.3006];
+
+// 将 GeoJSON Polygon 坐标转换为 Leaflet 所需的 [纬度, 经度]
+function geoJsonPolygonToLeaflet(polygon) {
+  return polygon.coordinates[0].map(([longitude, latitude]) => [
+    latitude,
+    longitude,
+  ]);
+}
 
 function App() {
   const [buildings, setBuildings] = useState([]);
@@ -29,6 +38,15 @@ function App() {
             `${API_BASE}/vehicles/nearby?longitude=116.3006&latitude=39.9005&radius_m=5000&minutes=30`
           ),
         ]);
+
+      // 检查 HTTP 请求是否成功
+      if (
+        !buildingResponse.ok ||
+        !facilityResponse.ok ||
+        !vehicleResponse.ok
+      ) {
+        throw new Error("地图数据请求失败，请检查后端 API");
+      }
 
       const buildingData = await buildingResponse.json();
       const facilityData = await facilityResponse.json();
@@ -54,6 +72,41 @@ function App() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
+        {/* 楼宇 300 米覆盖区域 */}
+        {buildings.map((building) => {
+          const polygon = building.coverage_300m;
+
+          if (
+            !polygon ||
+            polygon.type !== "Polygon" ||
+            !Array.isArray(polygon.coordinates) ||
+            !Array.isArray(polygon.coordinates[0]) ||
+            polygon.coordinates[0].length < 4
+          ) {
+            return null;
+          }
+
+          return (
+            <Polygon
+              key={`${building._id}-coverage`}
+              positions={geoJsonPolygonToLeaflet(polygon)}
+              pathOptions={{
+                color: "#f59e0b",
+                weight: 1,
+                fillColor: "#fbbf24",
+                fillOpacity: 0.12,
+              }}
+            >
+              <Popup>
+                <strong>{building.name || building._id}</strong>
+                <br />
+                楼宇覆盖范围：300 米
+              </Popup>
+            </Polygon>
+          );
+        })}
+
+        {/* 楼宇位置标记 */}
         {buildings.map((building) => {
           const point = building.location?.coordinates;
 
@@ -73,6 +126,7 @@ function App() {
           );
         })}
 
+        {/* 周边设施 */}
         {facilities.map((facility) => {
           const point = facility.location?.coordinates;
 
@@ -85,7 +139,10 @@ function App() {
               key={facility._id}
               center={[point[1], point[0]]}
               radius={8}
-              pathOptions={{ color: "#2563eb", fillColor: "#60a5fa" }}
+              pathOptions={{
+                color: "#2563eb",
+                fillColor: "#60a5fa",
+              }}
             >
               <Popup>
                 {facility.name || facility.type || facility._id}
@@ -94,6 +151,7 @@ function App() {
           );
         })}
 
+        {/* 周边车辆 */}
         {vehicles.map((vehicle) => {
           const point = vehicle.location?.coordinates;
 
@@ -106,7 +164,10 @@ function App() {
               key={vehicle._id}
               center={[point[1], point[0]]}
               radius={12}
-              pathOptions={{ color: "#dc2626", fillColor: "#f87171" }}
+              pathOptions={{
+                color: "#dc2626",
+                fillColor: "#f87171",
+              }}
             >
               <Popup>
                 <strong>{vehicle.vehicle_id}</strong>
