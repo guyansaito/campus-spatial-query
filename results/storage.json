@@ -6,45 +6,45 @@
     "python": "3.12.9",
     "memory": {
       "total_bytes": 34124718080,
-      "available_bytes": 12005978112
+      "available_bytes": 13587984384
     }
   },
   "disk": {
     "path": "D:\\docker-project\\campus-spatial-query",
     "total": 699697983488,
-    "used": 450615451648,
-    "free": 249082531840
+    "used": 427811028992,
+    "free": 271886954496
   },
   "mongodb": {
     "version": "8.0.34",
-    "resident_mb": 646,
-    "virtual_mb": 3685,
+    "resident_mb": 304,
+    "virtual_mb": 2649,
     "cache": {
-      "bytes_in_cache": 293170492,
+      "bytes_in_cache": 108867818,
       "max_bytes": 7786725376
     }
   },
   "database": {
     "name": "campus_service",
     "collections": 10,
-    "objects": 336719,
-    "dataSize": 246098212.0,
-    "storageSize": 109780992.0,
-    "indexSize": 16257024.0,
-    "totalSize": 126038016.0
+    "objects": 170238,
+    "dataSize": 120451651.0,
+    "storageSize": 55922688.0,
+    "indexSize": 9015296.0,
+    "totalSize": 64937984.0
   },
   "collections": {
     "facilities": {
       "count": 20000,
-      "size": 6456000,
-      "storageSize": 2306048,
-      "totalIndexSize": 1638400,
+      "size": 6456002,
+      "storageSize": 2297856,
+      "totalIndexSize": 1593344,
       "avgObjSize": 322
     },
     "buildings": {
       "count": 200,
       "size": 641240,
-      "storageSize": 774144,
+      "storageSize": 618496,
       "totalIndexSize": 237568,
       "avgObjSize": 3206
     },
@@ -64,9 +64,9 @@
     },
     "bike_reports": {
       "count": null,
-      "size": 187443575,
-      "storageSize": 96509952,
-      "totalIndexSize": 8761344,
+      "size": 88878503,
+      "storageSize": 48054272,
+      "totalIndexSize": 4079616,
       "avgObjSize": null
     },
     "bike_anomalies": {
@@ -77,10 +77,10 @@
       "avgObjSize": null
     },
     "heatmap_aggregates": {
-      "count": 206517,
-      "size": 51555447,
-      "storageSize": 10092544,
-      "totalIndexSize": 5484544,
+      "count": 98036,
+      "size": 24473956,
+      "storageSize": 4853760,
+      "totalIndexSize": 2969600,
       "avgObjSize": 249
     },
     "dataset_metadata": {

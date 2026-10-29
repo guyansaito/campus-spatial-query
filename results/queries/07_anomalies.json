@@ -2,23 +2,23 @@
   "function": "异常识别",
   "timing": {
     "runs_ms": [
-      1.42,
-      1.38,
-      0.87,
-      0.85,
-      0.96
+      1.16,
+      1.18,
+      1.03,
+      0.99,
+      1.43
     ],
-    "min_ms": 0.85,
-    "median_ms": 0.96,
-    "max_ms": 1.42
+    "min_ms": 0.99,
+    "median_ms": 1.16,
+    "max_ms": 1.43
   },
   "recompute_timing": {
     "runs_ms": [
-      1.81
+      1.97
     ],
-    "min_ms": 1.81,
-    "median_ms": 1.81,
-    "max_ms": 1.81
+    "min_ms": 1.97,
+    "median_ms": 1.97,
+    "max_ms": 1.97
   },
   "indexed_count": 0,
   "recompute_count": 0,

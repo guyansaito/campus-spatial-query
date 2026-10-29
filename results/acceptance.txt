@@ -1,44 +1,44 @@
 ===== storage exit 0 =====
-[存储] data 234.7 MB  storage 104.7 MB  index 15.5 MB
-[内存] mongod resident 646 MB
+[存储] data 114.9 MB  storage 53.3 MB  index 8.6 MB
+[内存] mongod resident 304 MB
 D:\docker-project\campus-spatial-query\results\storage.json
 
 ===== 01_write.py exit 0 =====
-[写入] median 2.19 ms  runs [2.19, 1.97, 2.83, 1.9, 2.6]
-设施 20000  楼宇 200  车辆 0  上报 2320  导入 0.77 s  轨迹 0.12 s
+[写入] median 2.58 ms  runs [2.15, 1.63, 2.65, 2.66, 2.58]
+设施 20000  楼宇 200  车辆 0  上报 17280000  导入 0.73 s  轨迹 472.77 s
 D:\docker-project\campus-spatial-query\results\queries\01_write.json
 
 ===== 02_nearby.py exit 0 =====
-[附近查找] median 6.76 ms  runs [7.35, 7.44, 6.72, 6.72, 6.76]
+[附近查找] median 5.41 ms  runs [10.11, 5.41, 4.64, 5.14, 5.7]
 返回 10 条  距离 [17.62, 18.68, 45.17, 50.88, 52.16, 54.29, 57.07, 60.37, 62.97, 65.29]  有序 True
 D:\docker-project\campus-spatial-query\results\queries\02_nearby.json
 
 ===== 03_within.py exit 0 =====
-[区域检索] median 17.79 ms  runs [17.59, 21.29, 17.96, 17.79, 17.18]
+[区域检索] median 13.08 ms  runs [13.01, 13.08, 12.59, 13.63, 14.0]
 总数 4875  第1页 20  第2页 20  重复 0
 D:\docker-project\campus-spatial-query\results\queries\03_within.json
 
 ===== 04_contains.py exit 0 =====
-[包含判断] median 1.46 ms  runs [1.2, 2.09, 1.46, 1.46, 1.58]
+[包含判断] median 1.0 ms  runs [1.35, 0.96, 1.78, 1.0, 0.88]
 点落在 ['building_0001']  校园外 0 栋
 D:\docker-project\campus-spatial-query\results\queries\04_contains.json
 
 ===== 05_coverage.py exit 0 =====
-[覆盖分析] median 705.91 ms  runs [727.6, 697.51, 705.91]
+[覆盖分析] median 697.94 ms  runs [697.94, 710.93, 663.35]
 楼宇 200  类别数 6~6
 D:\docker-project\campus-spatial-query\results\queries\05_coverage.json
 
 ===== 06_heatmap.py exit 1 =====
-[车辆热力] median 2.3 ms  runs [2.69, 2.29, 1.98, 2.3, 3.29]
+[车辆热力] median 2.09 ms  runs [2.09, 2.09, 1.74, 3.28, 1.42]
 格子 0  上报 0  网格 50 m
 D:\docker-project\campus-spatial-query\results\queries\06_heatmap.json
 
 ===== 07_anomalies.py exit 0 =====
-[跳变识别] median 0.96 ms  runs [1.42, 1.38, 0.87, 0.85, 0.96]
-索引 0  重算 0  重算耗时 1.81 ms  扫描 0  僵尸车 0
+[跳变识别] median 1.16 ms  runs [1.16, 1.18, 1.03, 0.99, 1.43]
+索引 0  重算 0  重算耗时 1.97 ms  扫描 0  僵尸车 0
 D:\docker-project\campus-spatial-query\results\queries\07_anomalies.json
 
 ===== 08_status.py exit 0 =====
-[状态维护] median 24.47 ms  runs [45.54, 23.12, 57.89, 23.48, 24.47]
-facility_000001 停用后附近查询不可见=True 恢复=True
+[状态维护] median 41.86 ms  runs [41.86, 60.81, 46.13, 33.4, 22.03]
+facility_000002 停用后附近查询不可见=True 恢复=True
 D:\docker-project\campus-spatial-query\results\queries\08_status.json

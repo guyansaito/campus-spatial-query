@@ -3,11 +3,11 @@
   "bulk": {
     "building_count": 200,
     "facility_count": 20000,
-    "bike_count": 40,
-    "report_count": 2320,
-    "static_import_seconds": 0.77,
-    "buffer_seconds": 0.36,
-    "bike_insert_seconds": 0.12
+    "bike_count": 2000,
+    "report_count": 17280000,
+    "static_import_seconds": 0.73,
+    "buffer_seconds": 0.33,
+    "bike_insert_seconds": 472.77
   },
   "count_query": {
     "result": {
@@ -18,27 +18,27 @@
     },
     "timing": {
       "runs_ms": [
-        10.11,
-        6.72,
-        7.64
+        9.62,
+        6.15,
+        5.6
       ],
-      "min_ms": 6.72,
-      "median_ms": 7.64,
-      "max_ms": 10.11
+      "min_ms": 5.6,
+      "median_ms": 6.15,
+      "max_ms": 9.62
     }
   },
   "single_facility_write": {
     "timing": {
       "runs_ms": [
-        2.19,
-        1.97,
-        2.83,
-        1.9,
-        2.6
+        2.15,
+        1.63,
+        2.65,
+        2.66,
+        2.58
       ],
-      "min_ms": 1.9,
-      "median_ms": 2.19,
-      "max_ms": 2.83
+      "min_ms": 1.63,
+      "median_ms": 2.58,
+      "max_ms": 2.66
     },
     "read_back": {
       "_id": "facility_probe_acceptance",
@@ -57,7 +57,7 @@
       "building_id": null,
       "source": "acceptance",
       "data_version": "probe",
-      "updated_at": "2026-10-28T16:59:01.423000+00:00"
+      "updated_at": "2026-10-29T15:13:23.843000+00:00"
     },
     "deleted": true
   }

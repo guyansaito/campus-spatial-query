@@ -74,3 +74,9 @@ npm run dev
 ```
 
 输出：`results/bench_output.txt`、`results/bench_summary.json`、`results/bench_per_second.csv`。
+
+
+
+if 单独没有bike数据
+`.\.venv\Scripts\python.exe scripts\generate_bike_reports.py --days 3 --bikes 2000 `
+ 

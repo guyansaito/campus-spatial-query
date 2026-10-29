@@ -2,13 +2,13 @@
   "function": "覆盖分析",
   "timing": {
     "runs_ms": [
-      727.6,
-      697.51,
-      705.91
+      697.94,
+      710.93,
+      663.35
     ],
-    "min_ms": 697.51,
-    "median_ms": 705.91,
-    "max_ms": 727.6
+    "min_ms": 663.35,
+    "median_ms": 697.94,
+    "max_ms": 710.93
   },
   "building_count": 200,
   "category_min": 6,
@@ -21,12 +21,12 @@
       "category_count": 6,
       "total": 1085,
       "counts": {
-        "charging_station": 97,
-        "printing_point": 107,
-        "parcel_locker": 212,
         "study_seat": 328,
         "restroom": 159,
-        "water_dispenser": 182
+        "water_dispenser": 182,
+        "parcel_locker": 212,
+        "charging_station": 97,
+        "printing_point": 107
       }
     },
     {
@@ -36,12 +36,12 @@
       "category_count": 6,
       "total": 1439,
       "counts": {
+        "study_seat": 431,
+        "restroom": 212,
         "water_dispenser": 236,
         "parcel_locker": 283,
-        "restroom": 212,
-        "printing_point": 142,
-        "study_seat": 431,
-        "charging_station": 135
+        "charging_station": 135,
+        "printing_point": 142
       }
     },
     {
@@ -51,12 +51,12 @@
       "category_count": 6,
       "total": 1758,
       "counts": {
+        "printing_point": 173,
+        "restroom": 249,
         "parcel_locker": 355,
         "water_dispenser": 280,
-        "restroom": 249,
-        "printing_point": 173,
-        "study_seat": 539,
-        "charging_station": 162
+        "charging_station": 162,
+        "study_seat": 539
       }
     }
   ],
@@ -68,12 +68,12 @@
       "category_count": 6,
       "total": 1085,
       "counts": {
-        "charging_station": 97,
-        "printing_point": 107,
-        "parcel_locker": 212,
         "study_seat": 328,
         "restroom": 159,
-        "water_dispenser": 182
+        "water_dispenser": 182,
+        "parcel_locker": 212,
+        "charging_station": 97,
+        "printing_point": 107
       }
     },
     {
@@ -83,12 +83,12 @@
       "category_count": 6,
       "total": 1439,
       "counts": {
+        "study_seat": 431,
+        "restroom": 212,
         "water_dispenser": 236,
         "parcel_locker": 283,
-        "restroom": 212,
-        "printing_point": 142,
-        "study_seat": 431,
-        "charging_station": 135
+        "charging_station": 135,
+        "printing_point": 142
       }
     },
     {
@@ -98,12 +98,12 @@
       "category_count": 6,
       "total": 1758,
       "counts": {
+        "printing_point": 173,
+        "restroom": 249,
         "parcel_locker": 355,
         "water_dispenser": 280,
-        "restroom": 249,
-        "printing_point": 173,
-        "study_seat": 539,
-        "charging_station": 162
+        "charging_station": 162,
+        "study_seat": 539
       }
     },
     {
@@ -113,12 +113,12 @@
       "category_count": 6,
       "total": 1930,
       "counts": {
-        "charging_station": 184,
-        "parcel_locker": 381,
-        "water_dispenser": 320,
+        "printing_point": 194,
         "study_seat": 587,
-        "restroom": 264,
-        "printing_point": 194
+        "water_dispenser": 320,
+        "parcel_locker": 381,
+        "charging_station": 184,
+        "restroom": 264
       }
     },
     {
@@ -129,11 +129,11 @@
       "total": 1886,
       "counts": {
         "restroom": 252,
-        "water_dispenser": 290,
         "printing_point": 195,
+        "parcel_locker": 381,
         "charging_station": 184,
-        "study_seat": 584,
-        "parcel_locker": 381
+        "water_dispenser": 290,
+        "study_seat": 584
       }
     },
     {
@@ -144,10 +144,10 @@
       "total": 1912,
       "counts": {
         "printing_point": 186,
-        "parcel_locker": 403,
-        "water_dispenser": 282,
-        "charging_station": 187,
         "restroom": 267,
+        "water_dispenser": 282,
+        "parcel_locker": 403,
+        "charging_station": 187,
         "study_seat": 587
       }
     },
@@ -158,12 +158,12 @@
       "category_count": 6,
       "total": 1861,
       "counts": {
-        "study_seat": 580,
-        "charging_station": 173,
-        "printing_point": 175,
         "restroom": 276,
+        "printing_point": 175,
         "water_dispenser": 275,
-        "parcel_locker": 382
+        "charging_station": 173,
+        "parcel_locker": 382,
+        "study_seat": 580
       }
     },
     {
@@ -173,12 +173,12 @@
       "category_count": 6,
       "total": 1850,
       "counts": {
-        "parcel_locker": 388,
-        "water_dispenser": 280,
         "restroom": 269,
-        "study_seat": 561,
+        "printing_point": 181,
+        "parcel_locker": 388,
         "charging_station": 171,
-        "printing_point": 181
+        "water_dispenser": 280,
+        "study_seat": 561
       }
     },
     {
@@ -188,12 +188,12 @@
       "category_count": 6,
       "total": 1825,
       "counts": {
-        "study_seat": 532,
-        "charging_station": 176,
-        "printing_point": 172,
         "restroom": 282,
+        "printing_point": 172,
         "parcel_locker": 376,
-        "water_dispenser": 287
+        "water_dispenser": 287,
+        "charging_station": 176,
+        "study_seat": 532
       }
     },
     {
@@ -203,12 +203,12 @@
       "category_count": 6,
       "total": 1901,
       "counts": {
-        "water_dispenser": 292,
         "restroom": 297,
-        "parcel_locker": 383,
-        "study_seat": 554,
+        "printing_point": 183,
+        "water_dispenser": 292,
         "charging_station": 192,
-        "printing_point": 183
+        "parcel_locker": 383,
+        "study_seat": 554
       }
     },
     {
@@ -218,12 +218,12 @@
       "category_count": 6,
       "total": 1898,
       "counts": {
-        "restroom": 289,
-        "water_dispenser": 300,
-        "printing_point": 188,
-        "charging_station": 197,
         "study_seat": 556,
-        "parcel_locker": 368
+        "printing_point": 188,
+        "water_dispenser": 300,
+        "parcel_locker": 368,
+        "charging_station": 197,
+        "restroom": 289
       }
     },
     {
@@ -233,12 +233,12 @@
       "category_count": 6,
       "total": 1954,
       "counts": {
+        "restroom": 289,
         "study_seat": 581,
         "water_dispenser": 302,
         "parcel_locker": 375,
         "charging_station": 196,
-        "printing_point": 211,
-        "restroom": 289
+        "printing_point": 211
       }
     },
     {
@@ -248,12 +248,12 @@
       "category_count": 6,
       "total": 1955,
       "counts": {
+        "restroom": 291,
         "study_seat": 560,
         "water_dispenser": 314,
         "parcel_locker": 378,
         "charging_station": 201,
-        "printing_point": 211,
-        "restroom": 291
+        "printing_point": 211
       }
     },
     {
@@ -263,12 +263,12 @@
       "category_count": 6,
       "total": 1935,
       "counts": {
-        "printing_point": 207,
-        "water_dispenser": 299,
-        "restroom": 292,
-        "charging_station": 197,
         "study_seat": 563,
-        "parcel_locker": 377
+        "restroom": 292,
+        "parcel_locker": 377,
+        "water_dispenser": 299,
+        "charging_station": 197,
+        "printing_point": 207
       }
     },
     {
@@ -278,12 +278,12 @@
       "category_count": 6,
       "total": 1936,
       "counts": {
-        "parcel_locker": 402,
         "restroom": 297,
-        "water_dispenser": 296,
         "printing_point": 195,
-        "study_seat": 558,
-        "charging_station": 188
+        "parcel_locker": 402,
+        "water_dispenser": 296,
+        "charging_station": 188,
+        "study_seat": 558
       }
     },
     {
@@ -293,12 +293,12 @@
       "category_count": 6,
       "total": 1998,
       "counts": {
-        "charging_station": 186,
-        "study_seat": 586,
-        "parcel_locker": 424,
         "restroom": 310,
         "printing_point": 197,
-        "water_dispenser": 295
+        "parcel_locker": 424,
+        "water_dispenser": 295,
+        "charging_station": 186,
+        "study_seat": 586
       }
     },
     {
@@ -308,12 +308,12 @@
       "category_count": 6,
       "total": 2012,
       "counts": {
-        "parcel_locker": 418,
-        "water_dispenser": 304,
-        "restroom": 320,
         "study_seat": 581,
         "printing_point": 199,
-        "charging_station": 190
+        "parcel_locker": 418,
+        "water_dispenser": 304,
+        "charging_station": 190,
+        "restroom": 320
       }
     },
     {
@@ -323,11 +323,11 @@
       "category_count": 6,
       "total": 1828,
       "counts": {
-        "parcel_locker": 369,
+        "study_seat": 549,
         "printing_point": 184,
+        "parcel_locker": 369,
         "water_dispenser": 259,
         "charging_station": 175,
-        "study_seat": 549,
         "restroom": 292
       }
     },
@@ -338,12 +338,12 @@
       "category_count": 6,
       "total": 1515,
       "counts": {
-        "parcel_locker": 303,
-        "water_dispenser": 215,
+        "restroom": 242,
         "printing_point": 146,
+        "parcel_locker": 303,
         "charging_station": 145,
-        "study_seat": 464,
-        "restroom": 242
+        "water_dispenser": 215,
+        "study_seat": 464
       }
     },
     {
@@ -353,11 +353,11 @@
       "category_count": 6,
       "total": 1142,
       "counts": {
+        "study_seat": 360,
+        "printing_point": 110,
         "parcel_locker": 209,
         "water_dispenser": 171,
-        "printing_point": 110,
         "charging_station": 106,
-        "study_seat": 360,
         "restroom": 186
       }
     },
@@ -368,12 +368,12 @@
       "category_count": 6,
       "total": 1407,
       "counts": {
-        "parcel_locker": 278,
         "printing_point": 136,
         "study_seat": 430,
         "restroom": 203,
         "charging_station": 131,
-        "water_dispenser": 229
+        "water_dispenser": 229,
+        "parcel_locker": 278
       }
     },
     {
@@ -383,12 +383,12 @@
       "category_count": 6,
       "total": 1886,
       "counts": {
-        "parcel_locker": 377,
-        "water_dispenser": 302,
-        "restroom": 273,
-        "printing_point": 191,
         "study_seat": 566,
-        "charging_station": 177
+        "restroom": 273,
+        "water_dispenser": 302,
+        "parcel_locker": 377,
+        "charging_station": 177,
+        "printing_point": 191
       }
     },
     {
@@ -399,11 +399,11 @@
       "total": 2242,
       "counts": {
         "study_seat": 692,
-        "water_dispenser": 354,
         "restroom": 314,
+        "parcel_locker": 446,
+        "water_dispenser": 354,
         "charging_station": 210,
-        "printing_point": 226,
-        "parcel_locker": 446
+        "printing_point": 226
       }
     },
     {
@@ -413,12 +413,12 @@
       "category_count": 6,
       "total": 2431,
       "counts": {
-        "restroom": 334,
         "study_seat": 750,
-        "parcel_locker": 481,
-        "charging_station": 243,
         "printing_point": 243,
-        "water_dispenser": 380
+        "parcel_locker": 481,
+        "water_dispenser": 380,
+        "charging_station": 243,
+        "restroom": 334
       }
     },
     {
@@ -428,12 +428,12 @@
       "category_count": 6,
       "total": 2485,
       "counts": {
-        "parcel_locker": 505,
-        "restroom": 328,
-        "water_dispenser": 372,
         "study_seat": 782,
+        "printing_point": 247,
+        "parcel_locker": 505,
+        "water_dispenser": 372,
         "charging_station": 251,
-        "printing_point": 247
+        "restroom": 328
       }
     },
     {
@@ -444,11 +444,11 @@
       "total": 2493,
       "counts": {
         "printing_point": 245,
-        "parcel_locker": 512,
-        "water_dispenser": 370,
-        "charging_station": 245,
+        "restroom": 338,
         "study_seat": 783,
-        "restroom": 338
+        "charging_station": 245,
+        "parcel_locker": 512,
+        "water_dispenser": 370
       }
     },
     {
@@ -460,10 +460,10 @@
       "counts": {
         "restroom": 347,
         "study_seat": 791,
+        "parcel_locker": 519,
         "water_dispenser": 371,
         "charging_station": 243,
-        "printing_point": 236,
-        "parcel_locker": 519
+        "printing_point": 236
       }
     },
     {
@@ -473,11 +473,11 @@
       "category_count": 6,
       "total": 2539,
       "counts": {
-        "charging_station": 244,
-        "printing_point": 242,
-        "parcel_locker": 529,
         "study_seat": 782,
+        "printing_point": 242,
+        "charging_station": 244,
         "restroom": 360,
+        "parcel_locker": 529,
         "water_dispenser": 382
       }
     },
@@ -488,11 +488,11 @@
       "category_count": 6,
       "total": 2532,
       "counts": {
-        "parcel_locker": 525,
-        "water_dispenser": 369,
-        "printing_point": 245,
-        "charging_station": 255,
         "study_seat": 757,
+        "printing_point": 245,
+        "water_dispenser": 369,
+        "parcel_locker": 525,
+        "charging_station": 255,
         "restroom": 381
       }
     },
@@ -503,12 +503,12 @@
       "category_count": 6,
       "total": 2495,
       "counts": {
+        "printing_point": 241,
+        "restroom": 365,
         "water_dispenser": 378,
         "parcel_locker": 510,
-        "restroom": 365,
-        "study_seat": 749,
-        "printing_point": 241,
-        "charging_station": 252
+        "charging_station": 252,
+        "study_seat": 749
       }
     },
     {
@@ -518,12 +518,12 @@
       "category_count": 6,
       "total": 2509,
       "counts": {
+        "study_seat": 747,
         "restroom": 369,
         "water_dispenser": 379,
         "parcel_locker": 498,
         "charging_station": 258,
-        "printing_point": 258,
-        "study_seat": 747
+        "printing_point": 258
       }
     },
     {
@@ -533,12 +533,12 @@
       "category_count": 6,
       "total": 2503,
       "counts": {
+        "printing_point": 266,
         "restroom": 372,
-        "study_seat": 738,
+        "parcel_locker": 486,
         "water_dispenser": 389,
         "charging_station": 252,
-        "printing_point": 266,
-        "parcel_locker": 486
+        "study_seat": 738
       }
     },
     {
@@ -548,12 +548,12 @@
       "category_count": 6,
       "total": 2582,
       "counts": {
-        "study_seat": 735,
         "printing_point": 284,
-        "charging_station": 259,
-        "parcel_locker": 522,
+        "restroom": 383,
         "water_dispenser": 399,
-        "restroom": 383
+        "parcel_locker": 522,
+        "charging_station": 259,
+        "study_seat": 735
       }
     },
     {
@@ -564,11 +564,11 @@
       "total": 2589,
       "counts": {
         "printing_point": 273,
-        "water_dispenser": 397,
         "restroom": 380,
+        "water_dispenser": 397,
         "charging_station": 255,
-        "study_seat": 738,
-        "parcel_locker": 546
+        "parcel_locker": 546,
+        "study_seat": 738
       }
     },
     {
@@ -578,12 +578,12 @@
       "category_count": 6,
       "total": 2637,
       "counts": {
-        "parcel_locker": 546,
         "restroom": 397,
+        "printing_point": 272,
+        "parcel_locker": 546,
         "water_dispenser": 385,
-        "study_seat": 782,
         "charging_station": 255,
-        "printing_point": 272
+        "study_seat": 782
       }
     },
     {
@@ -593,12 +593,12 @@
       "category_count": 6,
       "total": 2658,
       "counts": {
-        "restroom": 412,
-        "parcel_locker": 561,
-        "water_dispenser": 385,
         "study_seat": 776,
+        "printing_point": 275,
+        "water_dispenser": 385,
+        "parcel_locker": 561,
         "charging_station": 249,
-        "printing_point": 275
+        "restroom": 412
       }
     },
     {
@@ -609,11 +609,11 @@
       "total": 2690,
       "counts": {
         "restroom": 436,
+        "printing_point": 277,
         "water_dispenser": 376,
-        "parcel_locker": 553,
-        "study_seat": 790,
         "charging_station": 258,
-        "printing_point": 277
+        "parcel_locker": 553,
+        "study_seat": 790
       }
     },
     {
@@ -623,12 +623,12 @@
       "category_count": 6,
       "total": 2412,
       "counts": {
-        "parcel_locker": 490,
-        "restroom": 396,
-        "water_dispenser": 338,
-        "printing_point": 240,
         "study_seat": 711,
-        "charging_station": 237
+        "restroom": 396,
+        "parcel_locker": 490,
+        "water_dispenser": 338,
+        "charging_station": 237,
+        "printing_point": 240
       }
     },
     {
@@ -639,11 +639,11 @@
       "total": 1976,
       "counts": {
         "restroom": 328,
+        "study_seat": 594,
         "parcel_locker": 387,
         "water_dispenser": 275,
-        "printing_point": 202,
-        "study_seat": 594,
-        "charging_station": 190
+        "charging_station": 190,
+        "printing_point": 202
       }
     },
     {
@@ -654,11 +654,11 @@
       "total": 1481,
       "counts": {
         "restroom": 251,
+        "printing_point": 155,
         "parcel_locker": 282,
         "water_dispenser": 211,
-        "printing_point": 155,
-        "study_seat": 439,
-        "charging_station": 143
+        "charging_station": 143,
+        "study_seat": 439
       }
     },
     {
@@ -669,11 +669,11 @@
       "total": 1749,
       "counts": {
         "printing_point": 176,
-        "study_seat": 527,
-        "charging_station": 163,
+        "restroom": 259,
         "parcel_locker": 330,
         "water_dispenser": 294,
-        "restroom": 259
+        "charging_station": 163,
+        "study_seat": 527
       }
     },
     {
@@ -683,12 +683,12 @@
       "category_count": 6,
       "total": 2254,
       "counts": {
-        "charging_station": 213,
         "printing_point": 228,
-        "parcel_locker": 432,
-        "study_seat": 669,
         "restroom": 337,
-        "water_dispenser": 375
+        "parcel_locker": 432,
+        "water_dispenser": 375,
+        "charging_station": 213,
+        "study_seat": 669
       }
     },
     {
@@ -698,12 +698,12 @@
       "category_count": 6,
       "total": 2703,
       "counts": {
-        "study_seat": 820,
-        "water_dispenser": 430,
-        "restroom": 386,
-        "charging_station": 263,
         "printing_point": 271,
-        "parcel_locker": 533
+        "restroom": 386,
+        "water_dispenser": 430,
+        "parcel_locker": 533,
+        "charging_station": 263,
+        "study_seat": 820
       }
     },
     {
@@ -713,12 +713,12 @@
       "category_count": 6,
       "total": 2952,
       "counts": {
-        "charging_station": 300,
-        "study_seat": 915,
-        "parcel_locker": 567,
         "printing_point": 292,
         "restroom": 413,
-        "water_dispenser": 465
+        "parcel_locker": 567,
+        "water_dispenser": 465,
+        "charging_station": 300,
+        "study_seat": 915
       }
     },
     {
@@ -728,12 +728,12 @@
       "category_count": 6,
       "total": 2938,
       "counts": {
-        "restroom": 394,
-        "water_dispenser": 458,
-        "printing_point": 287,
-        "charging_station": 294,
         "study_seat": 929,
-        "parcel_locker": 576
+        "printing_point": 287,
+        "parcel_locker": 576,
+        "water_dispenser": 458,
+        "charging_station": 294,
+        "restroom": 394
       }
     },
     {
@@ -743,11 +743,11 @@
       "category_count": 6,
       "total": 2898,
       "counts": {
+        "study_seat": 918,
         "printing_point": 277,
         "water_dispenser": 447,
         "parcel_locker": 576,
         "charging_station": 288,
-        "study_seat": 918,
         "restroom": 392
       }
     },
@@ -758,12 +758,12 @@
       "category_count": 6,
       "total": 2986,
       "counts": {
+        "study_seat": 929,
+        "printing_point": 286,
+        "water_dispenser": 431,
         "parcel_locker": 625,
         "charging_station": 297,
-        "water_dispenser": 431,
-        "printing_point": 286,
-        "restroom": 418,
-        "study_seat": 929
+        "restroom": 418
       }
     },
     {
@@ -773,12 +773,12 @@
       "category_count": 6,
       "total": 2988,
       "counts": {
+        "restroom": 418,
         "study_seat": 940,
         "printing_point": 277,
-        "water_dispenser": 429,
+        "charging_station": 294,
         "parcel_locker": 630,
-        "restroom": 418,
-        "charging_station": 294
+        "water_dispenser": 429
       }
     },
     {
@@ -788,12 +788,12 @@
       "category_count": 6,
       "total": 2958,
       "counts": {
-        "charging_station": 283,
         "study_seat": 907,
-        "parcel_locker": 613,
-        "restroom": 442,
         "printing_point": 289,
-        "water_dispenser": 424
+        "parcel_locker": 613,
+        "water_dispenser": 424,
+        "charging_station": 283,
+        "restroom": 442
       }
     },
     {
@@ -803,12 +803,12 @@
       "category_count": 6,
       "total": 2988,
       "counts": {
-        "printing_point": 291,
-        "study_seat": 911,
-        "charging_station": 304,
         "restroom": 443,
+        "printing_point": 291,
         "parcel_locker": 597,
-        "water_dispenser": 442
+        "water_dispenser": 442,
+        "charging_station": 304,
+        "study_seat": 911
       }
     },
     {
@@ -820,10 +820,10 @@
       "counts": {
         "printing_point": 305,
         "study_seat": 887,
-        "water_dispenser": 423,
-        "parcel_locker": 578,
         "restroom": 423,
-        "charging_station": 283
+        "charging_station": 283,
+        "parcel_locker": 578,
+        "water_dispenser": 423
       }
     },
     {
@@ -833,12 +833,12 @@
       "category_count": 6,
       "total": 3070,
       "counts": {
-        "study_seat": 932,
-        "water_dispenser": 446,
-        "restroom": 452,
-        "charging_station": 298,
         "printing_point": 329,
-        "parcel_locker": 613
+        "restroom": 452,
+        "water_dispenser": 446,
+        "charging_station": 298,
+        "parcel_locker": 613,
+        "study_seat": 932
       }
     },
     {
@@ -848,11 +848,11 @@
       "category_count": 6,
       "total": 3001,
       "counts": {
-        "study_seat": 893,
-        "parcel_locker": 597,
-        "water_dispenser": 456,
-        "charging_station": 299,
         "restroom": 428,
+        "study_seat": 893,
+        "water_dispenser": 456,
+        "parcel_locker": 597,
+        "charging_station": 299,
         "printing_point": 328
       }
     },
@@ -863,12 +863,12 @@
       "category_count": 6,
       "total": 3026,
       "counts": {
-        "charging_station": 301,
         "study_seat": 890,
-        "printing_point": 319,
-        "parcel_locker": 628,
         "restroom": 439,
-        "water_dispenser": 449
+        "water_dispenser": 449,
+        "parcel_locker": 628,
+        "charging_station": 301,
+        "printing_point": 319
       }
     },
     {
@@ -878,12 +878,12 @@
       "category_count": 6,
       "total": 3082,
       "counts": {
-        "charging_station": 302,
-        "study_seat": 888,
-        "water_dispenser": 454,
-        "parcel_locker": 647,
         "restroom": 465,
-        "printing_point": 326
+        "printing_point": 326,
+        "water_dispenser": 454,
+        "charging_station": 302,
+        "parcel_locker": 647,
+        "study_seat": 888
       }
     },
     {
@@ -894,11 +894,11 @@
       "total": 3120,
       "counts": {
         "printing_point": 328,
-        "water_dispenser": 451,
         "restroom": 501,
+        "water_dispenser": 451,
+        "parcel_locker": 637,
         "charging_station": 302,
-        "study_seat": 901,
-        "parcel_locker": 637
+        "study_seat": 901
       }
     },
     {
@@ -908,12 +908,12 @@
       "category_count": 6,
       "total": 3104,
       "counts": {
-        "printing_point": 320,
+        "study_seat": 907,
+        "restroom": 508,
         "water_dispenser": 435,
         "parcel_locker": 631,
         "charging_station": 303,
-        "study_seat": 907,
-        "restroom": 508
+        "printing_point": 320
       }
     },
     {
@@ -923,12 +923,12 @@
       "category_count": 6,
       "total": 2897,
       "counts": {
-        "charging_station": 278,
-        "printing_point": 292,
         "restroom": 492,
-        "parcel_locker": 589,
         "study_seat": 837,
-        "water_dispenser": 409
+        "parcel_locker": 589,
+        "water_dispenser": 409,
+        "charging_station": 278,
+        "printing_point": 292
       }
     },
     {
@@ -939,10 +939,10 @@
       "total": 2353,
       "counts": {
         "study_seat": 677,
-        "charging_station": 233,
         "printing_point": 242,
         "parcel_locker": 464,
         "water_dispenser": 331,
+        "charging_station": 233,
         "restroom": 406
       }
     },
@@ -954,11 +954,11 @@
       "total": 1826,
       "counts": {
         "study_seat": 539,
-        "charging_station": 174,
         "printing_point": 196,
         "parcel_locker": 341,
-        "restroom": 306,
-        "water_dispenser": 270
+        "water_dispenser": 270,
+        "charging_station": 174,
+        "restroom": 306
       }
     },
     {
@@ -969,11 +969,11 @@
       "total": 1744,
       "counts": {
         "printing_point": 174,
-        "charging_station": 159,
-        "study_seat": 523,
-        "parcel_locker": 330,
+        "restroom": 264,
         "water_dispenser": 294,
-        "restroom": 264
+        "charging_station": 159,
+        "parcel_locker": 330,
+        "study_seat": 523
       }
     },
     {
@@ -984,11 +984,11 @@
       "total": 2398,
       "counts": {
         "restroom": 361,
-        "water_dispenser": 397,
-        "parcel_locker": 453,
         "printing_point": 236,
-        "study_seat": 712,
-        "charging_station": 239
+        "water_dispenser": 397,
+        "charging_station": 239,
+        "parcel_locker": 453,
+        "study_seat": 712
       }
     },
     {
@@ -998,12 +998,12 @@
       "category_count": 6,
       "total": 2788,
       "counts": {
-        "restroom": 414,
-        "water_dispenser": 456,
-        "charging_station": 275,
-        "printing_point": 268,
         "study_seat": 856,
-        "parcel_locker": 519
+        "printing_point": 268,
+        "water_dispenser": 456,
+        "parcel_locker": 519,
+        "charging_station": 275,
+        "restroom": 414
       }
     },
     {
@@ -1013,12 +1013,12 @@
       "category_count": 6,
       "total": 3081,
       "counts": {
-        "parcel_locker": 571,
         "restroom": 435,
-        "water_dispenser": 487,
-        "study_seat": 991,
+        "printing_point": 286,
+        "parcel_locker": 571,
         "charging_station": 311,
-        "printing_point": 286
+        "water_dispenser": 487,
+        "study_seat": 991
       }
     },
     {
@@ -1028,12 +1028,12 @@
       "category_count": 6,
       "total": 3097,
       "counts": {
-        "parcel_locker": 578,
         "study_seat": 998,
-        "charging_station": 324,
-        "restroom": 426,
         "printing_point": 300,
-        "water_dispenser": 471
+        "parcel_locker": 578,
+        "water_dispenser": 471,
+        "charging_station": 324,
+        "restroom": 426
       }
     },
     {
@@ -1043,12 +1043,12 @@
       "category_count": 6,
       "total": 3036,
       "counts": {
-        "parcel_locker": 591,
-        "water_dispenser": 448,
-        "restroom": 431,
-        "study_seat": 970,
         "printing_point": 285,
-        "charging_station": 311
+        "restroom": 431,
+        "water_dispenser": 448,
+        "parcel_locker": 591,
+        "charging_station": 311,
+        "study_seat": 970
       }
     },
     {
@@ -1059,11 +1059,11 @@
       "total": 3106,
       "counts": {
         "restroom": 435,
+        "printing_point": 287,
         "parcel_locker": 644,
-        "water_dispenser": 457,
-        "study_seat": 961,
         "charging_station": 322,
-        "printing_point": 287
+        "water_dispenser": 457,
+        "study_seat": 961
       }
     },
     {
@@ -1074,11 +1074,11 @@
       "total": 3052,
       "counts": {
         "restroom": 446,
-        "parcel_locker": 625,
+        "printing_point": 278,
         "water_dispenser": 423,
-        "study_seat": 968,
+        "parcel_locker": 625,
         "charging_station": 312,
-        "printing_point": 278
+        "study_seat": 968
       }
     },
     {
@@ -1089,11 +1089,11 @@
       "total": 3066,
       "counts": {
         "printing_point": 275,
-        "study_seat": 958,
-        "charging_station": 305,
-        "parcel_locker": 638,
+        "restroom": 451,
         "water_dispenser": 439,
-        "restroom": 451
+        "parcel_locker": 638,
+        "charging_station": 305,
+        "study_seat": 958
       }
     },
     {
@@ -1103,12 +1103,12 @@
       "category_count": 6,
       "total": 3104,
       "counts": {
-        "study_seat": 946,
-        "charging_station": 321,
+        "restroom": 453,
         "printing_point": 299,
         "parcel_locker": 640,
         "water_dispenser": 445,
-        "restroom": 453
+        "charging_station": 321,
+        "study_seat": 946
       }
     },
     {
@@ -1119,11 +1119,11 @@
       "total": 3089,
       "counts": {
         "restroom": 459,
-        "water_dispenser": 430,
         "printing_point": 316,
+        "parcel_locker": 646,
         "charging_station": 311,
-        "study_seat": 927,
-        "parcel_locker": 646
+        "water_dispenser": 430,
+        "study_seat": 927
       }
     },
     {
@@ -1134,10 +1134,10 @@
       "total": 3143,
       "counts": {
         "study_seat": 958,
-        "charging_station": 304,
         "printing_point": 323,
         "parcel_locker": 627,
         "water_dispenser": 464,
+        "charging_station": 304,
         "restroom": 467
       }
     },
@@ -1149,11 +1149,11 @@
       "total": 3227,
       "counts": {
         "printing_point": 338,
-        "study_seat": 978,
-        "water_dispenser": 472,
         "restroom": 460,
+        "water_dispenser": 472,
+        "charging_station": 314,
         "parcel_locker": 665,
-        "charging_station": 314
+        "study_seat": 978
       }
     },
     {
@@ -1163,12 +1163,12 @@
       "category_count": 6,
       "total": 3140,
       "counts": {
-        "water_dispenser": 465,
-        "restroom": 469,
-        "parcel_locker": 630,
-        "printing_point": 334,
         "study_seat": 939,
-        "charging_station": 303
+        "restroom": 469,
+        "water_dispenser": 465,
+        "parcel_locker": 630,
+        "charging_station": 303,
+        "printing_point": 334
       }
     },
     {
@@ -1178,12 +1178,12 @@
       "category_count": 6,
       "total": 3184,
       "counts": {
-        "charging_station": 302,
-        "printing_point": 349,
         "restroom": 488,
-        "study_seat": 921,
+        "printing_point": 349,
+        "water_dispenser": 468,
+        "charging_station": 302,
         "parcel_locker": 656,
-        "water_dispenser": 468
+        "study_seat": 921
       }
     },
     {
@@ -1193,11 +1193,11 @@
       "category_count": 6,
       "total": 3251,
       "counts": {
+        "study_seat": 925,
         "printing_point": 340,
         "water_dispenser": 467,
         "parcel_locker": 675,
         "charging_station": 313,
-        "study_seat": 925,
         "restroom": 531
       }
     },
@@ -1209,10 +1209,10 @@
       "total": 3183,
       "counts": {
         "restroom": 540,
-        "water_dispenser": 467,
+        "study_seat": 907,
         "printing_point": 318,
         "charging_station": 316,
-        "study_seat": 907,
+        "water_dispenser": 467,
         "parcel_locker": 635
       }
     },
@@ -1223,12 +1223,12 @@
       "category_count": 6,
       "total": 3024,
       "counts": {
-        "study_seat": 873,
-        "charging_station": 292,
         "printing_point": 302,
-        "restroom": 518,
         "water_dispenser": 434,
-        "parcel_locker": 605
+        "parcel_locker": 605,
+        "study_seat": 873,
+        "restroom": 518,
+        "charging_station": 292
       }
     },
     {
@@ -1238,12 +1238,12 @@
       "category_count": 6,
       "total": 2508,
       "counts": {
-        "charging_station": 245,
         "study_seat": 731,
-        "parcel_locker": 488,
-        "restroom": 438,
         "printing_point": 253,
-        "water_dispenser": 353
+        "parcel_locker": 488,
+        "water_dispenser": 353,
+        "charging_station": 245,
+        "restroom": 438
       }
     },
     {
@@ -1253,12 +1253,12 @@
       "category_count": 6,
       "total": 1865,
       "counts": {
-        "study_seat": 533,
-        "charging_station": 187,
+        "restroom": 329,
         "printing_point": 199,
         "parcel_locker": 342,
-        "restroom": 329,
-        "water_dispenser": 275
+        "charging_station": 187,
+        "water_dispenser": 275,
+        "study_seat": 533
       }
     },
     {
@@ -1268,12 +1268,12 @@
       "category_count": 6,
       "total": 1802,
       "counts": {
-        "study_seat": 552,
-        "charging_station": 179,
-        "printing_point": 186,
         "restroom": 272,
+        "printing_point": 186,
         "water_dispenser": 289,
-        "parcel_locker": 324
+        "charging_station": 179,
+        "parcel_locker": 324,
+        "study_seat": 552
       }
     },
     {
@@ -1284,11 +1284,11 @@
       "total": 2321,
       "counts": {
         "study_seat": 693,
-        "charging_station": 235,
         "printing_point": 238,
-        "restroom": 361,
         "water_dispenser": 364,
-        "parcel_locker": 430
+        "parcel_locker": 430,
+        "charging_station": 235,
+        "restroom": 361
       }
     },
     {
@@ -1298,12 +1298,12 @@
       "category_count": 6,
       "total": 2892,
       "counts": {
-        "study_seat": 896,
         "printing_point": 284,
+        "study_seat": 896,
+        "restroom": 421,
         "charging_station": 291,
-        "parcel_locker": 539,
         "water_dispenser": 461,
-        "restroom": 421
+        "parcel_locker": 539
       }
     },
     {
@@ -1314,10 +1314,10 @@
       "total": 3052,
       "counts": {
         "study_seat": 968,
-        "charging_station": 310,
         "printing_point": 283,
         "parcel_locker": 583,
         "water_dispenser": 477,
+        "charging_station": 310,
         "restroom": 431
       }
     },
@@ -1329,11 +1329,11 @@
       "total": 3091,
       "counts": {
         "study_seat": 985,
-        "printing_point": 295,
+        "restroom": 435,
         "water_dispenser": 471,
         "parcel_locker": 591,
-        "restroom": 435,
-        "charging_station": 314
+        "charging_station": 314,
+        "printing_point": 295
       }
     },
     {
@@ -1343,12 +1343,12 @@
       "category_count": 6,
       "total": 3078,
       "counts": {
-        "charging_station": 318,
-        "study_seat": 981,
         "restroom": 414,
-        "parcel_locker": 608,
         "printing_point": 300,
-        "water_dispenser": 457
+        "parcel_locker": 608,
+        "charging_station": 318,
+        "water_dispenser": 457,
+        "study_seat": 981
       }
     },
     {
@@ -1358,11 +1358,11 @@
       "category_count": 6,
       "total": 3116,
       "counts": {
-        "charging_station": 329,
         "study_seat": 973,
         "restroom": 428,
-        "parcel_locker": 616,
+        "charging_station": 329,
         "printing_point": 307,
+        "parcel_locker": 616,
         "water_dispenser": 463
       }
     },
@@ -1373,12 +1373,12 @@
       "category_count": 6,
       "total": 3043,
       "counts": {
-        "charging_station": 315,
-        "study_seat": 949,
-        "parcel_locker": 625,
         "restroom": 433,
         "printing_point": 291,
-        "water_dispenser": 430
+        "parcel_locker": 625,
+        "water_dispenser": 430,
+        "charging_station": 315,
+        "study_seat": 949
       }
     },
     {
@@ -1388,12 +1388,12 @@
       "category_count": 6,
       "total": 3072,
       "counts": {
-        "study_seat": 946,
-        "charging_station": 326,
+        "restroom": 440,
         "printing_point": 292,
         "parcel_locker": 627,
-        "restroom": 440,
-        "water_dispenser": 441
+        "water_dispenser": 441,
+        "charging_station": 326,
+        "study_seat": 946
       }
     },
     {
@@ -1403,12 +1403,12 @@
       "category_count": 6,
       "total": 3146,
       "counts": {
-        "study_seat": 947,
-        "printing_point": 306,
-        "charging_station": 325,
-        "parcel_locker": 656,
         "restroom": 455,
-        "water_dispenser": 457
+        "printing_point": 306,
+        "parcel_locker": 656,
+        "water_dispenser": 457,
+        "charging_station": 325,
+        "study_seat": 947
       }
     },
     {
@@ -1418,12 +1418,12 @@
       "category_count": 6,
       "total": 2995,
       "counts": {
-        "parcel_locker": 628,
-        "restroom": 435,
-        "charging_station": 309,
         "study_seat": 895,
         "printing_point": 299,
-        "water_dispenser": 429
+        "parcel_locker": 628,
+        "water_dispenser": 429,
+        "charging_station": 309,
+        "restroom": 435
       }
     },
     {
@@ -1433,12 +1433,12 @@
       "category_count": 6,
       "total": 3184,
       "counts": {
-        "parcel_locker": 649,
         "study_seat": 956,
-        "charging_station": 321,
-        "printing_point": 334,
         "restroom": 468,
-        "water_dispenser": 456
+        "parcel_locker": 649,
+        "water_dispenser": 456,
+        "charging_station": 321,
+        "printing_point": 334
       }
     },
     {
@@ -1449,11 +1449,11 @@
       "total": 3163,
       "counts": {
         "study_seat": 974,
-        "printing_point": 324,
-        "charging_station": 312,
-        "parcel_locker": 626,
+        "restroom": 455,
         "water_dispenser": 472,
-        "restroom": 455
+        "parcel_locker": 626,
+        "charging_station": 312,
+        "printing_point": 324
       }
     },
     {
@@ -1463,12 +1463,12 @@
       "category_count": 6,
       "total": 3220,
       "counts": {
-        "study_seat": 968,
-        "printing_point": 335,
-        "water_dispenser": 474,
         "restroom": 463,
+        "printing_point": 335,
         "parcel_locker": 659,
-        "charging_station": 321
+        "charging_station": 321,
+        "water_dispenser": 474,
+        "study_seat": 968
       }
     },
     {
@@ -1479,11 +1479,11 @@
       "total": 3196,
       "counts": {
         "charging_station": 318,
-        "study_seat": 930,
         "parcel_locker": 658,
+        "water_dispenser": 473,
+        "study_seat": 930,
         "restroom": 486,
-        "printing_point": 331,
-        "water_dispenser": 473
+        "printing_point": 331
       }
     },
     {
@@ -1493,12 +1493,12 @@
       "category_count": 6,
       "total": 3262,
       "counts": {
-        "parcel_locker": 671,
+        "study_seat": 946,
         "restroom": 526,
+        "parcel_locker": 671,
         "water_dispenser": 476,
-        "printing_point": 328,
         "charging_station": 315,
-        "study_seat": 946
+        "printing_point": 328
       }
     },
     {
@@ -1509,11 +1509,11 @@
       "total": 3280,
       "counts": {
         "study_seat": 944,
-        "charging_station": 319,
         "printing_point": 317,
-        "restroom": 541,
         "water_dispenser": 492,
-        "parcel_locker": 667
+        "parcel_locker": 667,
+        "charging_station": 319,
+        "restroom": 541
       }
     },
     {
@@ -1523,12 +1523,12 @@
       "category_count": 6,
       "total": 3011,
       "counts": {
-        "printing_point": 292,
         "study_seat": 884,
-        "charging_station": 296,
-        "restroom": 499,
+        "printing_point": 292,
         "parcel_locker": 599,
-        "water_dispenser": 441
+        "water_dispenser": 441,
+        "charging_station": 296,
+        "restroom": 499
       }
     },
     {
@@ -1539,11 +1539,11 @@
       "total": 2565,
       "counts": {
         "printing_point": 260,
-        "charging_station": 242,
         "study_seat": 745,
         "parcel_locker": 503,
-        "restroom": 446,
-        "water_dispenser": 369
+        "water_dispenser": 369,
+        "charging_station": 242,
+        "restroom": 446
       }
     },
     {
@@ -1553,12 +1553,12 @@
       "category_count": 6,
       "total": 1949,
       "counts": {
-        "printing_point": 197,
-        "study_seat": 553,
         "charging_station": 188,
-        "restroom": 356,
+        "parcel_locker": 374,
         "water_dispenser": 281,
-        "parcel_locker": 374
+        "study_seat": 553,
+        "restroom": 356,
+        "printing_point": 197
       }
     },
     {
@@ -1568,12 +1568,12 @@
       "category_count": 6,
       "total": 1816,
       "counts": {
-        "restroom": 279,
+        "study_seat": 556,
+        "printing_point": 188,
         "water_dispenser": 280,
         "parcel_locker": 343,
-        "study_seat": 556,
         "charging_station": 170,
-        "printing_point": 188
+        "restroom": 279
       }
     },
     {
@@ -1583,11 +1583,11 @@
       "category_count": 6,
       "total": 2376,
       "counts": {
+        "charging_station": 244,
+        "water_dispenser": 374,
+        "parcel_locker": 451,
         "study_seat": 716,
         "printing_point": 240,
-        "charging_station": 244,
-        "parcel_locker": 451,
-        "water_dispenser": 374,
         "restroom": 351
       }
     },
@@ -1598,12 +1598,12 @@
       "category_count": 6,
       "total": 2871,
       "counts": {
-        "restroom": 414,
-        "water_dispenser": 443,
-        "printing_point": 289,
-        "charging_station": 287,
         "study_seat": 883,
-        "parcel_locker": 555
+        "printing_point": 289,
+        "water_dispenser": 443,
+        "parcel_locker": 555,
+        "charging_station": 287,
+        "restroom": 414
       }
     },
     {
@@ -1613,12 +1613,12 @@
       "category_count": 6,
       "total": 2999,
       "counts": {
-        "parcel_locker": 577,
         "restroom": 427,
-        "water_dispenser": 456,
-        "study_seat": 941,
+        "printing_point": 297,
+        "parcel_locker": 577,
         "charging_station": 301,
-        "printing_point": 297
+        "water_dispenser": 456,
+        "study_seat": 941
       }
     },
     {
@@ -1628,12 +1628,12 @@
       "category_count": 6,
       "total": 3102,
       "counts": {
-        "parcel_locker": 593,
-        "water_dispenser": 458,
         "restroom": 435,
-        "study_seat": 992,
+        "printing_point": 295,
+        "parcel_locker": 593,
         "charging_station": 329,
-        "printing_point": 295
+        "water_dispenser": 458,
+        "study_seat": 992
       }
     },
     {
@@ -1643,12 +1643,12 @@
       "category_count": 6,
       "total": 3112,
       "counts": {
-        "restroom": 430,
-        "water_dispenser": 469,
-        "parcel_locker": 607,
         "study_seat": 965,
         "printing_point": 302,
-        "charging_station": 339
+        "water_dispenser": 469,
+        "parcel_locker": 607,
+        "charging_station": 339,
+        "restroom": 430
       }
     },
     {
@@ -1658,12 +1658,12 @@
       "category_count": 6,
       "total": 3093,
       "counts": {
-        "water_dispenser": 454,
-        "parcel_locker": 628,
-        "restroom": 423,
-        "study_seat": 959,
         "printing_point": 294,
-        "charging_station": 335
+        "restroom": 423,
+        "water_dispenser": 454,
+        "charging_station": 335,
+        "parcel_locker": 628,
+        "study_seat": 959
       }
     },
     {
@@ -1673,12 +1673,12 @@
       "category_count": 6,
       "total": 3085,
       "counts": {
-        "charging_station": 337,
         "study_seat": 954,
-        "restroom": 419,
         "printing_point": 280,
+        "water_dispenser": 471,
         "parcel_locker": 624,
-        "water_dispenser": 471
+        "charging_station": 337,
+        "restroom": 419
       }
     },
     {
@@ -1688,12 +1688,12 @@
       "category_count": 6,
       "total": 3054,
       "counts": {
-        "charging_station": 340,
         "study_seat": 945,
-        "parcel_locker": 607,
-        "restroom": 428,
         "printing_point": 300,
-        "water_dispenser": 434
+        "parcel_locker": 607,
+        "water_dispenser": 434,
+        "charging_station": 340,
+        "restroom": 428
       }
     },
     {
@@ -1703,12 +1703,12 @@
       "category_count": 6,
       "total": 3015,
       "counts": {
-        "charging_station": 334,
-        "study_seat": 906,
-        "parcel_locker": 602,
-        "restroom": 430,
         "printing_point": 290,
-        "water_dispenser": 453
+        "water_dispenser": 453,
+        "parcel_locker": 602,
+        "study_seat": 906,
+        "restroom": 430,
+        "charging_station": 334
       }
     },
     {
@@ -1718,12 +1718,12 @@
       "category_count": 6,
       "total": 3055,
       "counts": {
-        "charging_station": 324,
         "printing_point": 296,
-        "study_seat": 905,
         "restroom": 463,
+        "water_dispenser": 449,
+        "charging_station": 324,
         "parcel_locker": 618,
-        "water_dispenser": 449
+        "study_seat": 905
       }
     },
     {
@@ -1733,12 +1733,12 @@
       "category_count": 6,
       "total": 3152,
       "counts": {
-        "study_seat": 965,
+        "printing_point": 323,
         "restroom": 463,
         "water_dispenser": 466,
-        "charging_station": 315,
         "parcel_locker": 620,
-        "printing_point": 323
+        "charging_station": 315,
+        "study_seat": 965
       }
     },
     {
@@ -1748,12 +1748,12 @@
       "category_count": 6,
       "total": 3167,
       "counts": {
-        "parcel_locker": 612,
-        "study_seat": 981,
         "printing_point": 327,
-        "charging_station": 304,
         "restroom": 474,
-        "water_dispenser": 469
+        "parcel_locker": 612,
+        "charging_station": 304,
+        "water_dispenser": 469,
+        "study_seat": 981
       }
     },
     {
@@ -1763,12 +1763,12 @@
       "category_count": 6,
       "total": 3116,
       "counts": {
-        "printing_point": 324,
-        "water_dispenser": 467,
-        "restroom": 454,
-        "charging_station": 309,
         "study_seat": 946,
-        "parcel_locker": 616
+        "restroom": 454,
+        "parcel_locker": 616,
+        "water_dispenser": 467,
+        "charging_station": 309,
+        "printing_point": 324
       }
     },
     {
@@ -1779,11 +1779,11 @@
       "total": 3181,
       "counts": {
         "study_seat": 933,
-        "charging_station": 321,
         "printing_point": 340,
-        "restroom": 473,
         "water_dispenser": 480,
-        "parcel_locker": 634
+        "parcel_locker": 634,
+        "charging_station": 321,
+        "restroom": 473
       }
     },
     {
@@ -1794,10 +1794,10 @@
       "total": 3216,
       "counts": {
         "restroom": 497,
-        "water_dispenser": 495,
-        "parcel_locker": 659,
-        "charging_station": 315,
         "printing_point": 319,
+        "water_dispenser": 495,
+        "charging_station": 315,
+        "parcel_locker": 659,
         "study_seat": 931
       }
     },
@@ -1808,12 +1808,12 @@
       "category_count": 6,
       "total": 3264,
       "counts": {
-        "study_seat": 959,
-        "printing_point": 320,
-        "charging_station": 327,
         "restroom": 516,
+        "printing_point": 320,
         "parcel_locker": 659,
-        "water_dispenser": 483
+        "charging_station": 327,
+        "water_dispenser": 483,
+        "study_seat": 959
       }
     },
     {
@@ -1823,12 +1823,12 @@
       "category_count": 6,
       "total": 3008,
       "counts": {
-        "charging_station": 300,
-        "study_seat": 863,
         "restroom": 487,
         "printing_point": 304,
+        "water_dispenser": 453,
+        "charging_station": 300,
         "parcel_locker": 601,
-        "water_dispenser": 453
+        "study_seat": 863
       }
     },
     {
@@ -1838,12 +1838,12 @@
       "category_count": 6,
       "total": 2552,
       "counts": {
-        "charging_station": 265,
-        "study_seat": 748,
         "restroom": 430,
         "printing_point": 268,
+        "water_dispenser": 363,
+        "charging_station": 265,
         "parcel_locker": 478,
-        "water_dispenser": 363
+        "study_seat": 748
       }
     },
     {
@@ -1855,10 +1855,10 @@
       "counts": {
         "study_seat": 534,
         "printing_point": 191,
-        "charging_station": 179,
-        "restroom": 320,
         "water_dispenser": 261,
-        "parcel_locker": 354
+        "parcel_locker": 354,
+        "charging_station": 179,
+        "restroom": 320
       }
     },
     {
@@ -1868,10 +1868,10 @@
       "category_count": 6,
       "total": 1811,
       "counts": {
-        "parcel_locker": 343,
-        "restroom": 276,
-        "water_dispenser": 280,
         "study_seat": 540,
+        "restroom": 276,
+        "parcel_locker": 343,
+        "water_dispenser": 280,
         "charging_station": 189,
         "printing_point": 183
       }
@@ -1883,12 +1883,12 @@
       "category_count": 6,
       "total": 2473,
       "counts": {
-        "charging_station": 261,
-        "study_seat": 750,
         "restroom": 357,
-        "parcel_locker": 476,
+        "study_seat": 750,
         "printing_point": 255,
-        "water_dispenser": 374
+        "charging_station": 261,
+        "water_dispenser": 374,
+        "parcel_locker": 476
       }
     },
     {
@@ -1898,12 +1898,12 @@
       "category_count": 6,
       "total": 2914,
       "counts": {
-        "restroom": 419,
         "printing_point": 305,
+        "restroom": 419,
         "parcel_locker": 568,
         "charging_station": 304,
-        "study_seat": 888,
-        "water_dispenser": 430
+        "water_dispenser": 430,
+        "study_seat": 888
       }
     },
     {
@@ -1914,11 +1914,11 @@
       "total": 3026,
       "counts": {
         "restroom": 426,
+        "printing_point": 319,
         "parcel_locker": 591,
         "charging_station": 326,
-        "study_seat": 929,
-        "printing_point": 319,
-        "water_dispenser": 435
+        "water_dispenser": 435,
+        "study_seat": 929
       }
     },
     {
@@ -1928,12 +1928,12 @@
       "category_count": 6,
       "total": 3143,
       "counts": {
-        "charging_station": 357,
         "study_seat": 966,
-        "restroom": 432,
-        "parcel_locker": 613,
         "printing_point": 317,
-        "water_dispenser": 458
+        "parcel_locker": 613,
+        "water_dispenser": 458,
+        "charging_station": 357,
+        "restroom": 432
       }
     },
     {
@@ -1943,12 +1943,12 @@
       "category_count": 6,
       "total": 3142,
       "counts": {
-        "charging_station": 349,
         "printing_point": 314,
-        "parcel_locker": 598,
-        "study_seat": 985,
         "restroom": 426,
-        "water_dispenser": 470
+        "parcel_locker": 598,
+        "water_dispenser": 470,
+        "charging_station": 349,
+        "study_seat": 985
       }
     },
     {
@@ -1958,12 +1958,12 @@
       "category_count": 6,
       "total": 3147,
       "counts": {
-        "study_seat": 966,
-        "parcel_locker": 621,
-        "water_dispenser": 478,
-        "charging_station": 350,
         "printing_point": 300,
-        "restroom": 432
+        "restroom": 432,
+        "parcel_locker": 621,
+        "charging_station": 350,
+        "water_dispenser": 478,
+        "study_seat": 966
       }
     },
     {
@@ -1973,12 +1973,12 @@
       "category_count": 6,
       "total": 3095,
       "counts": {
-        "study_seat": 935,
-        "charging_station": 342,
+        "restroom": 424,
         "printing_point": 287,
-        "parcel_locker": 632,
         "water_dispenser": 475,
-        "restroom": 424
+        "charging_station": 342,
+        "parcel_locker": 632,
+        "study_seat": 935
       }
     },
     {
@@ -1988,12 +1988,12 @@
       "category_count": 6,
       "total": 3094,
       "counts": {
-        "restroom": 453,
+        "study_seat": 924,
+        "printing_point": 280,
         "parcel_locker": 634,
         "water_dispenser": 468,
-        "study_seat": 924,
         "charging_station": 335,
-        "printing_point": 280
+        "restroom": 453
       }
     },
     {
@@ -2003,12 +2003,12 @@
       "category_count": 6,
       "total": 3094,
       "counts": {
-        "restroom": 458,
-        "parcel_locker": 632,
         "study_seat": 924,
         "printing_point": 278,
+        "parcel_locker": 632,
+        "water_dispenser": 458,
         "charging_station": 344,
-        "water_dispenser": 458
+        "restroom": 458
       }
     },
     {
@@ -2018,12 +2018,12 @@
       "category_count": 6,
       "total": 3117,
       "counts": {
-        "parcel_locker": 629,
-        "study_seat": 935,
         "restroom": 468,
         "printing_point": 297,
+        "parcel_locker": 629,
+        "water_dispenser": 454,
         "charging_station": 334,
-        "water_dispenser": 454
+        "study_seat": 935
       }
     },
     {
@@ -2033,12 +2033,12 @@
       "category_count": 6,
       "total": 3123,
       "counts": {
-        "printing_point": 303,
-        "water_dispenser": 453,
-        "restroom": 479,
-        "charging_station": 305,
         "study_seat": 936,
-        "parcel_locker": 647
+        "restroom": 479,
+        "parcel_locker": 647,
+        "water_dispenser": 453,
+        "charging_station": 305,
+        "printing_point": 303
       }
     },
     {
@@ -2048,12 +2048,12 @@
       "category_count": 6,
       "total": 3171,
       "counts": {
-        "charging_station": 304,
         "study_seat": 961,
-        "parcel_locker": 633,
-        "printing_point": 321,
         "restroom": 479,
-        "water_dispenser": 473
+        "parcel_locker": 633,
+        "water_dispenser": 473,
+        "charging_station": 304,
+        "printing_point": 321
       }
     },
     {
@@ -2063,12 +2063,12 @@
       "category_count": 6,
       "total": 3162,
       "counts": {
-        "parcel_locker": 623,
         "study_seat": 982,
-        "restroom": 467,
-        "charging_station": 306,
         "printing_point": 317,
-        "water_dispenser": 467
+        "parcel_locker": 623,
+        "water_dispenser": 467,
+        "charging_station": 306,
+        "restroom": 467
       }
     },
     {
@@ -2078,12 +2078,12 @@
       "category_count": 6,
       "total": 3016,
       "counts": {
-        "restroom": 446,
-        "water_dispenser": 442,
-        "printing_point": 301,
-        "charging_station": 305,
         "study_seat": 901,
-        "parcel_locker": 621
+        "printing_point": 301,
+        "parcel_locker": 621,
+        "water_dispenser": 442,
+        "charging_station": 305,
+        "restroom": 446
       }
     },
     {
@@ -2093,12 +2093,12 @@
       "category_count": 6,
       "total": 3126,
       "counts": {
-        "charging_station": 306,
-        "study_seat": 930,
-        "parcel_locker": 633,
         "printing_point": 304,
         "restroom": 479,
-        "water_dispenser": 474
+        "water_dispenser": 474,
+        "parcel_locker": 633,
+        "charging_station": 306,
+        "study_seat": 930
       }
     },
     {
@@ -2108,12 +2108,12 @@
       "category_count": 6,
       "total": 3252,
       "counts": {
-        "charging_station": 323,
-        "printing_point": 327,
+        "study_seat": 945,
+        "restroom": 535,
         "water_dispenser": 491,
         "parcel_locker": 631,
-        "restroom": 535,
-        "study_seat": 945
+        "charging_station": 323,
+        "printing_point": 327
       }
     },
     {
@@ -2125,10 +2125,10 @@
       "counts": {
         "study_seat": 840,
         "printing_point": 304,
-        "charging_station": 298,
-        "restroom": 507,
         "water_dispenser": 438,
-        "parcel_locker": 570
+        "parcel_locker": 570,
+        "charging_station": 298,
+        "restroom": 507
       }
     },
     {
@@ -2138,12 +2138,12 @@
       "category_count": 6,
       "total": 2451,
       "counts": {
+        "restroom": 408,
         "printing_point": 264,
         "water_dispenser": 348,
-        "parcel_locker": 477,
         "charging_station": 254,
-        "study_seat": 700,
-        "restroom": 408
+        "parcel_locker": 477,
+        "study_seat": 700
       }
     },
     {
@@ -2153,12 +2153,12 @@
       "category_count": 6,
       "total": 1848,
       "counts": {
-        "study_seat": 533,
-        "printing_point": 199,
-        "charging_station": 179,
         "restroom": 306,
+        "printing_point": 199,
         "water_dispenser": 268,
-        "parcel_locker": 363
+        "charging_station": 179,
+        "parcel_locker": 363,
+        "study_seat": 533
       }
     },
     {
@@ -2168,12 +2168,12 @@
       "category_count": 6,
       "total": 1779,
       "counts": {
-        "charging_station": 188,
         "study_seat": 545,
-        "parcel_locker": 342,
-        "restroom": 259,
         "printing_point": 177,
-        "water_dispenser": 268
+        "water_dispenser": 268,
+        "parcel_locker": 342,
+        "charging_station": 188,
+        "restroom": 259
       }
     },
     {
@@ -2183,12 +2183,12 @@
       "category_count": 6,
       "total": 2304,
       "counts": {
-        "charging_station": 232,
-        "study_seat": 715,
-        "parcel_locker": 444,
         "restroom": 334,
+        "study_seat": 715,
         "printing_point": 233,
-        "water_dispenser": 346
+        "charging_station": 232,
+        "water_dispenser": 346,
+        "parcel_locker": 444
       }
     },
     {
@@ -2200,10 +2200,10 @@
       "counts": {
         "study_seat": 836,
         "printing_point": 277,
-        "charging_station": 291,
-        "restroom": 379,
         "water_dispenser": 399,
-        "parcel_locker": 528
+        "parcel_locker": 528,
+        "charging_station": 291,
+        "restroom": 379
       }
     },
     {
@@ -2213,12 +2213,12 @@
       "category_count": 6,
       "total": 3060,
       "counts": {
-        "restroom": 429,
+        "study_seat": 959,
+        "printing_point": 321,
         "water_dispenser": 438,
         "parcel_locker": 593,
-        "study_seat": 959,
         "charging_station": 320,
-        "printing_point": 321
+        "restroom": 429
       }
     },
     {
@@ -2228,12 +2228,12 @@
       "category_count": 6,
       "total": 3002,
       "counts": {
-        "charging_station": 329,
-        "study_seat": 920,
-        "parcel_locker": 598,
         "restroom": 414,
         "printing_point": 306,
-        "water_dispenser": 435
+        "parcel_locker": 598,
+        "water_dispenser": 435,
+        "charging_station": 329,
+        "study_seat": 920
       }
     },
     {
@@ -2243,12 +2243,12 @@
       "category_count": 6,
       "total": 3041,
       "counts": {
-        "charging_station": 339,
-        "study_seat": 909,
-        "parcel_locker": 608,
         "restroom": 419,
         "printing_point": 308,
-        "water_dispenser": 458
+        "water_dispenser": 458,
+        "parcel_locker": 608,
+        "charging_station": 339,
+        "study_seat": 909
       }
     },
     {
@@ -2258,12 +2258,12 @@
       "category_count": 6,
       "total": 2985,
       "counts": {
-        "water_dispenser": 453,
-        "parcel_locker": 597,
-        "restroom": 404,
         "printing_point": 294,
-        "study_seat": 897,
-        "charging_station": 340
+        "restroom": 404,
+        "parcel_locker": 597,
+        "water_dispenser": 453,
+        "charging_station": 340,
+        "study_seat": 897
       }
     },
     {
@@ -2275,10 +2275,10 @@
       "counts": {
         "restroom": 417,
         "printing_point": 288,
-        "water_dispenser": 456,
+        "parcel_locker": 606,
         "charging_station": 318,
-        "study_seat": 861,
-        "parcel_locker": 606
+        "water_dispenser": 456,
+        "study_seat": 861
       }
     },
     {
@@ -2288,12 +2288,12 @@
       "category_count": 6,
       "total": 2983,
       "counts": {
-        "charging_station": 317,
-        "study_seat": 874,
-        "parcel_locker": 611,
         "restroom": 449,
         "printing_point": 263,
-        "water_dispenser": 469
+        "parcel_locker": 611,
+        "water_dispenser": 469,
+        "charging_station": 317,
+        "study_seat": 874
       }
     },
     {
@@ -2304,11 +2304,11 @@
       "total": 3045,
       "counts": {
         "printing_point": 263,
-        "charging_station": 322,
-        "study_seat": 891,
-        "parcel_locker": 619,
+        "restroom": 470,
         "water_dispenser": 480,
-        "restroom": 470
+        "charging_station": 322,
+        "parcel_locker": 619,
+        "study_seat": 891
       }
     },
     {
@@ -2318,12 +2318,12 @@
       "category_count": 6,
       "total": 3085,
       "counts": {
+        "charging_station": 314,
         "parcel_locker": 626,
         "water_dispenser": 462,
-        "restroom": 471,
         "study_seat": 924,
         "printing_point": 288,
-        "charging_station": 314
+        "restroom": 471
       }
     },
     {
@@ -2333,12 +2333,12 @@
       "category_count": 6,
       "total": 3100,
       "counts": {
+        "printing_point": 289,
+        "restroom": 477,
         "parcel_locker": 633,
         "water_dispenser": 464,
-        "restroom": 477,
-        "study_seat": 946,
-        "printing_point": 289,
-        "charging_station": 291
+        "charging_station": 291,
+        "study_seat": 946
       }
     },
     {
@@ -2348,12 +2348,12 @@
       "category_count": 6,
       "total": 3065,
       "counts": {
+        "printing_point": 291,
+        "restroom": 476,
         "parcel_locker": 620,
         "water_dispenser": 471,
-        "restroom": 476,
         "charging_station": 286,
-        "study_seat": 921,
-        "printing_point": 291
+        "study_seat": 921
       }
     },
     {
@@ -2364,10 +2364,10 @@
       "total": 3088,
       "counts": {
         "restroom": 481,
-        "charging_station": 302,
-        "water_dispenser": 452,
         "printing_point": 298,
         "parcel_locker": 618,
+        "charging_station": 302,
+        "water_dispenser": 452,
         "study_seat": 937
       }
     },
@@ -2378,12 +2378,12 @@
       "category_count": 6,
       "total": 3105,
       "counts": {
-        "restroom": 467,
-        "water_dispenser": 468,
-        "printing_point": 307,
-        "charging_station": 310,
         "study_seat": 920,
-        "parcel_locker": 633
+        "printing_point": 307,
+        "parcel_locker": 633,
+        "water_dispenser": 468,
+        "charging_station": 310,
+        "restroom": 467
       }
     },
     {
@@ -2393,12 +2393,12 @@
       "category_count": 6,
       "total": 3130,
       "counts": {
-        "parcel_locker": 639,
         "charging_station": 306,
         "water_dispenser": 482,
+        "parcel_locker": 639,
         "study_seat": 904,
-        "restroom": 485,
-        "printing_point": 314
+        "printing_point": 314,
+        "restroom": 485
       }
     },
     {
@@ -2408,12 +2408,12 @@
       "category_count": 6,
       "total": 3149,
       "counts": {
-        "parcel_locker": 632,
         "study_seat": 923,
-        "printing_point": 324,
-        "charging_station": 305,
         "restroom": 498,
-        "water_dispenser": 467
+        "water_dispenser": 467,
+        "parcel_locker": 632,
+        "charging_station": 305,
+        "printing_point": 324
       }
     },
     {
@@ -2423,12 +2423,12 @@
       "category_count": 6,
       "total": 2843,
       "counts": {
-        "study_seat": 820,
-        "printing_point": 284,
-        "charging_station": 280,
         "restroom": 456,
+        "printing_point": 284,
         "water_dispenser": 431,
-        "parcel_locker": 572
+        "charging_station": 280,
+        "parcel_locker": 572,
+        "study_seat": 820
       }
     },
     {
@@ -2438,11 +2438,11 @@
       "category_count": 6,
       "total": 2401,
       "counts": {
+        "study_seat": 689,
         "printing_point": 237,
         "water_dispenser": 359,
         "parcel_locker": 481,
         "charging_station": 238,
-        "study_seat": 689,
         "restroom": 397
       }
     },
@@ -2453,12 +2453,12 @@
       "category_count": 6,
       "total": 1841,
       "counts": {
-        "charging_station": 181,
-        "study_seat": 544,
         "restroom": 289,
         "printing_point": 189,
+        "water_dispenser": 274,
+        "charging_station": 181,
         "parcel_locker": 364,
-        "water_dispenser": 274
+        "study_seat": 544
       }
     },
     {
@@ -2468,12 +2468,12 @@
       "category_count": 6,
       "total": 1489,
       "counts": {
-        "water_dispenser": 217,
-        "parcel_locker": 295,
+        "printing_point": 155,
         "restroom": 203,
-        "study_seat": 460,
+        "water_dispenser": 217,
         "charging_station": 159,
-        "printing_point": 155
+        "parcel_locker": 295,
+        "study_seat": 460
       }
     },
     {
@@ -2483,10 +2483,10 @@
       "category_count": 6,
       "total": 1943,
       "counts": {
+        "study_seat": 606,
+        "restroom": 267,
         "water_dispenser": 279,
         "parcel_locker": 381,
-        "restroom": 267,
-        "study_seat": 606,
         "charging_station": 209,
         "printing_point": 201
       }
@@ -2499,11 +2499,11 @@
       "total": 2305,
       "counts": {
         "printing_point": 241,
-        "charging_station": 254,
-        "study_seat": 715,
+        "restroom": 313,
         "parcel_locker": 458,
+        "charging_station": 254,
         "water_dispenser": 324,
-        "restroom": 313
+        "study_seat": 715
       }
     },
     {
@@ -2514,11 +2514,11 @@
       "total": 2452,
       "counts": {
         "restroom": 338,
-        "water_dispenser": 353,
         "printing_point": 258,
+        "parcel_locker": 480,
+        "water_dispenser": 353,
         "charging_station": 265,
-        "study_seat": 758,
-        "parcel_locker": 480
+        "study_seat": 758
       }
     },
     {
@@ -2528,12 +2528,12 @@
       "category_count": 6,
       "total": 2420,
       "counts": {
-        "study_seat": 731,
+        "restroom": 326,
         "printing_point": 260,
-        "charging_station": 254,
         "parcel_locker": 495,
         "water_dispenser": 354,
-        "restroom": 326
+        "charging_station": 254,
+        "study_seat": 731
       }
     },
     {
@@ -2543,12 +2543,12 @@
       "category_count": 6,
       "total": 2512,
       "counts": {
-        "parcel_locker": 524,
         "restroom": 336,
-        "study_seat": 735,
         "printing_point": 265,
+        "water_dispenser": 376,
+        "parcel_locker": 524,
         "charging_station": 276,
-        "water_dispenser": 376
+        "study_seat": 735
       }
     },
     {
@@ -2558,12 +2558,12 @@
       "category_count": 6,
       "total": 2511,
       "counts": {
-        "study_seat": 732,
-        "charging_station": 282,
-        "printing_point": 254,
         "restroom": 337,
+        "printing_point": 254,
         "water_dispenser": 381,
-        "parcel_locker": 525
+        "charging_station": 282,
+        "parcel_locker": 525,
+        "study_seat": 732
       }
     },
     {
@@ -2573,12 +2573,12 @@
       "category_count": 6,
       "total": 2519,
       "counts": {
-        "parcel_locker": 525,
-        "study_seat": 722,
         "printing_point": 241,
         "restroom": 363,
+        "parcel_locker": 525,
+        "water_dispenser": 397,
         "charging_station": 271,
-        "water_dispenser": 397
+        "study_seat": 722
       }
     },
     {
@@ -2590,10 +2590,10 @@
       "counts": {
         "restroom": 373,
         "study_seat": 703,
+        "parcel_locker": 532,
         "water_dispenser": 392,
         "charging_station": 258,
-        "printing_point": 223,
-        "parcel_locker": 532
+        "printing_point": 223
       }
     },
     {
@@ -2603,12 +2603,12 @@
       "category_count": 6,
       "total": 2556,
       "counts": {
-        "study_seat": 732,
-        "printing_point": 221,
-        "charging_station": 267,
         "restroom": 403,
+        "printing_point": 221,
         "water_dispenser": 398,
-        "parcel_locker": 535
+        "parcel_locker": 535,
+        "charging_station": 267,
+        "study_seat": 732
       }
     },
     {
@@ -2618,12 +2618,12 @@
       "category_count": 6,
       "total": 2582,
       "counts": {
-        "charging_station": 260,
-        "study_seat": 757,
-        "parcel_locker": 535,
         "printing_point": 226,
         "restroom": 399,
-        "water_dispenser": 405
+        "parcel_locker": 535,
+        "water_dispenser": 405,
+        "charging_station": 260,
+        "study_seat": 757
       }
     },
     {
@@ -2633,12 +2633,12 @@
       "category_count": 6,
       "total": 2589,
       "counts": {
-        "printing_point": 238,
         "study_seat": 752,
-        "charging_station": 254,
-        "parcel_locker": 543,
         "restroom": 408,
-        "water_dispenser": 394
+        "parcel_locker": 543,
+        "water_dispenser": 394,
+        "charging_station": 254,
+        "printing_point": 238
       }
     },
     {
@@ -2648,12 +2648,12 @@
       "category_count": 6,
       "total": 2587,
       "counts": {
-        "charging_station": 242,
-        "printing_point": 245,
         "restroom": 414,
+        "printing_point": 245,
         "parcel_locker": 537,
-        "study_seat": 765,
-        "water_dispenser": 384
+        "charging_station": 242,
+        "water_dispenser": 384,
+        "study_seat": 765
       }
     },
     {
@@ -2663,12 +2663,12 @@
       "category_count": 6,
       "total": 2599,
       "counts": {
-        "charging_station": 251,
-        "study_seat": 753,
         "printing_point": 248,
         "restroom": 413,
+        "water_dispenser": 391,
+        "charging_station": 251,
         "parcel_locker": 543,
-        "water_dispenser": 391
+        "study_seat": 753
       }
     },
     {
@@ -2678,12 +2678,12 @@
       "category_count": 6,
       "total": 2608,
       "counts": {
-        "study_seat": 773,
-        "charging_station": 259,
-        "printing_point": 257,
         "restroom": 396,
+        "printing_point": 257,
         "water_dispenser": 387,
-        "parcel_locker": 536
+        "parcel_locker": 536,
+        "charging_station": 259,
+        "study_seat": 773
       }
     },
     {
@@ -2693,12 +2693,12 @@
       "category_count": 6,
       "total": 2611,
       "counts": {
-        "charging_station": 260,
         "study_seat": 759,
-        "restroom": 396,
         "printing_point": 268,
+        "water_dispenser": 392,
         "parcel_locker": 536,
-        "water_dispenser": 392
+        "charging_station": 260,
+        "restroom": 396
       }
     },
     {
@@ -2708,12 +2708,12 @@
       "category_count": 6,
       "total": 2633,
       "counts": {
-        "charging_station": 253,
         "study_seat": 763,
-        "parcel_locker": 565,
-        "printing_point": 257,
         "restroom": 412,
-        "water_dispenser": 383
+        "parcel_locker": 565,
+        "water_dispenser": 383,
+        "charging_station": 253,
+        "printing_point": 257
       }
     },
     {
@@ -2723,12 +2723,12 @@
       "category_count": 6,
       "total": 2440,
       "counts": {
+        "study_seat": 710,
         "printing_point": 242,
-        "charging_station": 236,
         "water_dispenser": 368,
         "parcel_locker": 503,
-        "restroom": 381,
-        "study_seat": 710
+        "charging_station": 236,
+        "restroom": 381
       }
     },
     {
@@ -2738,11 +2738,11 @@
       "category_count": 6,
       "total": 2012,
       "counts": {
+        "study_seat": 583,
         "printing_point": 206,
         "water_dispenser": 303,
         "parcel_locker": 396,
         "charging_station": 198,
-        "study_seat": 583,
         "restroom": 326
       }
     },
@@ -2753,12 +2753,12 @@
       "category_count": 6,
       "total": 1572,
       "counts": {
-        "study_seat": 452,
-        "printing_point": 166,
-        "charging_station": 150,
         "restroom": 250,
+        "printing_point": 166,
         "water_dispenser": 235,
-        "parcel_locker": 319
+        "charging_station": 150,
+        "parcel_locker": 319,
+        "study_seat": 452
       }
     },
     {
@@ -2768,12 +2768,12 @@
       "category_count": 6,
       "total": 1085,
       "counts": {
-        "study_seat": 330,
+        "printing_point": 112,
         "restroom": 153,
+        "parcel_locker": 219,
         "charging_station": 117,
         "water_dispenser": 154,
-        "parcel_locker": 219,
-        "printing_point": 112
+        "study_seat": 330
       }
     },
     {
@@ -2785,10 +2785,10 @@
       "counts": {
         "study_seat": 448,
         "printing_point": 156,
-        "charging_station": 167,
         "parcel_locker": 291,
-        "restroom": 190,
-        "water_dispenser": 209
+        "water_dispenser": 209,
+        "charging_station": 167,
+        "restroom": 190
       }
     },
     {
@@ -2800,10 +2800,10 @@
       "counts": {
         "study_seat": 537,
         "printing_point": 200,
-        "water_dispenser": 249,
         "parcel_locker": 356,
-        "restroom": 242,
-        "charging_station": 196
+        "water_dispenser": 249,
+        "charging_station": 196,
+        "restroom": 242
       }
     },
     {
@@ -2813,12 +2813,12 @@
       "category_count": 6,
       "total": 1856,
       "counts": {
-        "parcel_locker": 380,
         "study_seat": 562,
-        "charging_station": 204,
-        "printing_point": 200,
         "restroom": 244,
-        "water_dispenser": 266
+        "parcel_locker": 380,
+        "water_dispenser": 266,
+        "charging_station": 204,
+        "printing_point": 200
       }
     },
     {
@@ -2829,11 +2829,11 @@
       "total": 1839,
       "counts": {
         "study_seat": 547,
-        "printing_point": 195,
-        "water_dispenser": 271,
-        "parcel_locker": 386,
         "restroom": 250,
-        "charging_station": 190
+        "parcel_locker": 386,
+        "water_dispenser": 271,
+        "charging_station": 190,
+        "printing_point": 195
       }
     },
     {
@@ -2843,12 +2843,12 @@
       "category_count": 6,
       "total": 1860,
       "counts": {
-        "restroom": 241,
-        "charging_station": 203,
-        "water_dispenser": 282,
+        "study_seat": 550,
         "printing_point": 193,
         "parcel_locker": 391,
-        "study_seat": 550
+        "water_dispenser": 282,
+        "charging_station": 203,
+        "restroom": 241
       }
     },
     {
@@ -2858,12 +2858,12 @@
       "category_count": 6,
       "total": 1929,
       "counts": {
-        "printing_point": 198,
-        "study_seat": 562,
-        "water_dispenser": 298,
-        "charging_station": 210,
         "restroom": 260,
-        "parcel_locker": 401
+        "printing_point": 198,
+        "water_dispenser": 298,
+        "parcel_locker": 401,
+        "charging_station": 210,
+        "study_seat": 562
       }
     },
     {
@@ -2873,12 +2873,12 @@
       "category_count": 6,
       "total": 1875,
       "counts": {
-        "charging_station": 213,
         "study_seat": 542,
-        "restroom": 264,
-        "parcel_locker": 388,
         "printing_point": 178,
-        "water_dispenser": 290
+        "water_dispenser": 290,
+        "parcel_locker": 388,
+        "charging_station": 213,
+        "restroom": 264
       }
     },
     {
@@ -2888,12 +2888,12 @@
       "category_count": 6,
       "total": 1928,
       "counts": {
-        "restroom": 294,
+        "charging_station": 195,
+        "water_dispenser": 309,
+        "parcel_locker": 407,
         "study_seat": 550,
         "printing_point": 173,
-        "parcel_locker": 407,
-        "charging_station": 195,
-        "water_dispenser": 309
+        "restroom": 294
       }
     },
     {
@@ -2905,9 +2905,9 @@
       "counts": {
         "restroom": 296,
         "printing_point": 158,
+        "parcel_locker": 388,
         "water_dispenser": 296,
         "charging_station": 173,
-        "parcel_locker": 388,
         "study_seat": 545
       }
     },
@@ -2920,10 +2920,10 @@
       "counts": {
         "study_seat": 574,
         "printing_point": 152,
-        "water_dispenser": 293,
-        "restroom": 305,
         "parcel_locker": 393,
-        "charging_station": 188
+        "water_dispenser": 293,
+        "charging_station": 188,
+        "restroom": 305
       }
     },
     {
@@ -2934,11 +2934,11 @@
       "total": 1930,
       "counts": {
         "study_seat": 586,
-        "printing_point": 167,
-        "water_dispenser": 298,
-        "parcel_locker": 393,
         "restroom": 314,
-        "charging_station": 172
+        "parcel_locker": 393,
+        "water_dispenser": 298,
+        "charging_station": 172,
+        "printing_point": 167
       }
     },
     {
@@ -2948,12 +2948,12 @@
       "category_count": 6,
       "total": 1959,
       "counts": {
+        "study_seat": 602,
         "restroom": 314,
         "water_dispenser": 282,
         "parcel_locker": 399,
         "charging_station": 177,
-        "printing_point": 185,
-        "study_seat": 602
+        "printing_point": 185
       }
     },
     {
@@ -2964,11 +2964,11 @@
       "total": 1924,
       "counts": {
         "restroom": 314,
-        "water_dispenser": 282,
         "printing_point": 183,
+        "water_dispenser": 282,
         "charging_station": 172,
-        "study_seat": 572,
-        "parcel_locker": 401
+        "parcel_locker": 401,
+        "study_seat": 572
       }
     },
     {
@@ -2978,12 +2978,12 @@
       "category_count": 6,
       "total": 1967,
       "counts": {
-        "restroom": 310,
-        "printing_point": 203,
         "study_seat": 570,
+        "restroom": 310,
+        "water_dispenser": 287,
         "parcel_locker": 412,
         "charging_station": 185,
-        "water_dispenser": 287
+        "printing_point": 203
       }
     },
     {
@@ -2993,12 +2993,12 @@
       "category_count": 6,
       "total": 1989,
       "counts": {
-        "charging_station": 198,
         "study_seat": 587,
-        "restroom": 304,
         "printing_point": 192,
+        "water_dispenser": 293,
         "parcel_locker": 415,
-        "water_dispenser": 293
+        "charging_station": 198,
+        "restroom": 304
       }
     },
     {
@@ -3008,12 +3008,12 @@
       "category_count": 6,
       "total": 1957,
       "counts": {
-        "parcel_locker": 419,
-        "water_dispenser": 289,
-        "restroom": 296,
         "study_seat": 575,
         "printing_point": 191,
-        "charging_station": 187
+        "parcel_locker": 419,
+        "water_dispenser": 289,
+        "charging_station": 187,
+        "restroom": 296
       }
     },
     {
@@ -3023,12 +3023,12 @@
       "category_count": 6,
       "total": 1847,
       "counts": {
-        "charging_station": 180,
-        "printing_point": 196,
         "study_seat": 535,
-        "parcel_locker": 377,
         "restroom": 290,
-        "water_dispenser": 269
+        "water_dispenser": 269,
+        "parcel_locker": 377,
+        "charging_station": 180,
+        "printing_point": 196
       }
     },
     {
@@ -3038,12 +3038,12 @@
       "category_count": 6,
       "total": 1551,
       "counts": {
-        "water_dispenser": 221,
-        "restroom": 251,
-        "charging_station": 153,
         "study_seat": 446,
         "printing_point": 161,
-        "parcel_locker": 319
+        "water_dispenser": 221,
+        "parcel_locker": 319,
+        "charging_station": 153,
+        "restroom": 251
       }
     },
     {
@@ -3053,12 +3053,12 @@
       "category_count": 6,
       "total": 1185,
       "counts": {
-        "charging_station": 113,
         "study_seat": 338,
-        "restroom": 193,
         "printing_point": 135,
+        "water_dispenser": 173,
         "parcel_locker": 233,
-        "water_dispenser": 173
+        "charging_station": 113,
+        "restroom": 193
       }
     }
   ]
