@@ -6,81 +6,81 @@
     "python": "3.12.9",
     "memory": {
       "total_bytes": 34124718080,
-      "available_bytes": 14214479872
+      "available_bytes": 12005978112
     }
   },
   "disk": {
-    "path": "D:\\aiagent\\campus-spatial-query",
+    "path": "D:\\docker-project\\campus-spatial-query",
     "total": 699697983488,
-    "used": 449009065984,
-    "free": 250688917504
+    "used": 450615451648,
+    "free": 249082531840
   },
   "mongodb": {
     "version": "8.0.34",
-    "resident_mb": 239,
-    "virtual_mb": 2660,
+    "resident_mb": 646,
+    "virtual_mb": 3685,
     "cache": {
-      "bytes_in_cache": 31080218,
+      "bytes_in_cache": 293170492,
       "max_bytes": 7786725376
     }
   },
   "database": {
     "name": "campus_service",
     "collections": 10,
-    "objects": 21677,
-    "dataSize": 7502965.0,
-    "storageSize": 3215360.0,
-    "indexSize": 2285568.0,
-    "totalSize": 5500928.0
+    "objects": 336719,
+    "dataSize": 246098212.0,
+    "storageSize": 109780992.0,
+    "indexSize": 16257024.0,
+    "totalSize": 126038016.0
   },
   "collections": {
     "facilities": {
       "count": 20000,
       "size": 6456000,
       "storageSize": 2306048,
-      "totalIndexSize": 1626112,
+      "totalIndexSize": 1638400,
       "avgObjSize": 322
     },
     "buildings": {
       "count": 200,
       "size": 641240,
-      "storageSize": 647168,
+      "storageSize": 774144,
       "totalIndexSize": 237568,
       "avgObjSize": 3206
     },
     "bikes": {
-      "count": 40,
-      "size": 8480,
-      "storageSize": 20480,
-      "totalIndexSize": 40960,
-      "avgObjSize": 212
+      "count": 0,
+      "size": 0,
+      "storageSize": 4096,
+      "totalIndexSize": 8192,
+      "avgObjSize": null
     },
     "bike_latest": {
-      "count": 40,
-      "size": 11680,
-      "storageSize": 20480,
-      "totalIndexSize": 102400,
-      "avgObjSize": 292
+      "count": 0,
+      "size": 0,
+      "storageSize": 4096,
+      "totalIndexSize": 20480,
+      "avgObjSize": null
     },
     "bike_reports": {
       "count": null,
-      "size": 45172,
-      "storageSize": 36864,
-      "totalIndexSize": 40960,
+      "size": 187443575,
+      "storageSize": 96509952,
+      "totalIndexSize": 8761344,
       "avgObjSize": null
     },
     "bike_anomalies": {
-      "count": 2,
-      "size": 692,
-      "storageSize": 20480,
-      "totalIndexSize": 81920,
-      "avgObjSize": 346
+      "count": 0,
+      "size": 0,
+      "storageSize": 4096,
+      "totalIndexSize": 16384,
+      "avgObjSize": null
     },
     "heatmap_aggregates": {
-      "count": 1353,
-      "size": 337751,
-      "storageSize": 77824,
-      "totalIndexSize": 65536,
+      "count": 206517,
+      "size": 51555447,
+      "storageSize": 10092544,
+      "totalIndexSize": 5484544,
       "avgObjSize": 249
     },
     "dataset_metadata": {

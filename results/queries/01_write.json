@@ -5,7 +5,7 @@
     "facility_count": 20000,
     "bike_count": 40,
     "report_count": 2320,
-    "static_import_seconds": 0.74,
+    "static_import_seconds": 0.77,
     "buffer_seconds": 0.36,
     "bike_insert_seconds": 0.12
   },
@@ -13,32 +13,32 @@
     "result": {
       "buildings": 200,
       "facilities": 20000,
-      "bikes": 40,
-      "bike_latest": 40
+      "bikes": 0,
+      "bike_latest": 0
     },
     "timing": {
       "runs_ms": [
-        12.41,
-        6.46,
-        7.32
+        10.11,
+        6.72,
+        7.64
       ],
-      "min_ms": 6.46,
-      "median_ms": 7.32,
-      "max_ms": 12.41
+      "min_ms": 6.72,
+      "median_ms": 7.64,
+      "max_ms": 10.11
     }
   },
   "single_facility_write": {
     "timing": {
       "runs_ms": [
-        2.5,
+        2.19,
         1.97,
-        1.92,
-        1.96,
-        1.86
+        2.83,
+        1.9,
+        2.6
       ],
-      "min_ms": 1.86,
-      "median_ms": 1.96,
-      "max_ms": 2.5
+      "min_ms": 1.9,
+      "median_ms": 2.19,
+      "max_ms": 2.83
     },
     "read_back": {
       "_id": "facility_probe_acceptance",
@@ -57,7 +57,7 @@
       "building_id": null,
       "source": "acceptance",
       "data_version": "probe",
-      "updated_at": "2026-10-28T16:33:06.480000+00:00"
+      "updated_at": "2026-10-28T16:59:01.423000+00:00"
     },
     "deleted": true
   }

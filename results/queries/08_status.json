@@ -3,15 +3,15 @@
   "facility_id": "facility_000001",
   "timing": {
     "runs_ms": [
-      47.87,
-      49.12,
-      26.25,
-      22.48,
-      42.89
+      45.54,
+      23.12,
+      57.89,
+      23.48,
+      24.47
     ],
-    "min_ms": 22.48,
-    "median_ms": 42.89,
-    "max_ms": 49.12
+    "min_ms": 23.12,
+    "median_ms": 24.47,
+    "max_ms": 57.89
   },
   "while_disabled": {
     "fresh_status": "disabled",

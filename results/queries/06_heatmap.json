@@ -2,93 +2,22 @@
   "function": "车辆热力",
   "timing": {
     "runs_ms": [
-      12.31,
-      8.78,
-      7.79,
-      8.97,
-      9.97
+      2.69,
+      2.29,
+      1.98,
+      2.3,
+      3.29
     ],
-    "min_ms": 7.79,
-    "median_ms": 8.97,
-    "max_ms": 12.31
+    "min_ms": 1.98,
+    "median_ms": 2.3,
+    "max_ms": 3.29
   },
   "start": "2026-10-28T15:24:30+00:00",
   "end": "2026-10-28T16:24:30+00:00",
   "grid_size_m": 50,
   "bucket_minutes": 15,
   "grid_reason": "校园约 2.0 km × 1.1 km，楼宇网格约 100 m。热力用 50 m 格子，大约半栋楼，能分开楼前和楼后的聚集；这个尺寸也大于常见手机定位误差（5～15 m），不会被噪声切碎。全校园大约 40×23 个格子，结果可以直接画在地图上。时间按 15 分钟分桶，是 30 秒上报间隔的 30 倍，短时拥堵看得到，1700 万条明细也被压成十万级汇总。",
-  "cell_count": 827,
-  "report_count": 2320,
-  "top": [
-    {
-      "grid_id": "31:1",
-      "grid_x": 31,
-      "grid_y": 1,
-      "center": {
-        "type": "Point",
-        "coordinates": [
-          116.3184748,
-          39.9006749
-        ]
-      },
-      "report_count": 60,
-      "bike_count_peak": 2
-    },
-    {
-      "grid_id": "29:7",
-      "grid_x": 29,
-      "grid_y": 7,
-      "center": {
-        "type": "Point",
-        "coordinates": [
-          116.3173018,
-          39.9033743
-        ]
-      },
-      "report_count": 58,
-      "bike_count_peak": 1
-    },
-    {
-      "grid_id": "40:11",
-      "grid_x": 40,
-      "grid_y": 11,
-      "center": {
-        "type": "Point",
-        "coordinates": [
-          116.3237534,
-          39.905174
-        ]
-      },
-      "report_count": 10,
-      "bike_count_peak": 4
-    },
-    {
-      "grid_id": "27:2",
-      "grid_x": 27,
-      "grid_y": 2,
-      "center": {
-        "type": "Point",
-        "coordinates": [
-          116.3161288,
-          39.9011248
-        ]
-      },
-      "report_count": 9,
-      "bike_count_peak": 3
-    },
-    {
-      "grid_id": "4:0",
-      "grid_x": 4,
-      "grid_y": 0,
-      "center": {
-        "type": "Point",
-        "coordinates": [
-          116.3026393,
-          39.900225
-        ]
-      },
-      "report_count": 8,
-      "bike_count_peak": 3
-    }
-  ]
+  "cell_count": 0,
+  "report_count": 0,
+  "top": []
 }

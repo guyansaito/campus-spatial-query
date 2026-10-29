@@ -42,7 +42,7 @@ npm install
 npm run dev
 ```
 
-接口文档在 `http://127.0.0.1:8000/docs`，地图在 `http://127.0.0.1:5173`。
+接口文档在 `http://127.0.0.1:8000/docs`，地图在 `http://localhost:5173/`。
 
 ## 八项功能
 

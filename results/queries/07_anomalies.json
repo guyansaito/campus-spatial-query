@@ -2,80 +2,31 @@
   "function": "异常识别",
   "timing": {
     "runs_ms": [
-      2.05,
-      1.2,
-      1.47,
-      1.12,
-      1.26
+      1.42,
+      1.38,
+      0.87,
+      0.85,
+      0.96
     ],
-    "min_ms": 1.12,
-    "median_ms": 1.26,
-    "max_ms": 2.05
+    "min_ms": 0.85,
+    "median_ms": 0.96,
+    "max_ms": 1.42
   },
   "recompute_timing": {
     "runs_ms": [
-      15.34
+      1.81
     ],
-    "min_ms": 15.34,
-    "median_ms": 15.34,
-    "max_ms": 15.34
+    "min_ms": 1.81,
+    "median_ms": 1.81,
+    "max_ms": 1.81
   },
-  "indexed_count": 2,
-  "recompute_count": 2,
-  "recompute_scanned": 2320,
+  "indexed_count": 0,
+  "recompute_count": 0,
+  "recompute_scanned": 0,
   "only_indexed": [],
   "only_recompute": [],
   "match": true,
-  "zombie_count": 2,
-  "sample": [
-    {
-      "_id": "bike_0011|2026-10-28T16:08:30+00:00",
-      "bike_id": "bike_0011",
-      "timestamp": "2026-10-28T16:08:30+00:00",
-      "anomaly_type": "jump",
-      "distance_m": 490.19,
-      "gap_seconds": 30,
-      "implied_speed_kmh": 58.82,
-      "from_location": {
-        "type": "Point",
-        "coordinates": [
-          116.3117924,
-          39.9035052
-        ]
-      },
-      "to_location": {
-        "type": "Point",
-        "coordinates": [
-          116.3169122,
-          39.9055075
-        ]
-      },
-      "source": "seed"
-    },
-    {
-      "_id": "bike_0018|2026-10-28T16:15:30+00:00",
-      "bike_id": "bike_0018",
-      "timestamp": "2026-10-28T16:15:30+00:00",
-      "anomaly_type": "jump",
-      "distance_m": 1216.27,
-      "gap_seconds": 30,
-      "implied_speed_kmh": 145.95,
-      "from_location": {
-        "type": "Point",
-        "coordinates": [
-          116.3166425,
-          39.9038382
-        ]
-      },
-      "to_location": {
-        "type": "Point",
-        "coordinates": [
-          116.3028321,
-          39.9011179
-        ]
-      },
-      "source": "seed"
-    }
-  ],
+  "zombie_count": 0,
+  "sample": [],
   "path": "indexed"
 }
