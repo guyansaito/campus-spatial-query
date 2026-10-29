@@ -6,32 +6,32 @@
     "python": "3.12.9",
     "memory": {
       "total_bytes": 34124718080,
-      "available_bytes": 13587984384
+      "available_bytes": 14456995840
     }
   },
   "disk": {
     "path": "D:\\docker-project\\campus-spatial-query",
     "total": 699697983488,
-    "used": 427811028992,
-    "free": 271886954496
+    "used": 427948380160,
+    "free": 271749603328
   },
   "mongodb": {
     "version": "8.0.34",
-    "resident_mb": 304,
-    "virtual_mb": 2649,
+    "resident_mb": 232,
+    "virtual_mb": 3668,
     "cache": {
-      "bytes_in_cache": 108867818,
+      "bytes_in_cache": 43555565,
       "max_bytes": 7786725376
     }
   },
   "database": {
     "name": "campus_service",
     "collections": 10,
-    "objects": 170238,
-    "dataSize": 120451651.0,
-    "storageSize": 55922688.0,
-    "indexSize": 9015296.0,
-    "totalSize": 64937984.0
+    "objects": 442829,
+    "dataSize": 323833885.0,
+    "storageSize": 145805312.0,
+    "indexSize": 28106752.0,
+    "totalSize": 173912064.0
   },
   "collections": {
     "facilities": {
@@ -49,38 +49,38 @@
       "avgObjSize": 3206
     },
     "bikes": {
-      "count": 0,
-      "size": 0,
-      "storageSize": 4096,
-      "totalIndexSize": 8192,
-      "avgObjSize": null
+      "count": 2000,
+      "size": 424000,
+      "storageSize": 94208,
+      "totalIndexSize": 69632,
+      "avgObjSize": 212
     },
     "bike_latest": {
-      "count": 0,
-      "size": 0,
-      "storageSize": 4096,
-      "totalIndexSize": 20480,
-      "avgObjSize": null
+      "count": 2000,
+      "size": 584000,
+      "storageSize": 159744,
+      "totalIndexSize": 192512,
+      "avgObjSize": 292
     },
     "bike_reports": {
       "count": null,
-      "size": 88878503,
-      "storageSize": 48054272,
-      "totalIndexSize": 4079616,
+      "size": 247632726,
+      "storageSize": 129327104,
+      "totalIndexSize": 18104320,
       "avgObjSize": null
     },
     "bike_anomalies": {
-      "count": 0,
-      "size": 0,
-      "storageSize": 4096,
-      "totalIndexSize": 16384,
-      "avgObjSize": null
+      "count": 360,
+      "size": 124560,
+      "storageSize": 49152,
+      "totalIndexSize": 94208,
+      "avgObjSize": 346
     },
     "heatmap_aggregates": {
-      "count": 98036,
-      "size": 24473956,
-      "storageSize": 4853760,
-      "totalIndexSize": 2969600,
+      "count": 272267,
+      "size": 67969407,
+      "storageSize": 13172736,
+      "totalIndexSize": 7725056,
       "avgObjSize": 249
     },
     "dataset_metadata": {

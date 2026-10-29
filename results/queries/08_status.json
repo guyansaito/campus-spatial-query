@@ -1,17 +1,17 @@
 {
   "function": "状态维护",
-  "facility_id": "facility_000002",
+  "facility_id": "facility_000001",
   "timing": {
     "runs_ms": [
-      41.86,
-      60.81,
-      46.13,
-      33.4,
-      22.03
+      24.26,
+      20.55,
+      49.43,
+      45.63,
+      47.98
     ],
-    "min_ms": 22.03,
-    "median_ms": 41.86,
-    "max_ms": 60.81
+    "min_ms": 20.55,
+    "median_ms": 45.63,
+    "max_ms": 49.43
   },
   "while_disabled": {
     "fresh_status": "disabled",

@@ -2,22 +2,93 @@
   "function": "车辆热力",
   "timing": {
     "runs_ms": [
-      2.09,
-      2.09,
-      1.74,
-      3.28,
-      1.42
+      11.08,
+      10.73,
+      10.4,
+      15.05,
+      10.89
     ],
-    "min_ms": 1.42,
-    "median_ms": 2.09,
-    "max_ms": 3.28
+    "min_ms": 10.4,
+    "median_ms": 10.89,
+    "max_ms": 15.05
   },
-  "start": "2026-10-28T15:53:00+00:00",
-  "end": "2026-10-28T16:53:00+00:00",
+  "start": "2026-10-29T14:14:00+00:00",
+  "end": "2026-10-29T15:14:00+00:00",
   "grid_size_m": 50,
   "bucket_minutes": 15,
   "grid_reason": "校园约 2.0 km × 1.1 km，楼宇网格约 100 m。热力用 50 m 格子，大约半栋楼，能分开楼前和楼后的聚集；这个尺寸也大于常见手机定位误差（5～15 m），不会被噪声切碎。全校园大约 40×23 个格子，结果可以直接画在地图上。时间按 15 分钟分桶，是 30 秒上报间隔的 30 倍，短时拥堵看得到，1700 万条明细也被压成十万级汇总。",
-  "cell_count": 0,
-  "report_count": 0,
-  "top": []
+  "cell_count": 943,
+  "report_count": 298000,
+  "top": [
+    {
+      "grid_id": "31:7",
+      "grid_x": 31,
+      "grid_y": 7,
+      "center": {
+        "type": "Point",
+        "coordinates": [
+          116.3184748,
+          39.9033743
+        ]
+      },
+      "report_count": 601,
+      "bike_count_peak": 61
+    },
+    {
+      "grid_id": "0:20",
+      "grid_x": 0,
+      "grid_y": 20,
+      "center": {
+        "type": "Point",
+        "coordinates": [
+          116.3002933,
+          39.9092232
+        ]
+      },
+      "report_count": 574,
+      "bike_count_peak": 70
+    },
+    {
+      "grid_id": "37:0",
+      "grid_x": 37,
+      "grid_y": 0,
+      "center": {
+        "type": "Point",
+        "coordinates": [
+          116.3219938,
+          39.900225
+        ]
+      },
+      "report_count": 566,
+      "bike_count_peak": 70
+    },
+    {
+      "grid_id": "0:16",
+      "grid_x": 0,
+      "grid_y": 16,
+      "center": {
+        "type": "Point",
+        "coordinates": [
+          116.3002933,
+          39.9074235
+        ]
+      },
+      "report_count": 561,
+      "bike_count_peak": 71
+    },
+    {
+      "grid_id": "0:5",
+      "grid_x": 0,
+      "grid_y": 5,
+      "center": {
+        "type": "Point",
+        "coordinates": [
+          116.3002933,
+          39.9024745
+        ]
+      },
+      "report_count": 560,
+      "bike_count_peak": 66
+    }
+  ]
 }
