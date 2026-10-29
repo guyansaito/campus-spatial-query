@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import {
   Circle,
+  CircleMarker,
   MapContainer,
   Polygon,
   Polyline,
+  Popup,
   TileLayer,
   useMapEvents,
 } from "react-leaflet";
@@ -12,10 +14,20 @@ import "./App.css";
 
 const API = "http://127.0.0.1:8000";
 
-function ClickCatcher({ onPick }) {
+const STATUS_LABELS = {
+  active: "可用",
+  disabled: "停用",
+  occupied: "占用",
+  zombie: "僵尸车",
+};
+
+function ClickCatcher({ mode, onPick, onAddVertex }) {
   useMapEvents({
     click(event) {
-      onPick(event.latlng.lng, event.latlng.lat);
+      const longitude = event.latlng.lng;
+      const latitude = event.latlng.lat;
+      if (mode === "within") onAddVertex(longitude, latitude);
+      else onPick(longitude, latitude);
     },
   });
   return null;
@@ -26,6 +38,24 @@ function toLatLngs(polygon) {
     return null;
   }
   return polygon.coordinates[0].map(([lon, lat]) => [lat, lon]);
+}
+
+function toLocalInput(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  const pad = (number) => String(number).padStart(2, "0");
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
+function distanceMeters(lon1, lat1, lon2, lat2) {
+  const radius = 6371008.8;
+  const toRad = (degree) => (degree * Math.PI) / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return 2 * radius * Math.asin(Math.min(1, Math.sqrt(a)));
 }
 
 async function request(path, options) {
@@ -53,14 +83,18 @@ export default function App() {
   const [status, setStatus] = useState("disabled");
   const [facilityId, setFacilityId] = useState("facility_000001");
   const [bikeId, setBikeId] = useState("bike_0001");
-  const [page, setPage] = useState(1);
+  const [heatStart, setHeatStart] = useState("");
+  const [heatEnd, setHeatEnd] = useState("");
+  const [draft, setDraft] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [summary, setSummary] = useState([]);
   const [facilities, setFacilities] = useState([]);
   const [bikes, setBikes] = useState([]);
+  const [anomalies, setAnomalies] = useState([]);
   const [heatmap, setHeatmap] = useState([]);
   const [highlight, setHighlight] = useState(null);
+  const [coverageArea, setCoverageArea] = useState(null);
   const [queryPolygon, setQueryPolygon] = useState(null);
   const [track, setTrack] = useState([]);
 
@@ -77,7 +111,12 @@ export default function App() {
         setBuildings(buildingData.items || []);
         setLon(String(metaData.center.lon));
         setLat(String(metaData.center.lat));
-        setQueryPolygon(metaData.sample_polygon);
+        const end = metaData.dataset?.simulation_end;
+        if (end) {
+          const endDate = new Date(end);
+          setHeatEnd(toLocalInput(endDate));
+          setHeatStart(toLocalInput(endDate.getTime() - 60 * 60 * 1000));
+        }
       } catch (err) {
         if (!cancelled) setError(err.message);
       }
@@ -97,6 +136,48 @@ export default function App() {
     parcel_locker: "快递柜",
   };
 
+  function statusLabel(value) {
+    return STATUS_LABELS[value] || value || "未知";
+  }
+
+  function switchMode(next) {
+    setMode(next);
+    if (next !== "heatmap") setHeatmap([]);
+  }
+
+  async function loadTrack(id = bikeId) {
+    const data = await request(
+      `/bikes/${encodeURIComponent(id)}/tracks?hours=1&limit=2000`,
+    );
+    setTrack(data.items || []);
+    return data;
+  }
+
+  async function fetchWithin(polygon) {
+    const pageSize = 200;
+    let page = 1;
+    let total = 0;
+    const items = [];
+    let pages = 0;
+    do {
+      const data = await request("/facilities/within", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          polygon,
+          facility_type: facilityType,
+          page,
+          page_size: pageSize,
+        }),
+      });
+      total = data.total;
+      pages = data.total_pages;
+      items.push(...(data.items || []));
+      page += 1;
+    } while (items.length < total && page <= pages);
+    return { items, total, pages };
+  }
+
   async function runQuery() {
     setLoading(true);
     setError("");
@@ -111,59 +192,90 @@ export default function App() {
         setSummary(
           (data.items || []).map(
             (item) =>
-              `${types[item.type] || item.type} ${item._id}  ${item.distance_m} 米（精度 ${item.accuracy_meters} 米，${item.coordinate_accuracy}）`,
+              `${item.name || item._id}，${types[item.type] || item.type}，${statusLabel(item.status)}，${item.distance_m} 米`,
           ),
         );
       } else if (mode === "within") {
-        const data = await request("/facilities/within", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            polygon: meta.sample_polygon,
-            facility_type: facilityType,
-            page: Number(page),
-            page_size: 20,
-          }),
-        });
-        setFacilities(data.items || []);
-        setQueryPolygon(meta.sample_polygon);
+        if (draft.length < 3) {
+          throw new Error("请在地图上至少点 3 个点，再闭合查询");
+        }
+        const ring = draft.map(([pointLon, pointLat]) => [pointLon, pointLat]);
+        ring.push(ring[0]);
+        const polygon = { type: "Polygon", coordinates: [ring] };
+        const data = await fetchWithin(polygon);
+        setQueryPolygon(polygon);
+        setFacilities(data.items);
         setSummary([
-          `第 ${data.page}/${data.total_pages} 页，共 ${data.total} 条，本页 ${data.count} 条，${data.elapsed_ms} ms`,
-          ...(data.items || []).map((item) => `${item._id}  ${types[item.type] || item.type}  ${item.status}`),
+          `范围内共 ${data.total} 个设施，已按每页 200 条自动载入 ${data.pages} 页`,
+          ...data.items.slice(0, 12).map(
+            (item) =>
+              `${item.name || item._id}，${types[item.type] || item.type}，${statusLabel(item.status)}`,
+          ),
         ]);
       } else if (mode === "contains") {
         const data = await request(`/buildings/contains?lon=${longitude}&lat=${latitude}`);
         const hit = data.items?.[0];
         setHighlight(hit?.boundary || null);
+        setCoverageArea(null);
         setSummary(
           data.count
-            ? data.items.map((item) => `${item.name || item._id}（${item._id}）`)
+            ? data.items.map((item) => item.name || item._id)
             : ["这个点不在任何楼里"],
         );
       } else if (mode === "coverage") {
-        const data = await request("/coverage");
-        const lines = data.items.slice(0, 12).map(
-          (item) => `${item.name}：${item.category_count} 类 / ${item.total} 个`,
-        );
-        setSummary([
-          `${data.building_count} 栋楼统计完成，${data.elapsed_ms} ms。下面是前 12 栋。`,
-          ...lines,
-        ]);
+        const found = await request(`/buildings/contains?lon=${longitude}&lat=${latitude}`);
+        const hit = found.items?.[0];
+        if (!hit) {
+          setHighlight(null);
+          setCoverageArea(null);
+          setSummary(["这个点不在任何楼里"]);
+        } else {
+          const data = await request(`/buildings/${encodeURIComponent(hit._id)}/coverage`);
+          setHighlight(hit.boundary || null);
+          setCoverageArea(data.coverage_300m || null);
+          const counts = data.facility_count_by_type || {};
+          setSummary([
+            `${data.building_name || hit.name}：${data.category_count} 类，共 ${data.facility_count} 个`,
+            ...Object.entries(counts).map(
+              ([key, count]) => `${types[key] || key} ${count} 个`,
+            ),
+          ]);
+        }
       } else if (mode === "heatmap") {
-        const data = await request("/bikes/heatmap?hours=1");
+        if (!heatStart || !heatEnd) {
+          throw new Error("请填写热力的开始和结束时间");
+        }
+        const start = new Date(heatStart).toISOString();
+        const end = new Date(heatEnd).toISOString();
+        const data = await request(
+          `/bikes/heatmap?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`,
+        );
         setHeatmap(data.items || []);
         setSummary([
-          `${data.cell_count} 个 50 米格子，窗口内 ${data.report_count} 次上报，${data.elapsed_ms} ms`,
+          `${data.grid_size_m} 米网格，${data.cell_count} 个格子，窗口内 ${data.report_count} 次上报`,
           data.grid_reason,
         ]);
       } else if (mode === "anomaly") {
-        const data = await request("/bikes/anomalies?hours=2");
+        const data = await request("/bikes/anomalies?hours=2&limit=500");
+        const points = (data.items || [])
+          .map((item) => {
+            const point = item.to_location?.coordinates;
+            if (!point) return null;
+            return {
+              bike_id: item.bike_id,
+              location: item.to_location,
+              distance_m: item.distance_m,
+              status: "jump",
+            };
+          })
+          .filter(Boolean);
+        setAnomalies(points);
         setSummary(
-          data.count
-            ? data.items.slice(0, 12).map(
-                (item) => `${item.bike_id}  ${item.distance_m} 米  ${item.implied_speed_kmh} km/h`,
+          points.length
+            ? points.slice(0, 12).map(
+                (item) => `${item.bike_id}，跳变 ${item.distance_m} 米`,
               )
-            : ["最近 2 小时没有跳变"],
+            : ["最近 2 小时没有位置跳变"],
         );
       } else if (mode === "status") {
         const data = await request(`/facilities/${encodeURIComponent(facilityId)}/status`, {
@@ -171,18 +283,24 @@ export default function App() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ status }),
         });
+        const item = data.fresh_read || data.item || {};
+        const point = item.location?.coordinates;
+        const distance = point
+          ? distanceMeters(longitude, latitude, point[0], point[1]).toFixed(1)
+          : null;
+        setFacilities(point ? [item] : []);
         setSummary([
-          `${facilityId} 已改为 ${data.fresh_read?.status}，耗时 ${data.elapsed_ms} ms`,
-          "新连接读到的状态和写入结果一致。",
+          `${item.name || facilityId}，${types[item.type] || item.type || "未知类型"}，${statusLabel(item.status)}，距当前位置 ${distance ?? "未知"} 米`,
         ]);
       } else if (mode === "bikes") {
         const data = await request(
           `/bikes/nearby?longitude=${longitude}&latitude=${latitude}&radius_m=800&limit=30`,
         );
         setBikes(data.items || []);
+        setTrack([]);
         setSummary(
-          (data.items || []).slice(0, 10).map(
-            (item) => `${item.bike_id}  ${item.distance_m} 米  ${item.status}`,
+          (data.items || []).map(
+            (item) => `${item.bike_id}，${statusLabel(item.status)}，${item.distance_m} 米`,
           ),
         );
       }
@@ -193,24 +311,24 @@ export default function App() {
     }
   }
 
-  async function loadTrack() {
-    setError("");
-    try {
-      const data = await request(`/bikes/${encodeURIComponent(bikeId)}/tracks?hours=1&limit=2000`);
-      setTrack(data.items || []);
-    } catch (err) {
-      setError(err.message);
-    }
-  }
-
   const dataset = meta?.dataset || {};
   const maxHeat = Math.max(1, ...heatmap.map((cell) => cell.report_count || 0));
+  const draftPolygon = draft.length >= 3
+    ? {
+        type: "Polygon",
+        coordinates: [[...draft, draft[0]]],
+      }
+    : null;
 
   return (
     <main className="app">
       <section className="panel">
         <h1>校园设施查询</h1>
-        <p className="muted">点地图选坐标。车辆历史不进附近查询，附近的车只看最新位置。</p>
+        <p className="muted">
+          {mode === "within"
+            ? "区域检索：在地图上依次点选范围，至少 3 个点后闭合。结果会自动按页载入。"
+            : "点地图设置当前位置。热力只在「单车热力」下显示，换功能后会从地图上清掉。"}
+        </p>
         <div className="meta">
           <span>楼宇 {dataset.building_count ?? "-"}</span>
           <span>设施 {dataset.facility_count ?? "-"}</span>
@@ -219,13 +337,13 @@ export default function App() {
         </div>
         <label>
           功能
-          <select value={mode} onChange={(event) => setMode(event.target.value)}>
-            <option value="nearby">附近 10 个设施</option>
-            <option value="within">区域检索（分页）</option>
-            <option value="contains">点在哪栋楼</option>
-            <option value="coverage">每栋楼 300 米覆盖</option>
+          <select value={mode} onChange={(event) => switchMode(event.target.value)}>
+            <option value="nearby">附近查找</option>
+            <option value="within">区域检索</option>
+            <option value="contains">所在楼宇名</option>
+            <option value="coverage">覆盖分析</option>
             <option value="heatmap">单车热力</option>
-            <option value="anomaly">两小时跳变</option>
+            <option value="anomaly">车辆异常识别</option>
             <option value="status">修改设施状态</option>
             <option value="bikes">附近单车</option>
           </select>
@@ -251,10 +369,27 @@ export default function App() {
           </label>
         )}
         {mode === "within" && (
-          <label>
-            页码
-            <input value={page} onChange={(event) => setPage(event.target.value)} />
-          </label>
+          <div className="actions">
+            <span>已选 {draft.length} 个顶点</span>
+            <button className="secondary" type="button" onClick={() => setDraft((points) => points.slice(0, -1))}>
+              撤销一点
+            </button>
+            <button className="secondary" type="button" onClick={() => { setDraft([]); setQueryPolygon(null); }}>
+              清除范围
+            </button>
+          </div>
+        )}
+        {mode === "heatmap" && (
+          <>
+            <label>
+              开始时间
+              <input type="datetime-local" value={heatStart} onChange={(event) => setHeatStart(event.target.value)} />
+            </label>
+            <label>
+              结束时间
+              <input type="datetime-local" value={heatEnd} onChange={(event) => setHeatEnd(event.target.value)} />
+            </label>
+          </>
         )}
         {mode === "status" && (
           <>
@@ -278,27 +413,39 @@ export default function App() {
               轨迹车辆
               <input value={bikeId} onChange={(event) => setBikeId(event.target.value)} />
             </label>
-            <button className="secondary" type="button" onClick={loadTrack}>最近 1 小时轨迹</button>
+            <button
+              className="secondary"
+              type="button"
+              onClick={() => loadTrack().catch((err) => setError(err.message))}
+            >
+              最近 1 小时轨迹
+            </button>
           </div>
         )}
         <button type="button" onClick={runQuery} disabled={loading}>
-          {loading ? "查询中..." : "查询"}
+          {loading ? "查询中..." : mode === "within" ? "闭合查询" : "查询"}
         </button>
         {error && <p className="error">{error}</p>}
         <ul className="result">
-          {summary.map((line) => <li key={line}>{line}</li>)}
+          {summary.map((line, index) => <li key={`${index}-${line}`}>{line}</li>)}
         </ul>
       </section>
       <div className="map-wrap">
-        <MapContainer center={[39.905, 116.312]} zoom={15} style={{ height: "100%", width: "100%" }}>
+        <MapContainer center={[39.905, 116.312]} zoom={16} style={{ height: "100%", width: "100%" }}>
           <TileLayer
             attribution="&copy; OpenStreetMap"
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <ClickCatcher onPick={(nextLon, nextLat) => {
-            setLon(nextLon.toFixed(6));
-            setLat(nextLat.toFixed(6));
-          }} />
+          <ClickCatcher
+            mode={mode}
+            onPick={(nextLon, nextLat) => {
+              setLon(nextLon.toFixed(6));
+              setLat(nextLat.toFixed(6));
+            }}
+            onAddVertex={(nextLon, nextLat) => {
+              setDraft((points) => [...points, [Number(nextLon.toFixed(6)), Number(nextLat.toFixed(6))]]);
+            }}
+          />
           {buildings.map((building) => {
             const positions = toLatLngs(building.boundary);
             if (!positions) return null;
@@ -306,52 +453,95 @@ export default function App() {
               <Polygon
                 key={building._id}
                 positions={positions}
-                pathOptions={{ color: "#1d4e89", weight: 1, fillOpacity: 0.15 }}
+                pathOptions={{ color: "#1d4e89", weight: 1, fillOpacity: 0.12 }}
               />
             );
           })}
-          {queryPolygon && mode === "within" && (
+          {mode === "within" && (queryPolygon || draftPolygon) && (
             <Polygon
-              positions={toLatLngs(queryPolygon)}
-              pathOptions={{ color: "#0f766e", weight: 2, fillOpacity: 0.05 }}
+              positions={toLatLngs(queryPolygon || draftPolygon)}
+              pathOptions={{ color: "#0f766e", weight: 2, fillOpacity: 0.08 }}
             />
           )}
-          {highlight && (
+          {(mode === "contains" || mode === "coverage") && highlight && (
             <Polygon
               positions={toLatLngs(highlight)}
               pathOptions={{ color: "#b45309", weight: 3, fillOpacity: 0.25 }}
             />
           )}
-          {facilities.map((facility) => {
+          {mode === "coverage" && coverageArea && (
+            <Polygon
+              positions={toLatLngs(coverageArea)}
+              pathOptions={{ color: "#ca8a04", weight: 1, fillOpacity: 0.08 }}
+            />
+          )}
+          {(mode === "nearby" || mode === "within" || mode === "status") && facilities.map((facility) => {
             const point = facility.location?.coordinates;
             if (!point) return null;
             return (
-              <Circle
+              <CircleMarker
                 key={facility._id}
                 center={[point[1], point[0]]}
-                radius={10}
-                pathOptions={{ color: "#0f766e", fillColor: "#14b8a6", fillOpacity: 0.8 }}
-              />
+                radius={5}
+                pathOptions={{ color: "#0f766e", fillColor: "#14b8a6", fillOpacity: 0.95, weight: 1 }}
+              >
+                <Popup>
+                  {facility.name || facility._id}
+                  <br />
+                  {types[facility.type] || facility.type}，{statusLabel(facility.status)}
+                </Popup>
+              </CircleMarker>
             );
           })}
-          {bikes.map((bike) => {
+          {mode === "bikes" && bikes.map((bike) => {
             const point = bike.location?.coordinates;
             if (!point) return null;
-            const zombie = bike.status === "zombie";
             return (
-              <Circle
+              <CircleMarker
                 key={bike.bike_id}
                 center={[point[1], point[0]]}
-                radius={zombie ? 8 : 12}
-                pathOptions={{
-                  color: zombie ? "#57534e" : "#b45309",
-                  fillColor: zombie ? "#a8a29e" : "#fdba74",
-                  fillOpacity: 0.85,
+                radius={6}
+                pathOptions={{ color: "#c2410c", fillColor: "#fdba74", fillOpacity: 0.95, weight: 1 }}
+                eventHandlers={{
+                  click: () => {
+                    setBikeId(bike.bike_id);
+                    loadTrack(bike.bike_id).catch((err) => setError(err.message));
+                  },
                 }}
-              />
+              >
+                <Popup>
+                  {bike.bike_id}
+                  <br />
+                  {statusLabel(bike.status)}，{bike.distance_m} 米
+                </Popup>
+              </CircleMarker>
             );
           })}
-          {heatmap.map((cell) => {
+          {mode === "anomaly" && anomalies.map((bike) => {
+            const point = bike.location?.coordinates;
+            if (!point) return null;
+            return (
+              <CircleMarker
+                key={`${bike.bike_id}-${point[0]}-${point[1]}`}
+                center={[point[1], point[0]]}
+                radius={6}
+                pathOptions={{ color: "#9a3412", fillColor: "#fb923c", fillOpacity: 0.95, weight: 1 }}
+                eventHandlers={{
+                  click: () => {
+                    setBikeId(bike.bike_id);
+                    loadTrack(bike.bike_id).catch((err) => setError(err.message));
+                  },
+                }}
+              >
+                <Popup>
+                  {bike.bike_id}
+                  <br />
+                  跳变 {bike.distance_m} 米
+                </Popup>
+              </CircleMarker>
+            );
+          })}
+          {mode === "heatmap" && heatmap.map((cell) => {
             const point = cell.center?.coordinates;
             if (!point) return null;
             return (
@@ -368,12 +558,12 @@ export default function App() {
               />
             );
           })}
-          {track.length > 1 && (
+          {track.length > 1 && (mode === "bikes" || mode === "anomaly") && (
             <Polyline
               positions={track
                 .filter((item) => item.location?.coordinates)
                 .map((item) => [item.location.coordinates[1], item.location.coordinates[0]])}
-              pathOptions={{ color: "#7f1d1d", weight: 3 }}
+              pathOptions={{ color: "#9a3412", weight: 3 }}
             />
           )}
         </MapContainer>

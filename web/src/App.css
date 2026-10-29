@@ -36,11 +36,19 @@
   margin-bottom: 8px;
 }
 
-.inline {
+.inline,
+.actions {
   display: flex;
   gap: 8px;
   align-items: end;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  align-items: center;
+  color: #57534e;
+  font-size: 13px;
 }
 
 .inline label {
